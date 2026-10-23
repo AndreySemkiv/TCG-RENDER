@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "profile": "pokemon-window-v1",
+  "renderer_names": [
+    "Card_F",
+    "IllustStencil",
+    "InnerStencil",
+    "L_Pokemon_Full_EnergyType_BG",
+    "L_Pokemon_Window_Image",
+    "L_UI_Dynamic_Text",
+    "L_UI_Panel_Pokemon",
+    "L_UI_RareMark_Diamond_a",
+    "OuterStencil"
+  ],
+  "shaders": {
+    "cab-b3f4ea5059ec42ce1ecf4c58effc0d97__8188686027359771149": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\ShadowBox\\UI\\Card_ShadowBoxUI_SimpleOpaque.shader_bundles",
+      "bundle_sha256": "d60e65ec1863147564ac197c7d55f632461b5b0c63a35f991d5d0e9f2d9cd6a9"
+    },
+    "cab-6a38ada553ef67a03d56b1ac5e7136e4__-6803783916199376897": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\ShadowBox\\UI\\Card_ShadowBoxUI_Hologram_Tuning.shader_bundles",
+      "bundle_sha256": "b43a33f0951be09b6bf045bb8ebc079c2673d41b204b92db85b6a0025d65c68d"
+    },
+    "cab-8a7c2ce4bb6aacc8ea3c27998a6709d1__1611494417526887254": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\Frame\\Card_Frame.shader_bundles",
+      "bundle_sha256": "db337606180ae0854f975b4dbbaa410463d1b5e1d14f1c65e2c338924133b1bb"
+    },
+    "cab-e4993e14922158e59579dd588a7a33d2__5701574008984223828": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\Card_Side_And_Back.shader_bundles",
+      "bundle_sha256": "80cef93ecb79ba1425ba9c6d1c0ca476c6514f259151933b653b7b6e7e11c708"
+    },
+    "cab-8a93e31cb5e318823fe7c18ec9b8c0f9__2245828404536736759": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\TextUI\\Card_Text.shader_bundles",
+      "bundle_sha256": "7b2063fbf6bdbc2c7fe797c6153ca2e83b195d8959f32c7a59389050078bad21"
+    },
+    "cab-dacac64c95b70409ad52b4bce1b63ad3__6715688836837633753": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\Illust\\Card_Illust.shader_bundles",
+      "bundle_sha256": "0853185a4c731259db3d9285868fd9378f99b1cfd21fdacf77279f83fcbaad2d"
+    },
+    "cab-42293d6a7a7fce02db50cb055655fd03__-4162825296486987532": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\Stencil\\Card_InnerStencil.shader_bundles",
+      "bundle_sha256": "2928a1532502a7fbb940bf8956d9e61e47e3a208501c85e3492104473048222c"
+    },
+    "cab-d2eee03d934a8dca5a2dfd1194c0d206__-4357900850690044614": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\Stencil\\Card_IllustStencil.shader_bundles",
+      "bundle_sha256": "2690a6b95a18d84f46a746ba7e235c5709fcdb50718042d528299d6d6053c563"
+    },
+    "cab-a60950da1ef13de49f88e8a1bfed565a__-2646869007466365342": {
+      "bundle": "Common\\Shader\\Common\\CardNew\\Stencil\\Card_OuterStencil.shader_bundles",
+      "bundle_sha256": "ac51e76207892161449afabe61769024d1a88b2397c6f3be45c0aa12792f71c2"
+    }
+  },
+  "policy": "Source-derived common rendering contract; no card textures, geometry, numeric data or localized strings are substituted."
+}

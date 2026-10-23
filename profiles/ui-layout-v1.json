@@ -1,0 +1,3557 @@
+{
+  "schema_version": 1,
+  "coordinate_system": {
+    "origin": "top-left",
+    "x_right": true,
+    "y_down": true,
+    "logical_root_size": [
+      734,
+      1024
+    ],
+    "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+    "root_rect_transform_id": 7434516060622623933
+  },
+  "render_size": [
+    1468,
+    2048
+  ],
+  "texts": [
+    {
+      "id": "name",
+      "kind": "text",
+      "font_file": "fonts/TPC_GillSansNovaBold.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -3799754503620455235,
+        "game_object_id": 3162879018541126845,
+        "path": "PokemonCardUI/name_elm/card_name_txt"
+      },
+      "static_rect_top_left": [
+        132.0,
+        20.0,
+        390.0,
+        90.0
+      ],
+      "render_rect_top_left": [
+        132.0,
+        20.0,
+        390.0,
+        90.0
+      ],
+      "horizontal_alignment": "left",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 3162879018541126845
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": 7997069833075654224
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -7490950863985017264
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 46.0,
+        "m_fontSizeBase": 45.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 4.599999904632568,
+        "m_fontSizeMax": 46.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 1,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": -4.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 9041653063728633021,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3162879018541126845
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -2156807969248790245
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_msPreviewStyleKey": "large_pokemon_card_ui_card_name_txt",
+            "_msPreviewFontKey": "TMP_TitleText_43",
+            "_parameters": [
+              {
+                "_language": 1217,
+                "_overrideFontSize": 1,
+                "_fontSize": 46.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -4.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 390.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              },
+              {
+                "_language": 2878,
+                "_overrideFontSize": 1,
+                "_fontSize": 43.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -4.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 2.0,
+                "_msPreviewRegionWidth": 390.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              }
+            ]
+          }
+        },
+        {
+          "id": 2540350467913356477,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3162879018541126845
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 5704742700175387613
+            },
+            "m_Name": "",
+            "_key": 100,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -3799754503620455235
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": [],
+            "_ex": {
+              "m_FileID": 0,
+              "m_PathID": -7420885454251158339
+            },
+            "_textMaxWidthForEx": 300.0,
+            "_textMaxWidthForRocketPt": 380.0,
+            "_lineType": 0,
+            "_additionalText": {
+              "m_FileID": 0,
+              "m_PathID": 2332460415830398141
+            },
+            "_exWidth": 100.0,
+            "_minWidth": 10.0,
+            "_spaceLeftCenter": 8.0,
+            "_spaceCenterRight": -28.0
+          }
+        },
+        {
+          "id": -1282637176157825859,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3162879018541126845
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -727316325176706104
+            },
+            "m_Name": "",
+            "_target": {
+              "m_FileID": 0,
+              "m_PathID": -3799754503620455235
+            }
+          }
+        },
+        {
+          "id": 891809296433943741,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3162879018541126845
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -450928071834293186
+            },
+            "m_Name": "",
+            "_fattenEnable": 1,
+            "_fattenFactor": 0.4000000059604645
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "attack",
+      "kind": "text",
+      "font_file": "fonts/TPC_GillSansNovaBold.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": 1415002257506047165,
+        "game_object_id": 3745998336534844605,
+        "path": "PokemonCardUI/PokemonSkillContainerView/PokemonSkillContainerView_01/PokemonAttackView/SkillName/skill_name_txt"
+      },
+      "static_rect_top_left": [
+        270.0,
+        627.9550018310547,
+        332.0,
+        34.0099983215332
+      ],
+      "render_rect_top_left": [
+        226,
+        677,
+        378,
+        34.01
+      ],
+      "horizontal_alignment": "left",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 3745998336534844605
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": 7997069833075654224
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -7490950863985017264
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 34.0,
+        "m_fontSizeBase": 34.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 3.4000000953674316,
+        "m_fontSizeMax": 34.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 1,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": -4.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          0
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": -7015418383397808963,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3745998336534844605
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -2156807969248790245
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_msPreviewStyleKey": "large_pokemon_card_ui_skill_name_txt",
+            "_msPreviewFontKey": "TMP_TitleText_34",
+            "_parameters": [
+              {
+                "_language": 1,
+                "_overrideFontSize": 1,
+                "_fontSize": 34.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -4.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 330.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.4000000059604645
+              },
+              {
+                "_language": 1216,
+                "_overrideFontSize": 1,
+                "_fontSize": 34.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 0,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 330.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.4000000059604645
+              },
+              {
+                "_language": 2878,
+                "_overrideFontSize": 1,
+                "_fontSize": 32.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 330.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.4000000059604645
+              }
+            ]
+          }
+        },
+        {
+          "id": -2704223629074426691,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3745998336534844605
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 107,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": 1415002257506047165
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        },
+        {
+          "id": 2689496735030777021,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3745998336534844605
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -8545018526213454877
+            },
+            "m_Name": "",
+            "m_IgnoreLayout": 0,
+            "m_MinWidth": 332.0,
+            "m_MinHeight": 34.0,
+            "m_PreferredWidth": -1.0,
+            "m_PreferredHeight": -1.0,
+            "m_FlexibleWidth": -1.0,
+            "m_FlexibleHeight": -1.0,
+            "m_LayoutPriority": 1
+          }
+        },
+        {
+          "id": 3529626763627599037,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3745998336534844605
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -727316325176706104
+            },
+            "m_Name": "",
+            "_target": {
+              "m_FileID": 0,
+              "m_PathID": 1415002257506047165
+            }
+          }
+        },
+        {
+          "id": 6042011694148949181,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 3745998336534844605
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -450928071834293186
+            },
+            "m_Name": "",
+            "_fattenEnable": 1,
+            "_fattenFactor": 0.4000000059604645
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "damage",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -2488084847741430595,
+        "game_object_id": 6565503331122681021,
+        "path": "PokemonCardUI/PokemonSkillContainerView/PokemonSkillContainerView_01/PokemonAttackView/SkillName/damage_num_elm/damage_txt"
+      },
+      "static_rect_top_left": [
+        581.0,
+        625.9550018310547,
+        100.0,
+        40.0
+      ],
+      "render_rect_top_left": [
+        581,
+        673,
+        100,
+        40
+      ],
+      "horizontal_alignment": "right",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 6565503331122681021
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -284393212418135729
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 40.0,
+        "m_fontSizeBase": 41.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 0,
+        "m_fontSizeMin": 4.0,
+        "m_fontSizeMax": 40.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 4,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          0
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 2752569819571623101,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6565503331122681021
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -7364754059447797526
+            },
+            "m_Name": "",
+            "_shrinkSetting": 1,
+            "_fontType": 0,
+            "_fontKey": "TMP_NumText_40",
+            "_styleKey": "",
+            "_lineNum": 1,
+            "_customMaxWidth": 0.0,
+            "_invalidInitRefreshLabel": 0,
+            "_labelDataList": []
+          }
+        },
+        {
+          "id": 1646057371129156797,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6565503331122681021
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 109,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -2488084847741430595
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "dex_line",
+      "kind": "text",
+      "font_file": "fonts/TPC_GillSansNovaMedium.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -7447821786276621123,
+        "game_object_id": 6968807628390339773,
+        "path": "PokemonCardUI/IllustFrameTextView/data_txt"
+      },
+      "static_rect_top_left": [
+        72.0,
+        476.0,
+        590.0,
+        50.0
+      ],
+      "render_rect_top_left": [
+        72.0,
+        476.0,
+        590.0,
+        50.0
+      ],
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 6968807628390339773
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": 8163795205098350844
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -3945054721683969796
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 1,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 14.0,
+        "m_fontSizeBase": 15.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 1.399999976158142,
+        "m_fontSizeMax": 14.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 2,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": -3150362727207529283,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6968807628390339773
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -2156807969248790245
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_msPreviewStyleKey": "large_pokemon_card_ui_data_txt",
+            "_msPreviewFontKey": "TMP_BodyText_14",
+            "_parameters": [
+              {
+                "_language": 1217,
+                "_overrideFontSize": 1,
+                "_fontSize": 14.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": 0.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 590.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 1,
+                "_wordWrappingRatios": 0.0
+              },
+              {
+                "_language": 2878,
+                "_overrideFontSize": 1,
+                "_fontSize": 13.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 590.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 1,
+                "_wordWrappingRatios": 0.0
+              }
+            ]
+          }
+        },
+        {
+          "id": 8657016480989189309,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6968807628390339773
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 103,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -7447821786276621123
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        },
+        {
+          "id": 1659785756225443005,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 6968807628390339773
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -727316325176706104
+            },
+            "m_Name": "",
+            "_target": {
+              "m_FileID": 0,
+              "m_PathID": -7447821786276621123
+            }
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "flavor",
+      "kind": "text",
+      "font_file": "fonts/TPC_GillSansNovaMedium.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -7636651939041045315,
+        "game_object_id": -5569701033675516739,
+        "path": "PokemonCardUI/library_flavor_txt"
+      },
+      "static_rect_top_left": [
+        247.0,
+        909.0,
+        434.0,
+        90.0
+      ],
+      "render_rect_top_left": [
+        247.0,
+        909.0,
+        434.0,
+        90.0
+      ],
+      "horizontal_alignment": "right",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": -5569701033675516739
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 1,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": 8163795205098350844
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -3945054721683969796
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 16.0,
+        "m_fontSizeBase": 36.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 1.600000023841858,
+        "m_fontSizeMax": 16.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 4,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": -56.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 550727126263796925,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -5569701033675516739
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -2156807969248790245
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_msPreviewStyleKey": "large_pokemon_card_ui_library_flavor_txt",
+            "_msPreviewFontKey": "TMP_BodyText_16",
+            "_parameters": [
+              {
+                "_language": 1217,
+                "_overrideFontSize": 1,
+                "_fontSize": 16.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": 0.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": -56.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 434.0,
+                "_msPreviewLineNum": 3,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              },
+              {
+                "_language": 574,
+                "_overrideFontSize": 1,
+                "_fontSize": 16.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": -56.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 434.0,
+                "_msPreviewLineNum": 3,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              },
+              {
+                "_language": 2048,
+                "_overrideFontSize": 1,
+                "_fontSize": 15.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": -70.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 434.0,
+                "_msPreviewLineNum": 4,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              }
+            ]
+          }
+        },
+        {
+          "id": 7010900106689582269,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -5569701033675516739
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 104,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -7636651939041045315
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        },
+        {
+          "id": 5270519479972926653,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -5569701033675516739
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -727316325176706104
+            },
+            "m_Name": "",
+            "_target": {
+              "m_FileID": 0,
+              "m_PathID": -7636651939041045315
+            }
+          }
+        },
+        {
+          "id": -1676159554744871747,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -5569701033675516739
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -450928071834293186
+            },
+            "m_Name": "",
+            "_fattenEnable": 1,
+            "_fattenFactor": 0.10000000149011612
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "weakness",
+      "kind": "text",
+      "font_file": "fonts/TPC_GillSansNovaMedium.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -7473925130748029763,
+        "game_object_id": -2022986068777757507,
+        "path": "PokemonCardUI/PokemonWeakResistView/WeakValue/weak_txt"
+      },
+      "static_rect_top_left": [
+        85.84001159667969,
+        884.0,
+        112.0,
+        20.0
+      ],
+      "render_rect_top_left": [
+        85.84001159667969,
+        884.0,
+        112.0,
+        20.0
+      ],
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": -2022986068777757507
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": 8163795205098350844
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -3945054721683969796
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4279572515
+        },
+        "m_fontColor": {
+          "r": 0.13725490868091583,
+          "g": 0.0941176488995552,
+          "b": 0.08235294371843338,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 16.0,
+        "m_fontSizeBase": 16.5,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 1.600000023841858,
+        "m_fontSizeMax": 16.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 2,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 6850905015446213821,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2022986068777757507
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -2156807969248790245
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_msPreviewStyleKey": "large_pokemon_card_ui_weak_txt",
+            "_msPreviewFontKey": "TMP_BodyText_16",
+            "_parameters": [
+              {
+                "_language": 1,
+                "_overrideFontSize": 1,
+                "_fontSize": 16.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": 0.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 112.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              },
+              {
+                "_language": 4094,
+                "_overrideFontSize": 1,
+                "_fontSize": 16.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 112.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              }
+            ]
+          }
+        },
+        {
+          "id": 6589237957896180925,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -2022986068777757507
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 115,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -7473925130748029763
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "retreat",
+      "kind": "text",
+      "font_file": "fonts/TPC_GillSansNovaMedium.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -2797332491701185347,
+        "game_object_id": 2037350412056925373,
+        "path": "PokemonCardUI/PokemonEscapeView/escape_txt_jp"
+      },
+      "static_rect_top_left": [
+        407.0,
+        884.0,
+        80.0,
+        20.0
+      ],
+      "render_rect_top_left": [
+        407.0,
+        884.0,
+        80.0,
+        20.0
+      ],
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 2037350412056925373
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": 8163795205098350844
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -3945054721683969796
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4279572515
+        },
+        "m_fontColor": {
+          "r": 0.13725490868091583,
+          "g": 0.0941176488995552,
+          "b": 0.08235294371843338,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 16.0,
+        "m_fontSizeBase": 16.5,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 1.600000023841858,
+        "m_fontSizeMax": 16.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 2,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 8661894478937068733,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2037350412056925373
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -2156807969248790245
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_msPreviewStyleKey": "large_pokemon_card_ui_escape_txt",
+            "_msPreviewFontKey": "TMP_BodyText_16",
+            "_parameters": [
+              {
+                "_language": 1217,
+                "_overrideFontSize": 1,
+                "_fontSize": 16.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": 0.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 112.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              },
+              {
+                "_language": 2878,
+                "_overrideFontSize": 1,
+                "_fontSize": 16.0,
+                "_overrideCharacterSpacing": 1,
+                "_characterSpacing": -1.0,
+                "_overrideLineSpacing": 1,
+                "_lineSpacing": 0.0,
+                "_positionYOffset": 0.0,
+                "_msPreviewRegionWidth": 112.0,
+                "_msPreviewLineNum": 1,
+                "_overrideWordWrappingRatios": 0,
+                "_wordWrappingRatios": 0.0
+              }
+            ]
+          }
+        },
+        {
+          "id": -1210492773254818627,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2037350412056925373
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 116,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -2797332491701185347
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        },
+        {
+          "id": 9150489301802161341,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2037350412056925373
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -7364754059447797526
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_fontType": 0,
+            "_fontKey": "TMP_BodyText_16",
+            "_styleKey": "",
+            "_lineNum": 1,
+            "_customMaxWidth": 80.0,
+            "_invalidInitRefreshLabel": 0,
+            "_labelDataList": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "weak_sign",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -6929337792013724483,
+        "game_object_id": 5178392093170537661,
+        "path": "PokemonCardUI/PokemonWeakResistView/WeakValue/TxtWeakSign"
+      },
+      "static_rect_top_left": [
+        215.83999633789062,
+        868.0,
+        42.0,
+        50.0
+      ],
+      "render_rect_top_left": [
+        215.83999633789062,
+        868.0,
+        42.0,
+        50.0
+      ],
+      "horizontal_alignment": "right",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 5178392093170537661
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 1,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "+",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -284393212418135729
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 30.0,
+        "m_fontSizeBase": 30.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 0,
+        "m_fontSizeMin": 18.0,
+        "m_fontSizeMax": 72.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 4,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 0.0,
+        "m_TextWrappingMode": 1,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 2107533237668156605,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5178392093170537661
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 113,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -6929337792013724483
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "weak_value",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": 6057868378949293245,
+        "game_object_id": 5755819269215950013,
+        "path": "PokemonCardUI/PokemonWeakResistView/WeakValue/TxtWeakValue"
+      },
+      "static_rect_top_left": [
+        259.8399963378906,
+        878.9999694824219,
+        60.0,
+        32.0
+      ],
+      "render_rect_top_left": [
+        259.8399963378906,
+        878.9999694824219,
+        60.0,
+        32.0
+      ],
+      "horizontal_alignment": "left",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 5755819269215950013
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -284393212418135729
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 32.0,
+        "m_fontSizeBase": 33.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 3.200000047683716,
+        "m_fontSizeMax": 32.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 1,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": -4090210917664156483,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5755819269215950013
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 112,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": 6057868378949293245
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "hp_label",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": 8902744113156658365,
+        "game_object_id": 5485094747363022013,
+        "path": "PokemonCardUI/hp_elm/hp_txt_elm/hp_txt"
+      },
+      "static_rect_top_left": [
+        466.0000114440918,
+        87.0,
+        40.0,
+        30.0
+      ],
+      "render_rect_top_left": [
+        546.8125,
+        60,
+        40,
+        30
+      ],
+      "horizontal_alignment": "center",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 5485094747363022013
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -6167166145700619731
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 22.0,
+        "m_fontSizeBase": 22.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 0,
+        "m_fontSizeMin": 2.200000047683716,
+        "m_fontSizeMax": 22.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 2,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 6632333684572886205,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5485094747363022013
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 117,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": 8902744113156658365
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "hp_value",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": 7226496110746080445,
+        "game_object_id": -1556667468562230083,
+        "path": "PokemonCardUI/hp_elm/hp_num_txt"
+      },
+      "static_rect_top_left": [
+        486.0,
+        67.0,
+        0.0,
+        54.0
+      ],
+      "render_rect_top_left": [
+        582.8125,
+        40,
+        53.1875,
+        54
+      ],
+      "horizontal_alignment": "right",
+      "vertical_alignment": "middle",
+      "font_style_bits": 0,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": -1556667468562230083
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -284393212418135729
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 46.0,
+        "m_fontSizeBase": 46.0,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 0,
+        "m_fontSizeMin": 4.599999904632568,
+        "m_fontSizeMax": 46.0,
+        "m_fontStyle": 0,
+        "m_HorizontalAlignment": 4,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": -6130888725337008963,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": -1556667468562230083
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 101,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": 7226496110746080445
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "illustrator_prefix",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -8374897469208128323,
+        "game_object_id": 1577707045293528253,
+        "path": "PokemonCardUI/CollectionView/illustrator_elm/illust_width_elm/Illustrator_txt"
+      },
+      "static_rect_top_left": [
+        53.0,
+        937.0,
+        0.0,
+        24.0
+      ],
+      "render_rect_top_left": [
+        53,
+        913,
+        29.49609375,
+        24
+      ],
+      "horizontal_alignment": "left",
+      "vertical_alignment": "middle",
+      "font_style_bits": 2,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 1577707045293528253
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -284393212418135729
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 15.0,
+        "m_fontSizeBase": 14.399999618530273,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 0,
+        "m_fontSizeMin": 1.5,
+        "m_fontSizeMax": 15.0,
+        "m_fontStyle": 2,
+        "m_HorizontalAlignment": 1,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.28099143505096436,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": -9168691792908708675,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1577707045293528253
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 1,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -8374897469208128323
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        },
+        {
+          "id": 7913190512124171453,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1577707045293528253
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -7364754059447797526
+            },
+            "m_Name": "",
+            "_shrinkSetting": 1,
+            "_fontType": 0,
+            "_fontKey": "TMP_NumText_15",
+            "_styleKey": "",
+            "_lineNum": 1,
+            "_customMaxWidth": 30.0,
+            "_invalidInitRefreshLabel": 0,
+            "_labelDataList": []
+          }
+        },
+        {
+          "id": -7265321566131055427,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1577707045293528253
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -450928071834293186
+            },
+            "m_Name": "",
+            "_fattenEnable": 0,
+            "_fattenFactor": 0.0
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "illustrator",
+      "kind": "text",
+      "font_file": "fonts/TPC_FuturaLTProHeavy.otf",
+      "source_node": {
+        "source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+        "object_id": -2100705622969346883,
+        "game_object_id": 4203786953443906749,
+        "path": "PokemonCardUI/CollectionView/illustrator_elm/name_width_elm/illustrator_name_txt"
+      },
+      "static_rect_top_left": [
+        53.0,
+        937.0,
+        0.0,
+        24.0
+      ],
+      "render_rect_top_left": [
+        82.49609375,
+        913,
+        140.50390625,
+        24
+      ],
+      "horizontal_alignment": "left",
+      "vertical_alignment": "middle",
+      "font_style_bits": 2,
+      "original_tmp": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 4203786953443906749
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7477354737935883349
+        },
+        "m_Name": "",
+        "m_Material": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_RaycastTarget": 0,
+        "m_RaycastPadding": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        },
+        "m_Maskable": 1,
+        "m_OnCullStateChanged": {
+          "m_PersistentCalls": {
+            "m_Calls": []
+          }
+        },
+        "m_text": "",
+        "m_isRightToLeft": 0,
+        "m_fontAsset": {
+          "m_FileID": 2,
+          "m_PathID": -757749988448016049
+        },
+        "m_sharedMaterial": {
+          "m_FileID": 2,
+          "m_PathID": -284393212418135729
+        },
+        "m_fontSharedMaterials": [],
+        "m_fontMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_fontMaterials": [],
+        "m_fontColor32": {
+          "rgba": 4294967295
+        },
+        "m_fontColor": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_enableVertexGradient": 0,
+        "m_colorMode": 3,
+        "m_fontColorGradient": {
+          "topLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "topRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomLeft": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          },
+          "bottomRight": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+          }
+        },
+        "m_fontColorGradientPreset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_spriteAsset": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_tintAllSprites": 0,
+        "m_StyleSheet": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_TextStyleHashCode": -1183493901,
+        "m_overrideHtmlColors": 0,
+        "m_faceColor": {
+          "rgba": 4294967295
+        },
+        "m_fontSize": 15.0,
+        "m_fontSizeBase": 14.399999618530273,
+        "m_fontWeight": 400,
+        "m_enableAutoSizing": 1,
+        "m_fontSizeMin": 1.5,
+        "m_fontSizeMax": 15.0,
+        "m_fontStyle": 2,
+        "m_HorizontalAlignment": 1,
+        "m_VerticalAlignment": 512,
+        "m_textAlignment": 65535,
+        "m_characterSpacing": 0.0,
+        "m_characterHorizontalScale": 1.0,
+        "m_wordSpacing": 0.0,
+        "m_lineSpacing": 0.0,
+        "m_lineSpacingMax": 0.0,
+        "m_paragraphSpacing": 0.0,
+        "m_charWidthMaxAdj": 50.0,
+        "m_TextWrappingMode": 0,
+        "m_wordWrappingRatios": 0.4000000059604645,
+        "m_overflowMode": 0,
+        "m_linkedTextComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "parentLinkedComponent": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_enableKerning": 1,
+        "m_ActiveFontFeatures": [
+          1801810542
+        ],
+        "m_enableExtraPadding": 0,
+        "checkPaddingRequired": 0,
+        "m_isRichText": 1,
+        "m_EmojiFallbackSupport": 1,
+        "m_parseCtrlCharacters": 1,
+        "m_isOrthographic": 1,
+        "m_isCullingEnabled": 0,
+        "m_horizontalMapping": 0,
+        "m_verticalMapping": 0,
+        "m_uvLineOffset": 0.0,
+        "m_geometrySortingOrder": 0,
+        "m_IsTextObjectScaleStatic": 0,
+        "m_VertexBufferAutoSizeReduction": 1,
+        "m_useMaxVisibleDescender": 1,
+        "m_pageToDisplay": 1,
+        "m_margin": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.28099143505096436,
+          "w": 0.0
+        },
+        "m_isUsingLegacyAnimationComponent": 0,
+        "m_isVolumetricText": 0,
+        "m_hasFontAssetChanged": 0,
+        "m_baseMaterial": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "m_maskOffset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 0.0
+        }
+      },
+      "companion_components": [
+        {
+          "id": 3913925856690836669,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 4203786953443906749
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -3032542960522965150
+            },
+            "m_Name": "",
+            "_key": 0,
+            "_text": {
+              "m_FileID": 0,
+              "m_PathID": -2100705622969346883
+            },
+            "_elementTagFontSize": 0.0,
+            "_exTagFontSize": 0.0,
+            "_inactivateOnEmpty": [],
+            "_autoSizeConditions": []
+          }
+        },
+        {
+          "id": 5109562493480735933,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 4203786953443906749
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -7364754059447797526
+            },
+            "m_Name": "",
+            "_shrinkSetting": 0,
+            "_fontType": 0,
+            "_fontKey": "TMP_NumText_15",
+            "_styleKey": "",
+            "_lineNum": 1,
+            "_customMaxWidth": 140.0,
+            "_invalidInitRefreshLabel": 0,
+            "_labelDataList": []
+          }
+        },
+        {
+          "id": 4316605348643607741,
+          "data": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 4203786953443906749
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": -450928071834293186
+            },
+            "m_Name": "",
+            "_fattenEnable": 1,
+            "_fattenFactor": 0.10000000149011612
+          }
+        }
+      ],
+      "text": ""
+    }
+  ],
+  "sprites": [],
+  "sprite_bindings": [],
+  "profile": "pocket-regular-window-original-v1",
+  "source_ui_sha256": "570d155332922c4ed31eee8069adcd271ce9ad7a0ff70dd4a8985733d00cd4e6",
+  "policy": "Source-derived layout bindings only; card values and localized strings must be read from the selected source."
+}

@@ -1,0 +1,34 @@
+# Local game data, exports and generated evidence
+/pocket-extraction/
+/tcg-data/
+**/renders/
+**/renders-metadata/
+**/render-cache/
+**/reports/
+**/workspaces/
+**/input/
+*.apk
+*.partial
+
+# Python environments and caches
+**/.venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# Native build outputs (bundled runtime EXEs are intentional)
+**/build/
+*.obj
+*.pdb
+*.ilk
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

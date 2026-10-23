@@ -1,0 +1,18 @@
+{
+  "dependencies": [
+    {
+      "file": "tools/aladump/aladump.exe",
+      "sha256": "96f6c6b5b413024ef8d951fd473d276ae035f9f0d2027d1e80bd394032429302"
+    },
+    {
+      "file": "native/original-shader-decoder/shaderdecode.exe",
+      "sha256": "0e0a9a475fb39ec977dc0bb2894d202c1d1a8e125fc3712390ed9e71dba9130e"
+    }
+  ],
+  "aladump_upstream": "https://github.com/SombrAbsol/aladump",
+  "shader_decoder_upstreams": [
+    "https://github.com/aras-p/smol-v",
+    "https://github.com/KhronosGroup/SPIRV-Cross"
+  ],
+  "note": "Bundled local tool snapshots; hashes identify these binaries and do not claim latest release status."
+}

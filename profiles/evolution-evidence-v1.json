@@ -1,0 +1,93 @@
+{
+  "scope": "Original regular Pokémon evolution binding; no GPU execution or card raster generated.",
+  "ui_source": "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles",
+  "ui_sha256": "570d155332922c4ed31eee8069adcd271ce9ad7a0ff70dd4a8985733d00cd4e6",
+  "master_relation": "Pokemon.PreevolvedCharacterID -> Character.CharacterID -> Character.DisplayNameMSID",
+  "source_text": {
+    "tmp_id": 88252315953337533,
+    "font_switch_key": 102,
+    "game_object": -5875562565885422403,
+    "rect_top_left": [
+      128.09999465942383,
+      95.0,
+      270.0,
+      22.0
+    ]
+  },
+  "source_image": {
+    "image_id": 157969315679638717,
+    "image_switch_key": 1,
+    "rect_top_left": [
+      28.099994659423828,
+      75.0,
+      88.0,
+      88.0
+    ],
+    "asset_address_pattern": "Common/CardNew/Pokemon/<PreevolvedCharacterID>/<PreevolvedCharacterID>.png_bundles"
+  },
+  "locale_patterns": {
+    "en-US": [
+      "Evolves from [Mst:CardCharacterName ]",
+      {
+        "authority": "original-localization",
+        "language": "en-US",
+        "source": "reports\\file-only-analysis\\locale-original\\en_US\\UI.kvrom",
+        "source_sha256": "f48101213eeb18cd340aa91a91348e5c3c97698d478c8f00c7fdbad0b5ec885b",
+        "table": "UI",
+        "key": "evolution_from",
+        "category": 102,
+        "category_provenance": null,
+        "entry_offset": 286100
+      }
+    ],
+    "pt-BR": [
+      "Evolui de [Mst:CardCharacterName ]",
+      {
+        "authority": "original-localization",
+        "language": "pt-BR",
+        "source": "reports\\file-only-analysis\\locale-original\\pt_BR\\UI.kvrom",
+        "source_sha256": "05174456995feb5ce76b9d8a8c4f1e0f78d33ef724f7c5b3597f981ab1a4b335",
+        "table": "UI",
+        "key": "evolution_from",
+        "category": 102,
+        "category_provenance": {
+          "attribute": "LocalizeUICard",
+          "source": "reports\\file-only-analysis\\locale-original\\pt_BR\\UI_Attribute.kvrom",
+          "source_sha256": "424641bf200b1ad59d2b0e444c85a1cc9ab2b4757fd126228ca0840e4f5a7456",
+          "entry_offset": 2464,
+          "canonical_category": 102
+        },
+        "entry_offset": 291040
+      }
+    ],
+    "ja-JP": [
+      "[Mst:CardCharacterName]から進化",
+      {
+        "authority": "original-localization",
+        "language": "ja-JP",
+        "source": "reports\\file-only-analysis\\locale-original\\ja_JP\\UI.kvrom",
+        "source_sha256": "fa79cd82d6732f6774f32f13c3a354f3e79e38f0ff50af8d9354234b94ad798b",
+        "table": "UI",
+        "key": "evolution_from",
+        "category": 59,
+        "category_provenance": {
+          "attribute": "LocalizeUICard",
+          "source": "reports\\file-only-analysis\\locale-original\\ja_JP\\UI_Attribute.kvrom",
+          "source_sha256": "75c89d55e44faf3c7e39f9b8755f64c81e6d71f2876b1b50c957e48f7ac9813a",
+          "entry_offset": 2464,
+          "canonical_category": 102
+        },
+        "entry_offset": 280412
+      }
+    ]
+  },
+  "tested_examples": [
+    "A1-002",
+    "A1-003",
+    "A1a-005"
+  ],
+  "remaining_limits": [
+    "Full original TMP autosizing and runtime behavior are not executed here.",
+    "The overall render must still validate each card family and material."
+  ]
+}

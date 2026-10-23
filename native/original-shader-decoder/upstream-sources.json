@@ -1,0 +1,173 @@
+[
+  {
+    "repository": "aras-p/smol-v",
+    "commit": "55000efe742f56d8b51223b9ea7775a8f0501881",
+    "path": "source/smolv.h",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\smolv\\smolv.h",
+    "bytes": 8108,
+    "sha256": "a4ef18392b5fed85844dec70c8fffe23b69ade92c8bea13e2986c97ad8872ca1",
+    "url": "https://raw.githubusercontent.com/aras-p/smol-v/55000efe742f56d8b51223b9ea7775a8f0501881/source/smolv.h"
+  },
+  {
+    "repository": "aras-p/smol-v",
+    "commit": "55000efe742f56d8b51223b9ea7775a8f0501881",
+    "path": "source/smolv.cpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\smolv\\smolv.cpp",
+    "bytes": 62205,
+    "sha256": "ae1818f33a0531ca6ecd1aad821ed8ae9225c4c0ac47bc016ab7c7a1bb1f813e",
+    "url": "https://raw.githubusercontent.com/aras-p/smol-v/55000efe742f56d8b51223b9ea7775a8f0501881/source/smolv.cpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv.hpp",
+    "bytes": 311927,
+    "sha256": "2ea0dd70e12e289c77a0347dfe88b5e1b6481a70e1804fab1557423394120f9f",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_common.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_common.hpp",
+    "bytes": 54572,
+    "sha256": "7dd3708d00caec7e87d5a6b01364758db3bb207d6c39446e708665616d81673a",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_common.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cross_containers.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cross_containers.hpp",
+    "bytes": 18023,
+    "sha256": "81c28e562046fc518a57be4e7eb9af836d3b05a6d9fb3f766a671638c275441f",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cross_containers.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cross_error_handling.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cross_error_handling.hpp",
+    "bytes": 2700,
+    "sha256": "af7ceaa02741ed3cb9a8c8dd347d428f7a27f82d41ac57dbc5ad0dbaab8a368f",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cross_error_handling.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cfg.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cfg.hpp",
+    "bytes": 4170,
+    "sha256": "75f5f76b2c2d5ad0bcae1dafe0cabf589df544cc0a7a5d254d29115cfb991b4a",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cfg.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cfg.cpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cfg.cpp",
+    "bytes": 17523,
+    "sha256": "e565ab177ae4531db893917951d9ac4f1135799ee5bee384c8ad879de564a596",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cfg.cpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cross.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cross.hpp",
+    "bytes": 54326,
+    "sha256": "d42b369d9dc33e77abec9c01ae685ff6dcbde2d9f3a3b24d7ba6b6305737a410",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cross.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cross.cpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cross.cpp",
+    "bytes": 184979,
+    "sha256": "27b5287bc307c7a0db052004cb44150b52bb5793aa031dcfd05ab088b1fbe6c2",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cross.cpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cross_parsed_ir.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cross_parsed_ir.hpp",
+    "bytes": 9948,
+    "sha256": "a724e129d3d1ba8b0bda3ee48cbf7d19bcc5d380b280269f33e0396080b3d808",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cross_parsed_ir.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_cross_parsed_ir.cpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_cross_parsed_ir.cpp",
+    "bytes": 27824,
+    "sha256": "0b9b0bcdb946aef73aab6eb5e6d1f81875abd80268697289b402a782519c3e84",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_cross_parsed_ir.cpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_parser.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_parser.hpp",
+    "bytes": 2633,
+    "sha256": "e5cc214ad1d87bd78183f2e72a902c0fb994dc18e7aa6e83e86cb2875708c2f2",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_parser.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_parser.cpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_parser.cpp",
+    "bytes": 44783,
+    "sha256": "7dff8886303c75cd65c5160fa5ddf2dab893c7d2f42aad7bed6e828f7a5c1001",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_parser.cpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_glsl.hpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_glsl.hpp",
+    "bytes": 54518,
+    "sha256": "6d17de5dc1074934f5122d310a8f8c3926064877003be4e938aab4af6d6a7407",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_glsl.hpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "spirv_glsl.cpp",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\spirv_glsl.cpp",
+    "bytes": 706468,
+    "sha256": "8309b385bbdae437f424465000b02866f2921255ff71af7aee21c0604682af26",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/spirv_glsl.cpp"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "GLSL.std.450.h",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\GLSL.std.450.h",
+    "bytes": 3073,
+    "sha256": "6f56e094663fded4435ab1d3d8c24d72adb3bf82832fc002ecf0a0d4d96543e9",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/GLSL.std.450.h"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "LICENSE",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\LICENSE",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/LICENSE"
+  },
+  {
+    "repository": "KhronosGroup/SPIRV-Cross",
+    "commit": "300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1",
+    "path": "NonSemanticShaderDebugInfo100.h",
+    "local": "pocket-extraction\\tools\\original-shader-decoder\\spirv-cross\\NonSemanticShaderDebugInfo100.h",
+    "bytes": 7918,
+    "sha256": "f22e8ce116c326c81ad4d0cc99b8da7b95f8fb800de77c11f7129bd04d251299",
+    "url": "https://raw.githubusercontent.com/KhronosGroup/SPIRV-Cross/300681bbcb8365a8d1eacdacdbdd0249bbf1d6b1/NonSemanticShaderDebugInfo100.h"
+  }
+]
