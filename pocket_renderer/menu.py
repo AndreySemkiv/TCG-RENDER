@@ -316,6 +316,8 @@ def run_menu(source_resolver=None, catalog_factory=None, runner=None,
     try:
         while True:
             if current is None:
+                output("\nIf you have already exported cards, enter the full path to your saved game folder:")
+                output("  tcg-data\\<your imported folder>\\ (for example, tcg-data\\6ac51691\\)")
                 value = input_fn("\nBlueStacks/TCG files folder, A to search automatically, or 0 to exit: ").strip()
                 if value == "0":
                     return 0
