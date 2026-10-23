@@ -1,4 +1,4 @@
-# TCG Render
+# TCG Render (BETA)
 
 Export Pokémon TCG Pocket collections as **700 × 976 PNGs with transparency**, assembled from the game's resources on your computer.
 
