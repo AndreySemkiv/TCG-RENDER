@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 import os
+import re
 import sys
 import uuid
 from .progress import error_details
@@ -151,6 +152,131 @@ def _choose_collection(rows, input_fn, output):
         output("Collection not found. Enter a number or ID from the list.")
 
 
+def _parse_card_selection(value, cards):
+    """Resolve collection numbers, numeric ranges and IDs within one collection."""
+    by_id = {card['id'].casefold(): card for card in cards}
+    by_number = {card['number']: card for card in cards}
+    tokens = re.split(r'[,;\s]+', re.sub(r'\s*-\s*', '-', value.strip()))
+    if not value.strip() or any(not token for token in tokens):
+        raise ValueError("Enter card numbers or IDs, separated by commas or spaces.")
+    selected = set()
+    for token in tokens:
+        if token.casefold() in by_id:
+            selected.add(by_id[token.casefold()]['id'])
+        elif re.fullmatch(r'[0-9]+', token) and int(token) in by_number:
+            selected.add(by_number[int(token)]['id'])
+        elif re.fullmatch(r'[0-9]+-[0-9]+', token):
+            start, end = map(int, token.split('-'))
+            matches = [card for number, card in by_number.items() if start <= number <= end]
+            if start > end or len(matches) != end - start + 1:
+                raise ValueError("Invalid range '%s': every number must exist in this collection." % token)
+            selected.update(card['id'] for card in matches)
+        else:
+            raise ValueError("Card '%s' was not found in this collection. Use card numbers or full IDs." % token)
+    return [card['id'] for card in cards if card['id'] in selected]
+
+
+def _rarity_label(group, locale, fallback):
+    # Master display groups share localized names: SR/SAR are both two stars.
+    suffix = {'AR': 'SA', 'SAR_SR': 'SSASR'}.get(group, group)
+    if not locale or not suffix:
+        return fallback
+    try:
+        label, _ = locale.lookup('Master', 'RARITY_MSID_' + suffix, allow_empty=True)
+    except (ValueError, OSError):
+        return fallback
+    if not label:
+        return fallback
+    label = re.sub(r'\[Text:Char\s+v="DIAMOND"\s*\]', 'Diamond ', label).strip()
+    parts = label.split()
+    if parts and all(part == 'Diamond' for part in parts):
+        return '%d Diamond%s' % (len(parts), '' if len(parts) == 1 else 's')
+    stars = ''.join(parts)
+    if stars and set(stars) == {'★'}:
+        return '%d Star%s' % (len(stars), '' if len(stars) == 1 else 's')
+    return label
+
+
+def rarities(cards, catalog, root):
+    """Group only selected-collection cards using the source's rarity displays."""
+    displays = {}
+    if catalog is not None:
+        try:
+            displays = {row['Rarity']: row for row in catalog.table('RarityDisplay')}
+        except (ValueError, OSError):
+            pass
+    locale = None
+    if root is not None:
+        from .localization import LocaleRepository
+        locale = LocaleRepository(root, 'en-US')
+    groups = {}
+    for card in cards:
+        code = card.get('card', {}).get('Rarity')
+        group = displays.get(code, {}).get('RarityDisplayGroupID')
+        key = ('group', group) if group else ('rarity', code)
+        if key not in groups:
+            fallback = 'Rarity %s' % code if code is not None else 'Unspecified rarity'
+            groups[key] = {'label': _rarity_label(group, locale, fallback),
+                           'cards': [], 'order': code if code is not None else -1}
+        groups[key]['cards'].append(card['id'])
+        groups[key]['order'] = min(groups[key]['order'], code if code is not None else -1)
+    return sorted(groups.values(), key=lambda row: row['order'])
+
+
+def _choose_rarity(cards, catalog, root, input_fn, output):
+    rows = rarities(cards, catalog, root)
+    if not rows:
+        output("No cards found in this collection.")
+        return None
+    output("\nRarities in the selected collection:")
+    for index, row in enumerate(rows, 1):
+        output("  %d. %s | %d card(s)" % (index, row['label'], len(row['cards'])))
+    while True:
+        choice = input_fn("Rarity number (0 = back): ").strip()
+        if choice == '0':
+            return None
+        if choice.isascii() and choice.isdigit() and 1 <= int(choice) <= len(rows):
+            row = rows[int(choice)-1]
+            output("Selected %s: %d card(s)." % (row['label'], len(row['cards'])))
+            return row['cards']
+        output("Select a rarity number from the list.")
+
+
+def _choose_cards(cards, input_fn, output, catalog=None, root=None):
+    """Return [] for the entire collection, selected IDs, or None to go back."""
+    output("\nExport selection:")
+    output("1. Entire collection (default)")
+    output("2. Specific cards")
+    output("3. By rarity")
+    output("0. Back")
+    while True:
+        choice = input_fn("Export [Enter = entire collection]: ").strip()
+        if choice == '0':
+            return None
+        if choice in ('', '1'):
+            return []
+        if choice == '2':
+            break
+        if choice == '3':
+            return _choose_rarity(cards, catalog, root, input_fn, output)
+        output("Choose 1, 2, 3 or 0.")
+    output("Enter card numbers or full IDs. Separate entries with commas or spaces.")
+    output("Numeric ranges are supported, for example: 1, 8, 20-25.")
+    if cards:
+        output("Full ID example: %s. Only cards from this collection can be selected." % cards[0]['id'])
+    while True:
+        value = input_fn("Cards (0 = back): ").strip()
+        if value == '0':
+            return None
+        try:
+            selected = _parse_card_selection(value, cards)
+        except ValueError as error:
+            output(str(error))
+            continue
+        output("Selected %d card(s): %s" % (len(selected), ', '.join(selected)))
+        return selected
+
+
 def _choose_language(input_fn, output):
     from .config import normalize_language
     output("\nLanguage: 1. English (default)  2. Portuges(Brazil)  3. Japanese  4. All three")
@@ -232,9 +358,19 @@ def run_menu(source_resolver=None, catalog_factory=None, runner=None,
                 if collection['supported'] == 0:
                     output("This collection has no supported large models available for export.")
                     continue
-                if collection["pending"]:
+                collection_cards = catalog.list_cards(collection['id'])
+                selected_ids = _choose_cards(collection_cards, input_fn, output, catalog, current.root)
+                if selected_ids is None:
+                    continue
+                selected_set = set(selected_ids)
+                selected_cards = [card for card in collection_cards if card['id'] in selected_set] if selected_ids else collection_cards
+                if not any(card['supported'] for card in selected_cards):
+                    output("The selected cards have no supported large models available for export.")
+                    continue
+                pending = sum(not card.get('exportable', card['supported']) for card in selected_cards)
+                if pending:
                     output("Resources available for %d of %d cards. The %d pending cards will be recorded in the report; the collection will be incomplete." %
-                           (collection.get('available',collection["supported"]), collection["total"], collection["pending"]))
+                           (len(selected_cards)-pending, len(selected_cards), pending))
                 language = _choose_language(input_fn, output)
                 if language is None:
                     continue
@@ -243,9 +379,10 @@ def run_menu(source_resolver=None, catalog_factory=None, runner=None,
                 destination = input_fn("Output folder [Enter = %s]: " % default_output).strip()
                 destination = _path(destination).resolve() if destination else default_output
                 command = "render"
-                arguments = ["--root", str(current.root), command, "--expansion", collection["id"],
+                selection = ['--cards'] + selected_ids if selected_ids else ['--expansion', collection['id']]
+                arguments = ["--root", str(current.root), command] + selection + [
                              "--lang", language, "--output", str(destination), '--quality',quality]
-                output("\n%s %s (%s)..." % ("Exporting" if command == "render" else "Preparing", collection["id"], language))
+                output("\nExporting %s: %d card(s) (%s)..." % (collection["id"], len(selected_cards), language))
                 status = runner(arguments)
                 from .export_paths import metadata_root
                 output("Finished. Reports and JSON: " + str(metadata_root(destination)))

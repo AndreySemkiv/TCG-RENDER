@@ -85,8 +85,9 @@ Wait for **“Environment ready”**. Setup installs these packages automaticall
 2. Follow the source prompt: enter the BlueStacks installation folder or press **A** to search automatically.
 3. Import the source, then choose **Export collection**.
 4. Select the collection.
-5. Select the card language: **English** is the default; the other menu choices are **Portuges(Brazil)**, **Japanese** and **All three**.
-6. Accept the default output folder or choose another destination, and wait for the export to finish.
+5. Choose **Entire collection** (the default), **Specific cards** or **By rarity**. For specific cards, enter numbers, numeric ranges or full IDs, such as `1, 8, 20-25` or `B4b-041 B4b-101`. Only cards from the selected collection are accepted; repeated entries are exported once. **By rarity** lists the rarities present in that collection with their card counts; select one to export only those cards. Categories come from the imported game's rarity data.
+6. Select the card language: **English** is the default; the other menu choices are **Portuges(Brazil)**, **Japanese** and **All three**.
+7. Accept the default output folder or choose another destination, and wait for the export to finish.
 
 The app automatically uses the large **700 × 976** presentation. Existing valid PNGs are skipped. To regenerate existing exports from the command line, use the export command's `--overwrite` option; available commands are listed by:
 
