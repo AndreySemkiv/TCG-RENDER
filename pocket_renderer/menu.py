@@ -65,8 +65,11 @@ def _source_label(source):
 def default_resolve_source(value, input_fn=input, output=print):
     """Discover one source and pass raw snapshots through the preparation stage."""
     from .bluestacks import discover_sources, import_source
+    from .progress import ProgressDisplay
     automatic = value.strip().casefold() in ("a", "s")
-    sources = discover_sources(None if automatic else _path(value))
+    with ProgressDisplay(output) as progress:
+        progress("Searching for game sources..." if automatic else "Checking source folder...")
+        sources = discover_sources(None if automatic else _path(value))
     if not sources:
         raise ValueError("No accessible installation found. Check the running instance and ADB, or enter an extracted files folder.")
     selected = sources[0]
@@ -84,8 +87,9 @@ def default_resolve_source(value, input_fn=input, output=print):
             output("Select a number from the list.")
     run_id = uuid.uuid4().hex[:8]
     # Keep decoded Windows paths short; card resource names can be very long.
-    from .progress import ProgressDisplay
     with ProgressDisplay(output) as progress:
+        progress("Loading saved game files..." if selected.get('kind') in ('prepared', 'snapshot')
+                 else "Importing game files...")
         result = import_source(selected, CODE_ROOT.parent/"tcg-data"/run_id, progress=progress)
         if not result.get("prepared"):
             from .materializer import prepare_import
@@ -231,15 +235,26 @@ def _choose_rarity(cards, catalog, root, input_fn, output):
     output("\nRarities in the selected collection:")
     for index, row in enumerate(rows, 1):
         output("  %d. %s | %d card(s)" % (index, row['label'], len(row['cards'])))
+    output("Select one or more rarities, separated by commas or spaces (for example: 1, 3, 5).")
     while True:
-        choice = input_fn("Rarity number (0 = back): ").strip()
+        choice = input_fn("Rarity numbers (0 = back): ").strip()
         if choice == '0':
             return None
-        if choice.isascii() and choice.isdigit() and 1 <= int(choice) <= len(rows):
-            row = rows[int(choice)-1]
-            output("Selected %s: %d card(s)." % (row['label'], len(row['cards'])))
-            return row['cards']
-        output("Select a rarity number from the list.")
+        tokens = re.split(r'[,\s]+', choice)
+        try:
+            if not all(re.fullmatch(r'[0-9]+', token) for token in tokens):
+                raise ValueError
+            indices = {int(token) for token in tokens}
+            if not indices or any(index < 1 or index > len(rows) for index in indices):
+                raise ValueError
+        except ValueError:
+            output("Select valid rarity numbers from the list, separated by commas or spaces.")
+            continue
+        selected_rows = [row for index, row in enumerate(rows, 1) if index in indices]
+        selected_ids = {card_id for row in selected_rows for card_id in row['cards']}
+        selected = list(dict.fromkeys(card['id'] for card in cards if card['id'] in selected_ids))
+        output("Selected %s: %d card(s)." % (', '.join(row['label'] for row in selected_rows), len(selected)))
+        return selected
 
 
 def _choose_cards(cards, input_fn, output, catalog=None, root=None):
@@ -278,15 +293,21 @@ def _choose_cards(cards, input_fn, output, catalog=None, root=None):
 
 
 def _choose_language(input_fn, output):
-    from .config import normalize_language
+    from .config import LANGUAGES, normalize_languages
     output("\nLanguage: 1. English (default)  2. Portuges(Brazil)  3. Japanese  4. All three")
-    choices = {"":"en-US", "1":"en-US", "2":"pt-BR", "3":"ja-JP", "4":"all", "all":"all"}
+    output("Select one or more languages, for example: 1, 3 or 1 and 2.")
+    choices = {"1":"en-US", "2":"pt-BR", "3":"ja-JP", "4":"all"}
     while True:
-        value = input_fn("Language [Enter = English, 0 = back]: ").strip()
+        value = input_fn("Languages [Enter = English, 0 = back]: ").strip()
         if value == "0": return None
-        if value in choices: return choices[value]
-        try: return normalize_language(value)
-        except ValueError: output("Choose 1, 2, 3 or 4.")
+        if not value: return 'en-US'
+        value = re.sub(r'\b(?:and|e)\b', ',', value, flags=re.I)
+        tokens = re.split(r'[,\s]+', value)
+        try:
+            languages = normalize_languages(','.join(choices.get(token, token) for token in tokens))
+            return 'all' if len(languages) == len(LANGUAGES) else ','.join(languages)
+        except ValueError:
+            output("Choose valid language numbers (1, 2, 3 or 4), separated by commas or spaces.")
 
 
 def run_menu(source_resolver=None, catalog_factory=None, runner=None,
@@ -326,8 +347,12 @@ def run_menu(source_resolver=None, catalog_factory=None, runner=None,
                     continue
                 try:
                     selected = _session(source_resolver(value))
-                    selected_catalog = catalog_factory(selected.root)
-                    selected_catalog.list_cards()
+                    from .progress import ProgressDisplay
+                    with ProgressDisplay(output) as progress:
+                        progress("Loading card catalog...")
+                        selected_catalog = catalog_factory(selected.root)
+                        loaded_cards = selected_catalog.list_cards()
+                        progress("[100%%] Card catalog loaded (%d cards)." % len(loaded_cards))
                     current, catalog = selected, selected_catalog
                 except (ValueError, OSError, RuntimeError, ImportError) as error:
                     output("Could not prepare the source: " + error_details(error))

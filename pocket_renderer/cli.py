@@ -11,7 +11,7 @@ import sys
 import uuid
 
 from . import __version__
-from .config import PROJECT_ROOT, LANGUAGES, RenderConfig, normalize_language
+from .config import PROJECT_ROOT, RenderConfig, normalize_language, normalize_languages
 
 class UnsupportedJob(ValueError):
     pass
@@ -153,7 +153,7 @@ def _parser():
         selection=sub.add_mutually_exclusive_group(required=True)
         selection.add_argument('--cards',nargs='+',help='IDs such as A1-001 A1-008.')
         selection.add_argument('--expansion',help='Process a whole collection.')
-        sub.add_argument('--language','--lang',default='en-US',help='en-US, pt-BR, ja-JP; all for all three; both for English and Portuges(Brazil).')
+        sub.add_argument('--language','--lang',default='en-US',help='One or more codes separated by commas, e.g. en-US,ja-JP; all for all three; both for English and Portuges(Brazil).')
         sub.add_argument('--output',type=Path)
         sub.add_argument('--cache',type=Path)
         sub.add_argument('--supported-only',action='store_true',help='Select eligible large layouts only (may omit cards).')
@@ -199,8 +199,7 @@ def main(argv=None):
         if args.supported_only: cards=[v for v in cards if v['supported']]
         if args.limit: cards=cards[:args.limit]
         if not cards: raise ValueError('Nenhuma carta encontrada para essa seleção.')
-        selection = args.language.lower()
-        languages = list(LANGUAGES) if selection == 'all' else ['en-US','pt-BR'] if selection == 'both' else [normalize_language(args.language)]
+        languages = normalize_languages(args.language)
         config=RenderConfig(root=root,output=(args.output or root/'renders').resolve(),
                             cache=(args.cache or root/'render-cache').resolve(),overwrite=args.overwrite,
                             stored_glyphs_only=args.stored_glyphs_only,quality=args.quality).validate()

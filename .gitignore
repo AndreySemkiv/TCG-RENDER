@@ -1,6 +1,9 @@
 # Local game data, exports and generated evidence
 /pocket-extraction/
 /tcg-data/
+/.updates/
+/.update-state.json
+/.update.lock
 **/renders/
 **/renders-metadata/
 **/render-cache/

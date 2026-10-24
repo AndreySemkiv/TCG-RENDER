@@ -85,8 +85,8 @@ Wait for **“Environment ready”**. Setup installs these packages automaticall
 2. Follow the source prompt: enter the BlueStacks installation folder or press **A** to search automatically.
 3. Import the source, then choose **Export collection**.
 4. Select the collection.
-5. Choose **Entire collection** (the default), **Specific cards** or **By rarity**. For specific cards, enter numbers, numeric ranges or full IDs, such as `1, 8, 20-25` or `B4b-041 B4b-101`. Only cards from the selected collection are accepted; repeated entries are exported once. **By rarity** lists the rarities present in that collection with their card counts; select one to export only those cards. Categories come from the imported game's rarity data.
-6. Select the card language: **English** is the default; the other menu choices are **Portuges(Brazil)**, **Japanese** and **All three**.
+5. Choose **Entire collection** (the default), **Specific cards** or **By rarity**. For specific cards, enter numbers, numeric ranges or full IDs, such as `1, 8, 20-25` or `B4b-041 B4b-101`. Only cards from the selected collection are accepted; repeated entries are exported once. **By rarity** lists the rarities present in that collection with their card counts; select one or more by entering their menu numbers separated by commas or spaces, such as `1, 3, 5`. Matching cards are combined without duplicates. Categories come from the imported game's rarity data.
+6. Select one or more card languages: **English** is the default; the other menu choices are **Portuges(Brazil)**, **Japanese** and **All three**. Combine choices with commas or spaces, for example `1, 3` for English and Japanese or `1 2` for English and Brazilian Portuguese. The menu also accepts `1 and 3` and `1 e 3`. Repeated choices are processed once.
 7. Accept the default output folder or choose another destination, and wait for the export to finish.
 
 The app automatically uses the large **700 × 976** presentation. Existing valid PNGs are skipped. To regenerate existing exports from the command line, use the export command's `--overwrite` option; available commands are listed by:
@@ -121,6 +121,18 @@ Card metadata and batch reports are kept separately from the PNGs. A custom outp
 After a game update, download the new resources in Pocket and choose **Update/import or choose another source** in TCG Render. Compatible new collections are discovered from the imported database; there is no fixed list of collections to edit manually.
 
 Existing snapshots do not update themselves. Changes to game binaries, resource formats, shaders or layouts may require an application update, so compatibility with every future game version cannot be guaranteed.
+
+## Application updates
+
+Starting with **v0.4.0**, opening `start.cmd` checks the latest stable release on [GitHub Releases](https://github.com/AndreySemkiv/TCG-RENDER/releases). If you already have that version, or GitHub is unavailable, the app continues silently. Command-line exports and help/version commands do not check for updates.
+
+For installations downloaded as a ZIP, a newer version offers **Update now? [y/N]**. Accepting downloads and validates the release, backs up the application files, installs the update and restarts the app. Python dependencies are updated in the local `.venv` when `requirements.txt` changes. No Git installation is required.
+
+Imported game data, renders, reports and the existing Python environment are preserved. During installation, backups and dependency logs are stored in `.updates`. If installation fails, the updater attempts to restore the previous application files and dependencies and keeps the backup for recovery. After a successful installation, `.updates` and its backups are automatically deleted. If Windows prevents cleanup, the app reports it without undoing the successful update. A small `.update-state.json` file tracks installed application files for future updates.
+
+Git checkouts receive a release notice and should be updated with Git, preserving local development changes. Users on older versions without the updater must download v0.4.0 or newer manually once.
+
+To publish a compatible update, change `__version__` in `pocket_renderer/__init__.py`, commit and push, then publish a stable GitHub release with the matching tag (for example, version `0.4.1` and tag `v0.4.1`). The updater uses GitHub's source ZIP; it must contain the required bundled decoder executables. Drafts, prereleases and ordinary commits are not installed automatically.
 
 ## Credits
 

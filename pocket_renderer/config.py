@@ -1,6 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
+import re
 
 CODE_ROOT = Path(__file__).resolve().parents[1]
 # Extracted originals and existing runtimes stay outside the source project.
@@ -16,6 +17,26 @@ def normalize_language(value: str) -> str:
     if normalized not in aliases:
         raise ValueError('Idioma inválido. Use en-US, pt-BR ou ja-JP.')
     return aliases[normalized]
+
+
+def normalize_languages(value: str) -> list:
+    """Resolve one or more card languages, keeping legacy all/both selectors."""
+    tokens = re.split(r'[,\s]+', value.strip())
+    if not all(tokens):
+        raise ValueError('Select at least one card language.')
+    selected = set()
+    for token in tokens:
+        if token.casefold() == 'all':
+            selected.update(LANGUAGES)
+        elif token.casefold() == 'both':
+            selected.update(('en-US', 'pt-BR'))
+        else:
+            try:
+                selected.add(normalize_language(token))
+            except ValueError as error:
+                raise ValueError('Unsupported card language: ' + token) from error
+    return [language for language in LANGUAGES if language in selected]
+
 
 @dataclass(frozen=True)
 class RenderConfig:
