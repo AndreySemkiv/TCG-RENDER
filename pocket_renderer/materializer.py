@@ -123,7 +123,8 @@ def _materialize_unlocked(root, progress=None):
     root = Path(root).resolve()
     catalog = Catalog(root)  # Verify this source's own master provenance before preparing.
     notify = progress or (lambda message:None)
-    UnityPy.config.FALLBACK_UNITY_VERSION = '6000.0.78f1'
+    from .native_profile import unity_version
+    UnityPy.config.FALLBACK_UNITY_VERSION = unity_version(root)
     profile = load_profile()
     notify('Checking shaders, fonts and source layout...')
     source_check = validate_profile_source(root)
@@ -145,6 +146,17 @@ def _materialize_unlocked(root, progress=None):
     template = json.loads((CODE_ROOT/'profiles/ui-layout-v1.json').read_text(encoding='utf8'))
     if template['source_ui_sha256'] != profile['bundles']['Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles']:
         raise ValueError('O contrato de layout e o perfil de origem não correspondem.')
+    # The structural contract above validated every consumed template field and
+    # transform. Bind current serialized PPtrs/companions, not stale file-index
+    # numbers from the reference bundle (which can gain unrelated dependencies).
+    from copy import deepcopy
+    for text in template['texts']:
+        text['original_tmp'] = deepcopy(resources.trees[text['source_node']['object_id']])
+        for companion in text['companion_components']:
+            companion['data'] = deepcopy(resources.trees[companion['id']])
+    template['reference_ui_sha256'] = template['source_ui_sha256']
+    template['source_ui_sha256'] = hashlib.sha256((resources.src/resources.UI).read_bytes()).hexdigest()
+    template['source_compatibility'] = source_check.get('compatible_source_objects', {})
     _write(root/'offline-render/bulbasaur-original/ui-layout.json',template)
     shader_records, shader_count = [], 0
     shader_paths=[relative for relative in profile['bundles'] if relative.endswith('.shader_bundles')]
@@ -208,7 +220,6 @@ def materialize(root, progress=None):
 
 def _raw_receipt_valid(root, input_digest):
     from .bluestacks import _hash
-    from .importer import NATIVE_PROFILES
     from .source_state import raw_preparation_code_digest
     try:
         receipt = json.loads((root/'raw-preparation.json').read_text(encoding='utf8'))
@@ -217,7 +228,7 @@ def _raw_receipt_valid(root, input_digest):
                 or receipt.get('raw_preparation_code_sha256') != raw_preparation_code_digest()):
             return False
         native = receipt['native_files']
-        if not {'libil2cpp.so','libunity.so'} <= native.keys() or native['libil2cpp.so'] not in NATIVE_PROFILES:
+        if not {'libil2cpp.so','libunity.so'} <= native.keys() or not receipt.get('native_loader'):
             return False
         for name, digest in native.items():
             if name not in ('libil2cpp.so','libunity.so') or _hash(root/'input/native-code'/name) != digest:

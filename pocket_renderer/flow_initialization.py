@@ -35,7 +35,7 @@ def renderer_overrides(root,scene):
               for c in o.get('serialized_components',[]) if c.get('data',{}).get('m_Enabled',True)
               and '_flowAInitialRotation' in c.get('data',{})]
     if not selected:return {},[]
-    root=Path(root).resolve();validate_native_source(str(root))
+    root=Path(root).resolve();validate_native_source(str(root),'GlitterFlowMaps')
     from .localization import _resources
     resources=_resources(str(root));blocks={};audit=[]
     targets={o['renderer']['id']:o for o in scene['objects'] if o.get('renderer')}

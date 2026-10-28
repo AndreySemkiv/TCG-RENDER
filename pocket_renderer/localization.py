@@ -63,19 +63,20 @@ class LocaleRepository:
     def category(self, table, canonical):
         """Resolve category IDs through original attribute names, not locale order.
 
-        Public numeric categories follow the existing en_US bindings. Japanese
-        ships different IDs for the same named attributes.
+        Numeric API aliases name the original audited categories. Resolve their
+        stable attribute names in this version and language, including en_US.
         """
-        if canonical is None or self.directory == "en_US":
+        if canonical is None:
             return canonical, None
         key = (table, canonical)
         if key not in self._categories:
             base = self.root/"reports/file-only-analysis/locale-original"
-            reference = _read_json(str(base/"en_US"/(table+"_Attribute.json")))
-            names = [r["key"] for r in reference["entries"] if len(r["value"]) == 1 and ord(r["value"]) == canonical]
+            from .config import CODE_ROOT
+            reference = _read_json(str(CODE_ROOT/'profiles/locale-categories-v1.json'))
+            name = canonical if isinstance(canonical, str) else reference['tables'].get(table, {}).get(str(canonical))
             data = _read_json(str(base/self.directory/(table+"_Attribute.json")))
-            matches = [r for r in data["entries"] if r["key"] in names and len(r["value"]) == 1]
-            if len(names) != 1 or len(matches) != 1:
+            matches = [r for r in data["entries"] if r["key"] == name and len(r["value"]) == 1]
+            if not name or len(matches) != 1:
                 raise LocalizationError("Original locale attribute mapping is ambiguous", table=table, category=canonical)
             row = matches[0]
             self._categories[key] = (ord(row["value"]), {
@@ -96,7 +97,7 @@ class LocaleRepository:
                 selected = [r for r in rows if r['key'] == attribute and len(r['value']) == 1]
                 if len(selected) != 1:
                     raise LocalizationError('Unknown original Master reference attribute', attribute=attribute)
-                return self.lookup('Master',match[2],ord(selected[0]['value']))[0]
+                return self.lookup('Master',match[2],attribute)[0]
             updated = pattern.sub(replace,value)
             if updated == value:
                 break
@@ -231,7 +232,8 @@ class _OriginalUIResources:
 
     def __init__(self, root):
         import UnityPy
-        UnityPy.config.FALLBACK_UNITY_VERSION = "6000.0.78f1"
+        from .native_profile import unity_version
+        UnityPy.config.FALLBACK_UNITY_VERSION = unity_version(root)
         self.root = Path(root)
         self.src = self.root / "input/aladin-complete/output"
         rows = _read_json(str(self.root / "reports/file-only-analysis/dependencies-index.json"))
@@ -305,7 +307,11 @@ class _OriginalUIResources:
         master_energy=card['pokemon']['PokemonTypes'][0] if card.get('pokemon') else 0
         energy = master_to_asset_energy.get(master_energy,0)
         from .font_conditions import select_font_condition
-        chosen_condition=select_font_condition(conditions['_conditions'],energy if card.get('pokemon') else None)
+        from .card_conditions import native_condition_contract,pokemon_features
+        condition_contract=native_condition_contract(str(self.root))
+        dual=pokemon_features(card)[0] if condition_contract['font_dual'] else False
+        chosen_condition=select_font_condition(conditions['_conditions'],energy if card.get('pokemon') else None,
+            pokemon_dual=dual,dual_predicate=condition_contract['font_dual'])
         selected=[chosen_condition] if chosen_condition is not None else []
         group_obj, group_file = self.resolve(owner, selected[0]["_font"] if selected else conditions["_default"])
         group = group_obj.read_typetree()

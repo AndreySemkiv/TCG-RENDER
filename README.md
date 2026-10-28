@@ -120,7 +120,9 @@ Card metadata and batch reports are kept separately from the PNGs. A custom outp
 
 After a game update, download the new resources in Pocket and choose **Update/import or choose another source** in TCG Render. Compatible new collections are discovered from the imported database; there is no fixed list of collections to edit manually.
 
-Existing snapshots do not update themselves. Changes to game binaries, resource formats, shaders or layouts may require an application update, so compatibility with every future game version cannot be guaranteed.
+Existing snapshots do not update themselves. Compatible game builds are recognized from their metadata loader, source Unity version and validated rendering contracts, rather than an allowlist of full executable hashes. The database key is recovered from the selected installation and checked against the database's content hash. An unknown loader algorithm, resource format, shader or layout can still require an application update; recognizing a version does not bypass these checks.
+
+**v0.5.0 compatibility validation:** Pokémon TCG Pocket **1.7.5 and 1.8.0**. The 1.8.0 test imported its own database and resources, recognized 24 collections with 4,317 cards, and successfully rendered 20 sample outputs across English, Brazilian Portuguese and Japanese. This sample includes Mega, Crown, Shiny, immersive, Trainer and Team Rocket cards; it is not a claim that every card was rendered during this validation.
 
 ## Application updates
 

@@ -68,7 +68,7 @@ def _category(locale,name):
     path=locale.root/'reports/file-only-analysis/locale-original/en_US/Master_Attribute.json'
     rows=[r for r in _read_json(str(path))['entries'] if r['key']=='LocalizeMaster'+name and len(r['value'])==1]
     if len(rows)!=1:raise UnsupportedLayout('Original reference category is ambiguous',attribute=name)
-    return ord(rows[0]['value'])
+    return rows[0]['key']
 
 
 

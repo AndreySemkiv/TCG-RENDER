@@ -41,7 +41,7 @@ def load_profile(profile_path=None):
     return profile
 
 
-def _check(base, values, problems, category):
+def _check(base, values, problems, category, semantic=None):
     for name, expected in values.items():
         path = base/name
         if not path.is_file():
@@ -49,6 +49,17 @@ def _check(base, values, problems, category):
             continue
         actual = hashlib.sha256(path.read_bytes()).hexdigest()
         if actual != expected:
+            if category == 'original-bundle' and semantic is not None:
+                from .bundle_contracts import UI, FONTS, CONDITIONS, verify_resource
+                if name in (UI, FONTS, CONDITIONS):
+                    try:
+                        semantic[name] = verify_resource(path, actual)
+                        continue
+                    except (ValueError, OSError, KeyError, IndexError) as error:
+                        problems.append({'category':category, 'file':name,
+                                         'reason':'source object contract mismatch', 'details':str(error),
+                                         'expected_sha256':expected, 'actual_sha256':actual})
+                        continue
             problems.append({'category':category, 'file':name,
                              'reason':'hash diferente do recurso validado',
                              'expected_sha256':expected, 'actual_sha256':actual})
@@ -65,11 +76,12 @@ def validate_profile_source(root, profile_path=None, strict=True):
     """Check original decoded bundles before preparing/copying derived data."""
     root = project_root(root)
     profile = load_profile(profile_path)
-    problems = []
-    _check(root/'input/aladin-complete/output', profile['bundles'], problems, 'original-bundle')
+    problems, semantic = [], {}
+    _check(root/'input/aladin-complete/output', profile['bundles'], problems, 'original-bundle', semantic)
     report = {'profile':profile['profile'], 'profile_path':str(Path(profile_path or DEFAULT_PROFILE).resolve()),
               'root':str(root), 'checked_bundles':len(profile['bundles']), 'checked_derived':0,
-              'master_hash_pinned':False, 'problems':problems, 'limits':profile.get('limitations', [])}
+              'master_hash_pinned':False, 'problems':problems, 'limits':profile.get('limitations', []),
+              'compatible_source_objects':semantic}
     return _finish(report, strict)
 
 

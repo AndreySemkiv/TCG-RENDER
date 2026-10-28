@@ -6,9 +6,7 @@ following CR/LF sequence when a command ends in U+000C; it adds no line break.
 """
 from functools import lru_cache
 from pathlib import Path
-import hashlib
 import re
-import struct
 
 from .localization import UnsupportedLayout
 
@@ -18,54 +16,70 @@ _LANGUAGE={'ja-JP':0,'en-US':1,'pt-BR':7} # MtUILocalizeDef.Language, not Asset3
 
 @lru_cache(maxsize=4)
 def native_list_contract(root):
-    root=Path(root)
-    paths=[root/'input/native-code/libil2cpp.so',
-           root/'original-render-pipeline/metadata/global-metadata.original-decoded.dat']
-    hashes=['eefba3938aa7bc1751135abb56b82f12d46c290c0a598b59e459d6f1a15c4d5c',
-            '905b9505a935828ac7174b7086d15e23640dcf61451e604e0085ae98e06c8618']
-    inputs=[]
-    for path,digest in zip(paths,hashes):
-        raw=path.read_bytes()
-        if hashlib.sha256(raw).hexdigest()!=digest:
-            raise UnsupportedLayout('List-control native source differs from inspected original',file=str(path))
-        inputs.append(raw)
-    binary,metadata=inputs
-    ph=struct.unpack_from('<Q',binary,32)[0];size,count=struct.unpack_from('<HH',binary,54)
-    segments=[struct.unpack_from('<IIQQQQQQ',binary,ph+i*size) for i in range(count)]
-    def offset(address):
-        segment=next(s for s in segments if s[0]==1 and s[3]<=address<s[3]+s[5])
-        return segment[2]+address-segment[3]
-    sh=struct.unpack_from('<Q',binary,40)[0];size,count=struct.unpack_from('<HH',binary,58)
-    relocations={}
-    for i in range(count):
-        section=struct.unpack_from('<IIQQQQIIQQ',binary,sh+i*size)
-        if section[1]!=4:continue
-        for pos in range(section[4],section[4]+section[5],section[9]):
-            address,kind,value=struct.unpack_from('<QQq',binary,pos)
-            if kind&0xffffffff==1027:relocations[address]=value
-    def qword(address):
-        return relocations.get(address,struct.unpack_from('<Q',binary,offset(address))[0])
-    literal_offset,literal_size,text_offset,text_size=struct.unpack_from('<4I',metadata,8)
-    def literal(address):
-        value=qword(address);encoded=value if value>>29==5 else qword(value)
-        if encoded>>29!=5:raise UnsupportedLayout('Original list literal is unavailable',slot=hex(address))
-        index=(encoded&0x1fffffff)>>1
-        if index>=literal_size//8:raise UnsupportedLayout('Original list literal index is invalid')
-        length,pos=struct.unpack_from('<II',metadata,literal_offset+index*8)
-        if pos+length>text_size:raise UnsupportedLayout('Original list literal bounds are invalid')
-        return metadata[text_offset+pos:text_offset+pos+length].decode('utf8')
-    return {'numbers':[literal(v) for v in (0x72f5a60,0x72f5a40,0x72f5a28,0x72f5a18,0x72f5a50,
-                 0x72f5a30,0x72f5a58,0x72f5a48,0x72f5a20,0x72f5a38)],
-        'bullets':[literal(qword(0x6e2f448+i*8)) for i in range(12)],
-        'indents':[literal(qword(0x6e2f4a8+i*8)) for i in range(12)],
-        'default_bullet':literal(0x72eedc8),'default_indent':literal(0x72f5c60),
-        'indent_open':literal(0x72f5c48),'indent_close':literal(0x72f5af8),
-        'suffix':literal(0x72684b8),'space':literal(0x7269ab8),
-        'number_format':literal(0x72f5c50),'plain_number_format':literal(0x72f5c40),
-        'provenance':{'native_sha256':hashes[0],'metadata_sha256':hashes[1],
-            'constructor':'0x4A1C180','get_list_item':'0x4A1F4C4','ctrl':'0x4A1D780',
-            'following_newline_consumption':'0x5BF9380-0x5BF9410',
-            'language_enum':'MtUILocalizeDef.Language'}}
+    from .native_text_contract import source
+    native=source(str(Path(root).resolve()))
+    namespace='Lettuce.Infrastructure.LocLabel.TagCommandImpl';name='LtUICtrlTagCommand'
+    inspected={'.ctor':'ebb6a5b7f629f1650b07f413853c4f0c8cfeca27f8d272e53f2fd5b551f680a6',
+               'GetListItemStartString':'9bd28cd486746cc389497958d566c510dacb932da832cc38121d57a35c0d58df',
+               'PreProcessForTMP':'9cdc491775d5a5fd6cf07b1b42c3e46950deb57575d2fde757bc1ca03ed7dd8a'}
+    for method,digest in inspected.items():
+        if native.normalized_method(namespace,name,method)!=digest:
+            raise UnsupportedLayout('List-control native method structure is not recovered',method=method)
+    if native.normalized_method('MtUISystem','MtUIMessageTagHandler','Parse')!='c22e50b082546dc93c584c4d744a28fc4d6df52fc1c7bfce72077626533923ed':
+        raise UnsupportedLayout('Original list newline consumption is not recovered')
+    def literals(method):
+        values=[]
+        for ref in native.method_references(namespace,name,method):
+            try:values.append(native.literal(ref['target']))
+            except ValueError:pass
+        return values
+    # The inspected constructor first registers literals, then stores the actual
+    # ten-number array in order. Read that last sequence from this source.
+    numbers=[value for value in literals('.ctor') if len(value)==1 and 0x2460<=ord(value)<=0x2469][-10:]
+    if len(numbers)!=10 or len(set(numbers))!=10:
+        raise UnsupportedLayout('Original list number array is not recovered')
+    list_literals=literals('GetListItemStartString')
+    ctrl_literals=literals('PreProcessForTMP')
+    required={'<indent=','>',' ','{0}.<indent={1}>','{0}. '}
+    if not required<=set(list_literals) or '</indent>' not in ctrl_literals:
+        raise UnsupportedLayout('Original list formatting literals are not recovered')
+    arrays={}
+    for ref in native.method_references(namespace,name,'GetListItemStartString'):
+        try:values=[native.literal(ref['target']+i*8) for i in range(12)]
+        except ValueError:continue
+        if all(re.fullmatch(r'\d+(?:\.\d+)?em',v) for v in values):arrays['indents']=values
+        elif all(v in ('♦','◆') for v in values):arrays['bullets']=values
+    if set(arrays)!={'indents','bullets'}:
+        raise UnsupportedLayout('Original per-language list arrays are not recovered')
+    # In the inspected branch, fallback literals are the first emitted values
+    # after the two language arrays. Stable code fingerprints retain that flow.
+    first_array_ref=next((i for i,ref in enumerate(native.method_references(namespace,name,'GetListItemStartString'))
+        if ref['target'] and _array_matches(native,ref['target'],arrays['indents'])),None)
+    if first_array_ref is None:
+        raise UnsupportedLayout('Original list fallback branch is unavailable')
+    refs=native.method_references(namespace,name,'GetListItemStartString')[first_array_ref+1:]
+    fallbacks=[]
+    for ref in refs:
+        try:fallbacks.append(native.literal(ref['target']))
+        except ValueError:pass
+    default_indent=next((v for v in fallbacks if re.fullmatch(r'\d+(?:\.\d+)?em',v)),None)
+    default_bullet=next((v for v in fallbacks if v in ('♦','◆')),None)
+    if default_indent is None or default_bullet is None:
+        raise UnsupportedLayout('Original list fallback literals are unavailable')
+    return dict(arrays,numbers=numbers,default_bullet=default_bullet,default_indent=default_indent,
+        indent_open='<indent=',indent_close='</indent>',suffix='>',space=' ',
+        number_format='{0}.<indent={1}>',plain_number_format='{0}. ',
+        provenance=dict(native.provenance,
+            constructor=hex(native.method(namespace,name,'.ctor')),
+            get_list_item=hex(native.method(namespace,name,'GetListItemStartString')),
+            ctrl=hex(native.method(namespace,name,'PreProcessForTMP')),
+            following_newline_consumption=hex(native.method('MtUISystem','MtUIMessageTagHandler','Parse')),
+            language_enum='MtUILocalizeDef.Language'))
+
+
+def _array_matches(native,address,values):
+    try:return [native.literal(address+i*8) for i in range(len(values))]==values
+    except ValueError:return False
 
 
 def expand_list_controls(value,locale,audit=None):

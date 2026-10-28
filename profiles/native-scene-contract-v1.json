@@ -1,0 +1,2355 @@
+{
+  "schema": 1,
+  "id": "arm64-static-card-initialization-v1",
+  "scope": "Per-controller instruction shape, metadata fields, string literals and readonly FP data constants; relocated methods/data accepted. Not full animation/runtime equivalence.",
+  "common": [
+    "CardUtils"
+  ],
+  "dependencies": {
+    "CardMarbleLayer": [
+      "RemapCurveSettings"
+    ]
+  },
+  "marble_variant_evidence": {
+    "methods": [
+      "Awake",
+      "OnValidate",
+      "UpdateCurveTextures",
+      "ApplyParams",
+      "OnDestroy",
+      ".ctor"
+    ],
+    "difference": "One explicit zero MethodInfo argument added before each RemapCurveSettings call. All six RemapCurveSettings method contracts, field names and all initialized scene constants/literals match.",
+    "metadata_argument_registers": {
+      "Awake": "x1",
+      "OnValidate": "x1",
+      "UpdateCurveTextures": "x1",
+      "ApplyParams": "x2",
+      "OnDestroy": "x1",
+      ".ctor": "x2"
+    }
+  },
+  "families": {
+    "CardMRRObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_animStartDegree",
+        "_animTimeScale",
+        "_settings",
+        "_animDuration",
+        "_flashRadialStartOffset",
+        "_useSpeedAdjust",
+        "_recordingTime",
+        "_minTiltSpeed",
+        "_maxTiltSpeed",
+        "_minAnimSpeed",
+        "_maxAnimSpeed",
+        "_changeColor",
+        "_lightColorIntensity",
+        "_lightEmitIntensity",
+        "_lightPower",
+        "_layer2UVTranslate",
+        "_layer2ColorPower",
+        "_layer2EmissiveIntensity",
+        "_effSwitchColor",
+        "_effAdditiveIntensity",
+        "_effColor3Blend",
+        "_effEmissiveIntensity",
+        "_flashIntensity",
+        "_flashRadialScaling",
+        "_flashRadialAnim",
+        "_tiltLimitRatio",
+        "_localFront",
+        "_worldFront",
+        "_lastWorldFront",
+        "_worldFrontXY",
+        "_worldFrontAtAnimStart",
+        "_tiltDegree",
+        "_lastTiltDegree",
+        "_isPlaying",
+        "_elapsedTime",
+        "_tiltDistQueue",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_adjustedAnimSpeed",
+        "_minRadialScaling",
+        "_maxRadialScaling",
+        "_renderers",
+        "_effectRenderers",
+        "_flashRenderers",
+        "_sharedMaterials",
+        "_mpb",
+        "s_changeColor",
+        "s_lightColorIntensity",
+        "s_lightEmitIntensity",
+        "s_lightPower",
+        "s_layer2UVTranslate",
+        "s_layer2ColorPower",
+        "s_layer2EmissiveIntensity",
+        "s_effectSwitchColor",
+        "s_effectAdditiveIntensity",
+        "s_effectColor3Blend",
+        "S_effectEmissiveIntensity",
+        "s_flashIntensity",
+        "s_flashRadialScaling",
+        "s_flashRadialAnim"
+      ],
+      "methods": {
+        "Awake": [
+          {
+            "shape": "5684c8393c7372b0001b4e76d412862118e50825d7c8d32eb4f5809c1463f550",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "31f0487cb73e772d45922bdbd886e44fa546067839ac86b175e13d4768fbb518",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "c5120c7cfef30ad84761644d239e2c1d3f60915e55204d9a5ff3c5f277db8a66",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "78d55b1b75c7f28dba491a52f1e9e973a5534e402c8c14327d54dd2afdbc7f5f",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "bc6ab7e02b7343e8456f9598cad3cc1e25513da38ed001b4f73bcf3d6f8e6a2b",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 264,
+                "bytes": "e12e6542"
+              }
+            ]
+          }
+        ],
+        "UpdateAnimation": [
+          {
+            "shape": "9210731aa255bc9091675bbd102bf14d17bad5aab8586cb0f4495900052acf14",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "EvaluateAnim": [
+          {
+            "shape": "2a690e531a403355fe29b7876f88b3cb6a361104509084a8ae1c97740d3feb5f",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "49dbdf5dfed42aaa19a77b6c7cd99760c01fbf3fb77250fdbba8e52c771c7ef9",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "39c4e2070b0ad888483ed233f599eae91081b97fff353f2eec9e1b6186f41f1f",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 100,
+                "bytes": "000020410000803f"
+              },
+              {
+                "offset": 124,
+                "bytes": "0000803e9a99993e0000c03fcdcc4c3f"
+              },
+              {
+                "offset": 144,
+                "bytes": "000040400000000000000000000080bf"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "c2cdb48ef4c796bdd79c4623dbdd52e318a792f75738b8b7551a8174bde26b4e",
+            "literals": [
+              {
+                "offset": 68,
+                "value": "_ChangeColor"
+              },
+              {
+                "offset": 76,
+                "value": "_LightColorIntensity"
+              },
+              {
+                "offset": 84,
+                "value": "_LightEmitIntensity"
+              },
+              {
+                "offset": 88,
+                "value": "_LightPower"
+              },
+              {
+                "offset": 92,
+                "value": "_Layer2UVTranslate"
+              },
+              {
+                "offset": 96,
+                "value": "_Layer2ColorPower"
+              },
+              {
+                "offset": 100,
+                "value": "_Layer2EmissiveIntensity"
+              },
+              {
+                "offset": 104,
+                "value": "_Switch"
+              },
+              {
+                "offset": 108,
+                "value": "_AdditiveIntensity"
+              },
+              {
+                "offset": 132,
+                "value": "_FlashIntensity"
+              },
+              {
+                "offset": 144,
+                "value": "_Layer2UVTranslate"
+              },
+              {
+                "offset": 156,
+                "value": "_LightPower"
+              },
+              {
+                "offset": 168,
+                "value": "_Layer2EmissiveIntensity"
+              },
+              {
+                "offset": 180,
+                "value": "_Color3Blend"
+              },
+              {
+                "offset": 192,
+                "value": "_EmissiveIntensity"
+              },
+              {
+                "offset": 204,
+                "value": "_LightColorIntensity"
+              },
+              {
+                "offset": 216,
+                "value": "_RadialAnim"
+              },
+              {
+                "offset": 228,
+                "value": "_ChangeColor"
+              },
+              {
+                "offset": 240,
+                "value": "_LightEmitIntensity"
+              },
+              {
+                "offset": 252,
+                "value": "_Switch"
+              },
+              {
+                "offset": 264,
+                "value": "_AdditiveIntensity"
+              },
+              {
+                "offset": 276,
+                "value": "_Layer2ColorPower"
+              },
+              {
+                "offset": 288,
+                "value": "_RadialScaling"
+              },
+              {
+                "offset": 556,
+                "value": "_Color3Blend"
+              },
+              {
+                "offset": 592,
+                "value": "_EmissiveIntensity"
+              },
+              {
+                "offset": 628,
+                "value": "_FlashIntensity"
+              },
+              {
+                "offset": 664,
+                "value": "_RadialScaling"
+              },
+              {
+                "offset": 700,
+                "value": "_RadialAnim"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CardMSRObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_settings",
+        "_animStartDegree",
+        "_animTimeScale",
+        "_animDuration",
+        "_endAnimDuration",
+        "_stopAnimTiming",
+        "_timeOffset",
+        "_intensityNoiseSpeed",
+        "_reflectFlipBookMaxSpeed",
+        "_reflectStartBane",
+        "_reflectStartNensei",
+        "_reflectEndBane",
+        "_reflectEndNensei",
+        "_checkRotatingTime",
+        "_rotatingEndThreshold",
+        "_rotatingStartThreshold",
+        "_disappearBane",
+        "_disappearNensei",
+        "_appearBane",
+        "_appearNensei",
+        "_isAnimationStopped",
+        "_auraTransparency",
+        "_streakAttributes",
+        "_parallaxPDTilt",
+        "_parallaxPDSpeed",
+        "_parallaxTransparency",
+        "_parallaxTranslate",
+        "_outlineReflectCenterX",
+        "_outlineReflectColorIntensity",
+        "_colorIntensityNoiseStrength",
+        "_reflectCenterXOffset",
+        "_reflectColorIntensityOffseet",
+        "_reflectFlipBookAnim",
+        "_reflectFlipBookSpeed",
+        "_reflectFlipBookBlend",
+        "_reflectPDSpeed",
+        "_reflectPDState",
+        "TiltLimitRatio",
+        "_localFront",
+        "_worldFront",
+        "_worldFrontXY",
+        "_lastWorldFront",
+        "_tilt",
+        "_tiltDegree",
+        "_lastTiltDegree",
+        "_tiltDistQueue",
+        "_animState",
+        "_animElapsedTime",
+        "_endAnimElapsedTime",
+        "_timeParam",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_elapsedTime",
+        "_adjustAnimSpeed",
+        "_auraRenderers",
+        "_parallaxRenderers",
+        "_shadowboxRenderers",
+        "_sharedMaterials",
+        "_mpb",
+        "s_auraTransparency",
+        "s_parallaxTransparency",
+        "s_parallaxTranslate",
+        "s_outlineReflectCenterX",
+        "s_outlineReflectColorIntensity",
+        "s_reflectFlipBookAnim",
+        "s_reflectFlipBookBlend",
+        "s_timeParam"
+      ],
+      "methods": {
+        "get_IsAnimationStopped": [
+          {
+            "shape": "1100d241275fbe4bc4419e3f87ef9556d0bb3ad7853da97a0308ca737dce7179",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "set_IsAnimationStopped": [
+          {
+            "shape": "57661f811412cb467f08d37a263fc559a9860f5f9ff197bf1fbd33e3d2cd1a22",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Awake": [
+          {
+            "shape": "76d8cca9034d26c28a51357d46a3ab170acbe43b504bdf59b4d1e8be912b9da8",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "9c6fb30a237aee7f10988e34580773341bf64078cdff14eadb7a71529d7cf3f2",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "1091886d829a4bf035c175372571319a422c8c85a19022a964968c8269a14ed8",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "df64a97965c02636808032bcbffe9518fdc04fb1febf83db39bca599b31c8fee",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "f4499eb09e6b8a4c6108bda83a303c169127be7db8b5c916b91e0fea5c94ff65",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 260,
+                "bytes": "e12e6542"
+              }
+            ]
+          }
+        ],
+        "UpdateTranslateLayer": [
+          {
+            "shape": "9532db38c55e5ad7d4f844d4b8b6c0ce7ee45741f2578ba7ae0ce9ffe49daf24",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateReflection": [
+          {
+            "shape": "447717abc7521fbe0b1e336282709c322b05d4d75aa30b091ae437af03614cf1",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 332,
+                "bytes": "0ad7a33b"
+              }
+            ]
+          }
+        ],
+        "UpdateAnimation": [
+          {
+            "shape": "9ce66d97273193e5cbd38b3f30181a2a93779b8ddeda3fed5b5cd307bea0aa49",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "EvaluateAnim": [
+          {
+            "shape": "112804f69f3c5e709b21bf4d2644d802bc08238297714c4f8a20c1c25de044fd",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "ac071ff54a0aa58d699e70f7ce286ebd1ea80b8457a041bdbef3421d028fb3e0",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "a27e7d2e117762abe639ef6610ef094b4cdd95cb11d8bf3a7f30f0bac3a6d859",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 96,
+                "bytes": "000020410000803f0000803f0000003f"
+              },
+              {
+                "offset": 104,
+                "bytes": "9a99193e0000f041000070410000c841"
+              },
+              {
+                "offset": 112,
+                "bytes": "000070419a99993e0ad7233dcdcccc3d"
+              },
+              {
+                "offset": 124,
+                "bytes": "00000442000060410000044200006041"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "3d688e530d254878b191a906b1398fde84128f255d7dc226b454ee08b6540fda",
+            "literals": [
+              {
+                "offset": 56,
+                "value": "_Transparency"
+              },
+              {
+                "offset": 64,
+                "value": "_Translate"
+              },
+              {
+                "offset": 72,
+                "value": "_ReflectCenterX"
+              },
+              {
+                "offset": 76,
+                "value": "_ReflectIntensity"
+              },
+              {
+                "offset": 80,
+                "value": "_FlipAnim"
+              },
+              {
+                "offset": 84,
+                "value": "_FlipBlend"
+              },
+              {
+                "offset": 88,
+                "value": "_TimeParam"
+              },
+              {
+                "offset": 112,
+                "value": "_FlipAnim"
+              },
+              {
+                "offset": 124,
+                "value": "_TimeParam"
+              },
+              {
+                "offset": 136,
+                "value": "_Translate"
+              },
+              {
+                "offset": 148,
+                "value": "_FlipBlend"
+              },
+              {
+                "offset": 160,
+                "value": "_ReflectCenterX"
+              },
+              {
+                "offset": 172,
+                "value": "_ReflectIntensity"
+              },
+              {
+                "offset": 184,
+                "value": "_Transparency"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CardMSSRObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_settings",
+        "_animStartDegree",
+        "_animTimeScale",
+        "_animDuration",
+        "_useSpeedAdjust",
+        "_recordingTime",
+        "_minTiltSpeed",
+        "_maxTiltSpeed",
+        "_minAnimSpeed",
+        "_maxAnimSpeed",
+        "_effSwitchColor",
+        "_effAdditiveIntensity",
+        "_effColor3Blend",
+        "_effEmissiveIntensity",
+        "_tiltLimitRatio",
+        "_localFront",
+        "_worldFront",
+        "_lastWorldFront",
+        "_worldFrontXY",
+        "_worldFrontAtAnimStart",
+        "_tiltDegree",
+        "_lastTiltDegree",
+        "_isPlaying",
+        "_elapsedTime",
+        "_tiltDistQueue",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_adjustedAnimSpeed",
+        "_effectRenderers",
+        "_sharedMaterials",
+        "_mpb",
+        "s_effectSwitchColor",
+        "s_effectAdditiveIntensity",
+        "s_effectColor3Blend",
+        "S_effectEmissiveIntensity"
+      ],
+      "methods": {
+        "Awake": [
+          {
+            "shape": "5684c8393c7372b0001b4e76d412862118e50825d7c8d32eb4f5809c1463f550",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "57e817d755ac5ac5ae1a92ffeeeccfa1190d26e70d87f2004a19eb1ca27473a4",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "c5120c7cfef30ad84761644d239e2c1d3f60915e55204d9a5ff3c5f277db8a66",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "d92eeb2fab296076dc46381899c2368e703166ab6bda3b1954aa24a5375679b2",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "f6d605503636f8def10f0e0ed39874c73b1688af74aa7e090299330fe4b8add5",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 264,
+                "bytes": "e12e6542"
+              }
+            ]
+          }
+        ],
+        "UpdateAnimation": [
+          {
+            "shape": "f2ff0215231fcb5d6924d3eb09a86aa3caffaf785673046ed257c0493baaa91e",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "EvaluateAnim": [
+          {
+            "shape": "967c8973f6aa42b5026e60bdd57f18afbf65606378155cbf515a22096314e5e9",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "c6ca76eafbaa2c5b4ac791e271775743e9dec253e0807198e87cc230e241ba19",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "27de325d9da3d512b944fac5b87b7b41b57733232752d018be591f1c2383217e",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 92,
+                "bytes": "000020410000803f"
+              },
+              {
+                "offset": 100,
+                "bytes": "0000803e9a99993e0000c03fcdcc4c3f"
+              },
+              {
+                "offset": 124,
+                "bytes": "000040400000000000000000000080bf"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "cfc10d4d611e6ebaabf25a54008d7d3e9a0188cfcaae16fe2dbbd8df7fb55148",
+            "literals": [
+              {
+                "offset": 40,
+                "value": "_Switch"
+              },
+              {
+                "offset": 48,
+                "value": "_AdditiveIntensity"
+              },
+              {
+                "offset": 56,
+                "value": "_Color3Blend"
+              },
+              {
+                "offset": 60,
+                "value": "_EmissiveIntensity"
+              },
+              {
+                "offset": 84,
+                "value": "_Color3Blend"
+              },
+              {
+                "offset": 96,
+                "value": "_EmissiveIntensity"
+              },
+              {
+                "offset": 108,
+                "value": "_Switch"
+              },
+              {
+                "offset": 120,
+                "value": "_AdditiveIntensity"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CardMReliefSRObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_translateOffset",
+        "_lightDir",
+        "_animStartDegree",
+        "_animTimeScale",
+        "_settings",
+        "_animDuration",
+        "_localFront",
+        "_sharedMaterials",
+        "_mpb",
+        "_shadowUVTranslate",
+        "_changeColor",
+        "_lightColorIntensity",
+        "_lightEmitIntensity",
+        "_lightPower",
+        "_shadowDecay",
+        "_effSwitchColor",
+        "_effAdditiveIntensity",
+        "_effColor3Blend",
+        "_effEmissiveIntensity",
+        "_tiltLimitRatio",
+        "_worldFront",
+        "_worldFrontXY",
+        "_tiltDegree",
+        "_lastTiltDegree",
+        "_isPlaying",
+        "_elapsedTime",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_adjustedAnimSpeed",
+        "_shadowRenderers",
+        "_renderers",
+        "_effectRenderers",
+        "s_shadowUVTranslate",
+        "s_changeColor",
+        "s_lightColorIntensity",
+        "s_lightEmitIntensity",
+        "s_lightPower",
+        "s_shadowDecay",
+        "s_effectSwitchColor",
+        "s_effectAdditiveIntensity",
+        "s_effectColor3Blend",
+        "S_effectEmissiveIntensity"
+      ],
+      "methods": {
+        "Awake": [
+          {
+            "shape": "cef1b969a73ed272f1b38daff4f5b843f8ae73163bf15dc520ddda4a2e3daa55",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "160d45b90f17f8fe65aac5d42a31ef704031c1536878b911e1e8beed1d32d941",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "54d834801e72bd9c580c8bf4458dce2c8ef3df21af187caed0f4f4318c5614b3",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 164,
+                "bytes": "e12e6542"
+              }
+            ]
+          }
+        ],
+        "UpdateAnimation": [
+          {
+            "shape": "068ba3463078d654dcf4ec117ec43893efe4d19dd4e61d969bd7df738e3503bc",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "EvaluateAnim": [
+          {
+            "shape": "d03c03e74ef6cc1fe9fe7e3ba44649f18e200c556de59e1f80672989015da62e",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "d26c5df27701a0f31c49c0cb70c212d367ac72cddfbb35fa96529e72977e304a",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "fa0a841931816635b762f42db59ea92eafdaaf3503d6edc74651023d10f912c0",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateShadowTranslate": [
+          {
+            "shape": "cfa01b4856c7508a46d56dc7edcef8457f0ebed8a6ffbc5405ece985dd255342",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 156,
+                "bytes": "acc52737"
+              }
+            ]
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "e4b34f9243da92a27a5964e4f235be19577c81fed7331eac7f4721fe7378fccd",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "1849082ad9f1801edbd1fa9b869a7de04d746d80b14a19a9a1fbbabb6cb5ae3e",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 92,
+                "bytes": "cdccccbd9a99193e0000803f00002041"
+              },
+              {
+                "offset": 96,
+                "bytes": "0000803f0000000000000000000080bf"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "9d7bae9e91efcd1012887978cbe94c56e279525a92e8eb9ddbbcebf0591d2588",
+            "literals": [
+              {
+                "offset": 68,
+                "value": "_ShadowUVTranslate"
+              },
+              {
+                "offset": 76,
+                "value": "_ChangeColor"
+              },
+              {
+                "offset": 84,
+                "value": "_LightColorIntensity"
+              },
+              {
+                "offset": 88,
+                "value": "_LightEmitIntensity"
+              },
+              {
+                "offset": 92,
+                "value": "_LightPower"
+              },
+              {
+                "offset": 96,
+                "value": "_ShadowDecay"
+              },
+              {
+                "offset": 100,
+                "value": "_Switch"
+              },
+              {
+                "offset": 104,
+                "value": "_AdditiveIntensity"
+              },
+              {
+                "offset": 108,
+                "value": "_FlashBlend"
+              },
+              {
+                "offset": 132,
+                "value": "_ShadowUVTranslate"
+              },
+              {
+                "offset": 144,
+                "value": "_LightPower"
+              },
+              {
+                "offset": 156,
+                "value": "_ShadowDecay"
+              },
+              {
+                "offset": 168,
+                "value": "_EmissiveIntensity"
+              },
+              {
+                "offset": 180,
+                "value": "_LightColorIntensity"
+              },
+              {
+                "offset": 192,
+                "value": "_ChangeColor"
+              },
+              {
+                "offset": 204,
+                "value": "_LightEmitIntensity"
+              },
+              {
+                "offset": 216,
+                "value": "_Switch"
+              },
+              {
+                "offset": 228,
+                "value": "_FlashBlend"
+              },
+              {
+                "offset": 240,
+                "value": "_AdditiveIntensity"
+              },
+              {
+                "offset": 508,
+                "value": "_EmissiveIntensity"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CardMarbleLayer": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_renderer",
+        "_tiltPower",
+        "_useMarbleDelay",
+        "_delayTime2",
+        "_pointAccel",
+        "_shearAccel",
+        "_dorodoroDistance",
+        "_resistancePower",
+        "_minDorodoroCoef",
+        "_maxPointSpeed",
+        "_minPointSpeed",
+        "_goalThreshold",
+        "_pointMoveByTilt",
+        "_pointForceChangeByTilt",
+        "_points",
+        "_defaultNoiseRemapSettings",
+        "_mesh",
+        "_attributes",
+        "_tilt",
+        "_tiltDirDegree",
+        "_tiltFrontQueue",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_currentTilt",
+        "_goalTilt",
+        "_tiltSpeed",
+        "TiltLimitRatio",
+        "_localFront",
+        "_worldFront",
+        "_tiltRotation",
+        "_currentFront",
+        "_worldFrontXY",
+        "_mpb",
+        "s_attributes",
+        "s_tilt",
+        "s_front",
+        "s_pointCount",
+        "s_worldFront",
+        "s_tiltRotation"
+      ],
+      "methods": {
+        "Awake": [
+          {
+            "shape": "a31162f29af777966e16c21dc4fd9d2bfbc0b1c8e7a05645f9c1032ba86351c7",
+            "literals": [],
+            "constants": []
+          },
+          {
+            "shape": "b84610acfd18979cb70966e7892315e7d47c17df87ba37a197eae1c0c65a03e9",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "26d397f8c4684712722f0656183e6ba7005cf0e8d4177af6b90ab2e263d33e9a",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "OnValidate": [
+          {
+            "shape": "a80dcdf425da85452f0bf607cb6d7f5052dda8884967ed98281ebc118348b6a9",
+            "literals": [],
+            "constants": []
+          },
+          {
+            "shape": "398e0e61e1e5b34cbad7768dc38b14b23e09fad2ad96b7789eefae8bdd2644ba",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "9f1e9b345d4d6a03fd8039b62b4ccb33f4ffc6777b77b1c06a915888dd03967c",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "FixedUpdate": [
+          {
+            "shape": "20bc59b881abe443fa6b65e3f72da740640b06264127f30211aa9c92bb259b98",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "2f78e8022ae286728c00ec9ac3d5c24e3bf1d7e471e30439458bc357d6c57465",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 540,
+                "bytes": "db0f4940"
+              }
+            ]
+          }
+        ],
+        "UpdatePointGoals": [
+          {
+            "shape": "14590fbd129c1c008c7b60c38e753d13fa6587abcadcdf12420f5d70a598721b",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 68,
+                "bytes": "e12e6542"
+              },
+              {
+                "offset": 80,
+                "bytes": "35fa8e3c"
+              }
+            ]
+          }
+        ],
+        "UpdatePosition": [
+          {
+            "shape": "1c5c05f933adaf9a853e386c2ec469dde22b941df35a12a606002b0139888d8d",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 292,
+                "bytes": "acc52737"
+              }
+            ]
+          }
+        ],
+        "UpdateMarble": [
+          {
+            "shape": "d180d57ead080f66abb3b50a251e4b473aa7637d9b3c282f92c9a13cc1b25116",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateCurveTextures": [
+          {
+            "shape": "a80dcdf425da85452f0bf607cb6d7f5052dda8884967ed98281ebc118348b6a9",
+            "literals": [],
+            "constants": []
+          },
+          {
+            "shape": "398e0e61e1e5b34cbad7768dc38b14b23e09fad2ad96b7789eefae8bdd2644ba",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "4dd1c54409c4d7cb2c4b1839fda303f32545f4452cce2e5116faa8edcb8ffd54",
+            "literals": [],
+            "constants": []
+          },
+          {
+            "shape": "769744d7f46f29031da868fb0ac19dc1f40fae7d52987fa66b0e3e397d80eb84",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "OnDestroy": [
+          {
+            "shape": "a80dcdf425da85452f0bf607cb6d7f5052dda8884967ed98281ebc118348b6a9",
+            "literals": [],
+            "constants": []
+          },
+          {
+            "shape": "398e0e61e1e5b34cbad7768dc38b14b23e09fad2ad96b7789eefae8bdd2644ba",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "013e1c643669491ff3dffa66b31d3fc2d6f01badbc2ac03706cfad99abed571f",
+            "literals": [
+              {
+                "offset": 36,
+                "value": "_DefaultNoiseRemapCurveTexture"
+              },
+              {
+                "offset": 60,
+                "value": "_DefaultNoiseRemapCurveTexture"
+              }
+            ],
+            "constants": []
+          },
+          {
+            "shape": "bf9b013f9182307432bd6b648cac3e60a40c0cb50d63aae12e487838bb555fcd",
+            "literals": [
+              {
+                "offset": 36,
+                "value": "_DefaultNoiseRemapCurveTexture"
+              },
+              {
+                "offset": 60,
+                "value": "_DefaultNoiseRemapCurveTexture"
+              }
+            ],
+            "constants": []
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "0ddfd27e5886c8522b0ad009e308f5e365be9fb2141977db6f29fb0a95b6ef3a",
+            "literals": [
+              {
+                "offset": 52,
+                "value": "_Attributes"
+              },
+              {
+                "offset": 60,
+                "value": "_Tilt"
+              },
+              {
+                "offset": 68,
+                "value": "_Front"
+              },
+              {
+                "offset": 72,
+                "value": "_PointCount"
+              },
+              {
+                "offset": 76,
+                "value": "_WorldFront"
+              },
+              {
+                "offset": 80,
+                "value": "_TiltRotation"
+              },
+              {
+                "offset": 104,
+                "value": "_Front"
+              },
+              {
+                "offset": 116,
+                "value": "_TiltRotation"
+              },
+              {
+                "offset": 128,
+                "value": "_Tilt"
+              },
+              {
+                "offset": 140,
+                "value": "_PointCount"
+              },
+              {
+                "offset": 152,
+                "value": "_Attributes"
+              },
+              {
+                "offset": 164,
+                "value": "_WorldFront"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CardAncientObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_animCurveSettings",
+        "_animCurveScale",
+        "_animStartDelayRangeA",
+        "_animStartDelayRangeB",
+        "_changeRangeStart",
+        "_changeRangeEnd",
+        "_zuzuGoalAnimThreshold",
+        "_goalThreshold",
+        "_scrolls",
+        "_scrollLength",
+        "_shapeChangeSpeed",
+        "_dot2Multiply",
+        "_accellRatio",
+        "_diffOffset",
+        "_shakeAIntensity",
+        "_shakeAFrequency",
+        "_shakeBIntensity",
+        "_shakeBFrequency",
+        "_shakeSpeed",
+        "_noiseScale",
+        "_sandParticleSystems",
+        "_sand2ParticleSystems",
+        "_frictionScale",
+        "_maxFriction",
+        "_startSandBaseEmissionRate",
+        "_middleSandBaseEmissionRate",
+        "_endSandBaseEmissionRate",
+        "<IsAnimationStopped>k__BackingField",
+        "SandNum",
+        "StrataNum",
+        "LocalFront",
+        "LightDir",
+        "LightDir2",
+        "s_strataFaults",
+        "s_shake",
+        "_worldFront",
+        "_goalStrataFaults",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_elapsedTime",
+        "_strataData",
+        "_remapedStrataFaults",
+        "_sandVolumes",
+        "_effMeshIndeces",
+        "_shake",
+        "_sandEmissionModules",
+        "_sandShapeModules",
+        "_sand2EmissionModules",
+        "_strataRenderers",
+        "_sharedMaterials",
+        "_mpb"
+      ],
+      "methods": {
+        "get_IsAnimationStopped": [
+          {
+            "shape": "c63fed20e2ceaaf72fc9c51417d9989ea9f15afbfd3e27079f89be3155d4f630",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "set_IsAnimationStopped": [
+          {
+            "shape": "7ebe8d262f3e1f429674f8c1553195bbe937f612ed507a31f3bc4c79604943b3",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Awake": [
+          {
+            "shape": "ea6166850b30566d5fb927088d26b2a9b5cf38366521b34edf65bbe85c57af37",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "8f527e51c80bb2d8c97b05bcd26744177382d90947a16ab2bb0ce9ce5b8ecbef",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "0526b379c50dbb567eeb6dc96c3daac219d79e6e26f9d91847c3a1f69e6f5dd6",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "07b26fe87a87fa9cd0b3c2341e7fe75dd82312ae6a8bee98c9835a09a8310fe5",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "d53f892c1adc0b02e05b25101e4476ac8de1e70061fef6975b462bcf511d7e82",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 240,
+                "bytes": "acc52737"
+              }
+            ]
+          }
+        ],
+        "SetEmissionRate": [
+          {
+            "shape": "2958a629d5b649bb71ad1d21588079d8d91aeeb22427aed85047a1c8ffae5c55",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateStrataFaults": [
+          {
+            "shape": "5f20508625819965d5678f4be80c9e2a37a3b016a7bbaadc23dba198a66d4c04",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateStrataFault": [
+          {
+            "shape": "c88e8978855731ee94f90b718b3f5d8c88bd2315dbaaf45f6318ccb2897bd410",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateShake": [
+          {
+            "shape": "c645b1729f0fa41573fc51b56249f0f4712fdfae6433b0c8a84b59f5a6826dab",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateSandVolumes": [
+          {
+            "shape": "6f1cf927d4384926b77ecaa4c5b5af63f20d606682f34e4b4a4536390f60ad8c",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "f3f7a9c3a4d66d755e08bd8e8da5dfb6e1b76913e512b57d2e519b4f8ed23f66",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "ce7d399b60a6571b5ae8f56807545926c037e56e561d34a9fcbcf3898db2efe6",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 112,
+                "bytes": "cdcccc3ecdcc4c3e0000803fcdcccc3d"
+              },
+              {
+                "offset": 172,
+                "bytes": "0000803f9a99993e3333b33e0000a040"
+              },
+              {
+                "offset": 180,
+                "bytes": "0ad7a33c0ad7a33ccdcccc3d0ad7a33c"
+              },
+              {
+                "offset": 188,
+                "bytes": "cdcccc3ccdcccc3ccdcc4c3d0ad7233c"
+              },
+              {
+                "offset": 196,
+                "bytes": "000048430000c842"
+              },
+              {
+                "offset": 208,
+                "bytes": "0000803fcdcc4c40"
+              },
+              {
+                "offset": 224,
+                "bytes": "0000284100007041"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "17ace083e8543bd0eddcffbd44bc1e072738056328dfe2b7678cdb8093220f97",
+            "literals": [
+              {
+                "offset": 36,
+                "value": "_StrataFaults"
+              },
+              {
+                "offset": 40,
+                "value": "_Shake"
+              },
+              {
+                "offset": 64,
+                "value": "_Shake"
+              },
+              {
+                "offset": 76,
+                "value": "_StrataFaults"
+              }
+            ],
+            "constants": [
+              {
+                "offset": 120,
+                "bytes": "0400000006000000"
+              },
+              {
+                "offset": 124,
+                "bytes": "0000000000000000000080bf0000803f"
+              },
+              {
+                "offset": 128,
+                "bytes": "0000803f000000000000803f000080bf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "CardFutureObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_animationTexFrameCount",
+        "_animationFrameCount",
+        "_animSwitchSpeed",
+        "_animFrameOffset",
+        "_skipAnimThreshold",
+        "_accellRatio",
+        "<IsAnimationStopped>k__BackingField",
+        "LocalFront",
+        "LightDir",
+        "LightDir2",
+        "s_animFrame",
+        "s_tiltDot",
+        "_worldFront",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_goalAnimFrame",
+        "_lastGoalAnimFrame",
+        "_animFrame",
+        "_tiltDot",
+        "_ledRenderers",
+        "_sharedMaterials",
+        "_mpb"
+      ],
+      "methods": {
+        "get_IsAnimationStopped": [
+          {
+            "shape": "6770a96f4998ce8df43beb8e497cf1a56ff280479bbf45eeb6d10b8b1fe08600",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "set_IsAnimationStopped": [
+          {
+            "shape": "525490d17fbdb7a82a823d4a82d7829c51d1c751e9080bfb96f9f6a5e95e2c92",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Awake": [
+          {
+            "shape": "3112df4056b59ff9d61870ceef752cc3314a47414078acff823b6fc27f0ab317",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "d26c5df27701a0f31c49c0cb70c212d367ac72cddfbb35fa96529e72977e304a",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "ee3269332404486eebcb7d2f31c1ab23e7760bdd3b1c67998da447c765584480",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "InitializeAnimFrame": [
+          {
+            "shape": "ce8ae59ce7bb5eda9f64d187c9e84d1dc85bd763e95d77048376c13c1e07df6e",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "4ee4fd1a19ab0aba9e190ba664a401a19fdec199a067a9557976c6becede4449",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 228,
+                "bytes": "acc52737"
+              }
+            ]
+          }
+        ],
+        "UpdateGoalAnimFrame": [
+          {
+            "shape": "628eac690f04db18e27b347327e8a40e1a2fe5e70a097b9d23536e1ebb9f2b29",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateAnimFrame": [
+          {
+            "shape": "7627b2db3b5ca41bdfc9e0210c351c8bc07eaf42ec7ade6e39f73d691c0c51a7",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 16,
+                "bytes": "17b7d138"
+              }
+            ]
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "04db33086efc94d29cc6ff87d427b176b667224773da14dc35355630930f23b3",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "3eba1cd9ef188e287278766e9e4b7fd4516bf6bbde5141f6754a8f8b36711308",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 88,
+                "bytes": "f000000018000000"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "f58b8ef8f2be9febd65df4eeaff4059dbf369e5bc09151731499acae56dd78f5",
+            "literals": [
+              {
+                "offset": 36,
+                "value": "_AnimFrame"
+              },
+              {
+                "offset": 40,
+                "value": "_TiltDot"
+              },
+              {
+                "offset": 64,
+                "value": "_AnimFrame"
+              },
+              {
+                "offset": 76,
+                "value": "_TiltDot"
+              }
+            ],
+            "constants": [
+              {
+                "offset": 116,
+                "bytes": "0000000000000000000080bf0000803f"
+              },
+              {
+                "offset": 120,
+                "bytes": "0000803f000000000000803f000080bf"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "CardUVShadow": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_translateOffset",
+        "_lightDir",
+        "_localFront",
+        "_shadowUVTranslate",
+        "_renderers",
+        "_sharedMaterials",
+        "_mpb",
+        "s_shadowUVTranslate"
+      ],
+      "methods": {
+        "Awake": [
+          {
+            "shape": "a7911cdfdc28e6a1867e359ba426081aacfa692fdeb3e978d2a68dd924fa8c3e",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "ea6166850b30566d5fb927088d26b2a9b5cf38366521b34edf65bbe85c57af37",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "de229f7e094afd8dd8951c2f4f428ceee6e72b15d849a5a44b0f61b55a8ef418",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateShadowTranslate": [
+          {
+            "shape": "62b2dc4b78105d745873a4bd0656a0468f15d132abfbb5367348cf161f05d811",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 156,
+                "bytes": "acc52737"
+              }
+            ]
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "78ca6c48df237c808f6e2ed3342b8189d69fb99417d271f1273dbf1df0e1026e",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "CollectRenderers": [
+          {
+            "shape": "a5fab3d610852c7edaa08bb70949a27d204fba6171192cb18b17df0c0fb80d51",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "7ecccb7a4dea3d85556fb99316f5feb1a0c7a2e6a146ff46c415d79d3bed4880",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 92,
+                "bytes": "cdccccbd9a99193e0000803f00000000"
+              },
+              {
+                "offset": 96,
+                "bytes": "00000000000080bf"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "f987e1ec7bb8374b927edda7f1ffc1df21cea24e41e083e61edfddb1c732751d",
+            "literals": [
+              {
+                "offset": 24,
+                "value": "_ShadowUVTranslate"
+              },
+              {
+                "offset": 52,
+                "value": "_ShadowUVTranslate"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "GlitterFlowMaps": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_renderer",
+        "_accelIntensity",
+        "_maxFlowSpeed",
+        "_minFlowSpeed",
+        "_initFlowSpeed",
+        "_resistance",
+        "_minTiltPower",
+        "_lightSpeed",
+        "_flowAMinRotateSpeed",
+        "_flowAMaxRotateSpeed",
+        "_flowBMinRotateSpeed",
+        "_flowBMaxRotateSpeed",
+        "_flowAInitialRotation",
+        "_flowBInitialRotation",
+        "_flowSpeed",
+        "_flowMapUVOffset",
+        "_lightTiming",
+        "_flowARotate",
+        "_flowBRotate",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_mpb",
+        "_flowParams"
+      ],
+      "methods": {
+        "OnEnable": [
+          {
+            "shape": "5684c8393c7372b0001b4e76d412862118e50825d7c8d32eb4f5809c1463f550",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Update": [
+          {
+            "shape": "2a705b06f0c9fb538a0cf061eb86a838b3d6fd90a1531c8d69a23ae0c9554e4b",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "ee595141552cff2ccf2483c6f8c056baa3eb54ef82880120e5f8b0adf78dacef",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "3ed9a0a3e84859909c1c4cd2d31fde1ab8f956a404a92f08352fe690b26b16f8",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateFlowSpeed": [
+          {
+            "shape": "663a1eb9d84479d1b4e291b62431e66431c677770325a082d462fb02d4fd8d36",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 136,
+                "bytes": "acc52737"
+              }
+            ]
+          }
+        ],
+        "UpdateFlowMapUVOffset": [
+          {
+            "shape": "62d2a56455498ab153c6cbb7fb2ea79fb555a01eb29a48d9d739363efdf12232",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 192,
+                "bytes": "acc52737"
+              },
+              {
+                "offset": 284,
+                "bytes": "4905153f"
+              },
+              {
+                "offset": 288,
+                "bytes": "e527503f"
+              }
+            ]
+          }
+        ],
+        "UpdateLightTiming": [
+          {
+            "shape": "61d3ecf1f0bf97fc88bf0021118c5b52399b84967a1365f2b13c7df0f43a45a4",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateFlowRotate": [
+          {
+            "shape": "8be1abe8161d98d19580bf9e1fe57c88d2b71a9733fa65ac5dad0f701e784148",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 108,
+                "bytes": "db0fc940"
+              }
+            ]
+          }
+        ],
+        "SetParams": [
+          {
+            "shape": "cd91ca71de068ed8667a564b1012e60556d311331bc15462f2a55bded2417bd2",
+            "literals": [
+              {
+                "offset": 28,
+                "value": "_FlowParams"
+              },
+              {
+                "offset": 84,
+                "value": "_FlowParams"
+              }
+            ],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "a6dc31d882307a3adca75bdd68507a4921236ab6eef2a3e1a58ab37c15500427",
+            "literals": [],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "KiraPuyoObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_renderer",
+        "_settings",
+        "_rampRepeat",
+        "_scrollScale",
+        "_scrollOffset",
+        "_vertScaleSpeed",
+        "_scaleAnimationOffset",
+        "LocalFront",
+        "LightDir",
+        "_anim",
+        "_kiraScale",
+        "_mpb",
+        "s_rampRepeat",
+        "s_scrollScale",
+        "s_scrollOffset",
+        "s_kiraScale",
+        "s_anim"
+      ],
+      "methods": {
+        "Awake": [
+          {
+            "shape": "5684c8393c7372b0001b4e76d412862118e50825d7c8d32eb4f5809c1463f550",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "5684c8393c7372b0001b4e76d412862118e50825d7c8d32eb4f5809c1463f550",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateAnimation": [
+          {
+            "shape": "387a5129b1ee490185e6d73f2e8c1b36d8ef5c54c35f215ebb7d0b86b428802a",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateMPB": [
+          {
+            "shape": "746e69a50528bc5e5fec0b5ea2623e2114f9e65d07ba6e38baf8cecd70307c2e",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "c0732bea822f3da049ebd2ddab37309f35ebfa2b3721f142036f3c8ca6b9257c",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "58f2f24c8379f99150fa7e716a92faedd5615ce6fcd0a3e853ce329c158cea9e",
+            "literals": [
+              {
+                "offset": 44,
+                "value": "_RampRepeat"
+              },
+              {
+                "offset": 52,
+                "value": "_ScrollScale"
+              },
+              {
+                "offset": 60,
+                "value": "_ScrollOffset"
+              },
+              {
+                "offset": 64,
+                "value": "_KiraScale"
+              },
+              {
+                "offset": 68,
+                "value": "_Anim"
+              },
+              {
+                "offset": 92,
+                "value": "_KiraScale"
+              },
+              {
+                "offset": 104,
+                "value": "_ScrollOffset"
+              },
+              {
+                "offset": 116,
+                "value": "_RampRepeat"
+              },
+              {
+                "offset": 128,
+                "value": "_Anim"
+              },
+              {
+                "offset": 140,
+                "value": "_ScrollScale"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CircularKiraObject": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [
+        "_movingKiraARenderer",
+        "_movingKiraBRenderer",
+        "_defaultCircularAnglePattern",
+        "_defaultCircularAngleManual",
+        "_tiltPower",
+        "_tiltThreshold",
+        "_tiltStateChangeDelay",
+        "_rotateAccel",
+        "_brakeDuration",
+        "_primTypeASymmetryCount",
+        "_primTypeBSymmetryCount",
+        "_primTypeCSymmetryCount",
+        "_prims",
+        "_trailKiraARenderer",
+        "_trailKiraBRenderer",
+        "_trailKiraAMeshFilter",
+        "_trailKiraBMeshFilter",
+        "_meshDivideCount",
+        "_moveAngleScale",
+        "_centerIntensity",
+        "_fadeOut",
+        "_fadeOutEnd",
+        "_expandLength",
+        "_expandPower",
+        "_useLengthLimit",
+        "_limitLengthRatio",
+        "_LimitAdjustCurvePower",
+        "_LimitAdjustSpeed",
+        "_useDistanceFadeOut",
+        "_distanceFadeOutSpeed",
+        "_distanceFadeOutCurvePower",
+        "<IsAnimationStopped>k__BackingField",
+        "TiltLimitRatio",
+        "DefaultCircularAnglePresetA",
+        "DefaultCircularAnglePresetB",
+        "DefaultCircularAnglePresetC",
+        "_localFront",
+        "_lightDir",
+        "_isTilt",
+        "_worldFront",
+        "_tilt",
+        "_tiltChangeElapsedTime",
+        "_speedState",
+        "_remainAngles",
+        "_kiraLastPosIndex",
+        "_morphingAnimOffset",
+        "_moveAngleQueue",
+        "_defaultCircularAngle",
+        "_moveAngle",
+        "_expandBrightnessCap",
+        "_primAngles",
+        "_primBaseScales",
+        "_primBaseIntensities",
+        "_primMinIntensities",
+        "_primMaxIntensities",
+        "_primFlickerScaling",
+        "_primFlickerAnimOffsets",
+        "_primTypes",
+        "_primMorphing",
+        "_brightnesses",
+        "_tempBrightnesses",
+        "_vertUVs",
+        "_trailMesh",
+        "_startTime",
+        "_time",
+        "_deltaTime",
+        "_mpb",
+        "s_tilt",
+        "s_defaultCircularAngle",
+        "s_moveAngle",
+        "s_primAngles",
+        "s_primBaseScales",
+        "s_primBaseIntensities",
+        "s_primMinIntensities",
+        "s_primMaxIntensities",
+        "s_primFlickerScaling",
+        "s_primFlickerAnimOffsets",
+        "s_primTypes",
+        "s_primMorphing",
+        "s_noiseTime"
+      ],
+      "methods": {
+        "get_IsAnimationStopped": [
+          {
+            "shape": "6a3089bcd1a502252a4af98cf8cc226f9014f6ad0f163adc3b460aaf48bc8579",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "set_IsAnimationStopped": [
+          {
+            "shape": "ea3186096a658cc608654c4f87c1a782e2a440d83d9360af3c884e78cbf716e8",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "GetSymmetryCount": [
+          {
+            "shape": "96185b4c2f9295d9624300ae95fa82490e8b7b8c9fc8f38bb8ba817fa9407487",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Awake": [
+          {
+            "shape": "5684c8393c7372b0001b4e76d412862118e50825d7c8d32eb4f5809c1463f550",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Initialize": [
+          {
+            "shape": "268dfdd8590f3bcd3960a8dda9412d62c6c4e13c98932279153e0a72231dc0eb",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 120,
+                "bytes": "00401c46"
+              }
+            ]
+          }
+        ],
+        "LateUpdate": [
+          {
+            "shape": "f04d6f50b6bae3bb44b26f1de68a4d2cd5af1b6fd639dc14c11c3a47629dd524",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "Validate": [
+          {
+            "shape": "bca354d25cfeb76ec995e7c94266202894c99e1aed5cf4e5303396198734637c",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTilt": [
+          {
+            "shape": "98803a7e8e6be31fc911b2df796fb81926de88cf17b66f8d52077d9ad35efd09",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateCircularParams": [
+          {
+            "shape": "5fa60e81dba661c995a94ef55f0b06c80a6395290372361273dbc4814eb8c766",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateParticleParams": [
+          {
+            "shape": "03d2d8d320df0c375afc4f29ff04c1bd5d12d229aafaa7ed54455912d1acee6e",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 92,
+                "bytes": "cdcc4c3d"
+              }
+            ]
+          }
+        ],
+        "CalculateBrakeTiming": [
+          {
+            "shape": "f873acd3454b5b3b0e6970ce52ac94dd458c468e975af862c4ad290cc7229142",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 72,
+                "bytes": "db0f4940"
+              }
+            ]
+          }
+        ],
+        "ResetBrakeParams": [
+          {
+            "shape": "7f762903c7d157c528d98ca6e9dd6a9d439e67318c41926e03423bd0095214cc",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateTrailParams": [
+          {
+            "shape": "fb217bef8964f19c81eb4e3130b9f68453878e12a7c23de24b9fc21eeeb40cba",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyVerticesParams": [
+          {
+            "shape": "596f909cafc6d678581e39f9c4d87040542ace9cf99cf66a7e3092f1508d103f",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "367696157e8749122867fbb30c23baccccef587ee4d65ff8b487e850dc3d9152",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "OnDestroy": [
+          {
+            "shape": "b78bcca845390c78a719438c5946b44c3746d855f950204f8293b38f80641409",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        ".ctor": [
+          {
+            "shape": "414b6ac7107a326a6c28e0ffcc93fcf892f39bbb2dbb94833a6d69ccece28bf9",
+            "literals": [],
+            "constants": [
+              {
+                "offset": 16,
+                "bytes": "cdcccc3dcdcc4c3ecdcc4c3d0ad7233c"
+              },
+              {
+                "offset": 24,
+                "bytes": "0000803f17b7d138"
+              },
+              {
+                "offset": 32,
+                "bytes": "000000400000003f"
+              },
+              {
+                "offset": 44,
+                "bytes": "0000803f00007041"
+              },
+              {
+                "offset": 56,
+                "bytes": "0000000000000000000080bf0000003f"
+              },
+              {
+                "offset": 80,
+                "bytes": "0000003f000000bf"
+              }
+            ]
+          }
+        ],
+        ".cctor": [
+          {
+            "shape": "dda5a1d1edf00e7492fa8e54dfabbca7ca5912e507576f8a3ff1b4c104539c26",
+            "literals": [
+              {
+                "offset": 68,
+                "value": "_Tilt"
+              },
+              {
+                "offset": 76,
+                "value": "_CircularDefaultAngle"
+              },
+              {
+                "offset": 84,
+                "value": "_MoveAngle"
+              },
+              {
+                "offset": 88,
+                "value": "_PrimAngles"
+              },
+              {
+                "offset": 92,
+                "value": "_PrimBaseScales"
+              },
+              {
+                "offset": 96,
+                "value": "_PrimBaseIntensities"
+              },
+              {
+                "offset": 100,
+                "value": "_PrimMinIntensities"
+              },
+              {
+                "offset": 104,
+                "value": "_PrimMaxIntensities"
+              },
+              {
+                "offset": 108,
+                "value": "_PrimFlickerScaling"
+              },
+              {
+                "offset": 132,
+                "value": "_PrimMinIntensities"
+              },
+              {
+                "offset": 144,
+                "value": "_PrimMorphing"
+              },
+              {
+                "offset": 156,
+                "value": "_Tilt"
+              },
+              {
+                "offset": 168,
+                "value": "_NoiseTime"
+              },
+              {
+                "offset": 180,
+                "value": "_PrimFlickerScaling"
+              },
+              {
+                "offset": 192,
+                "value": "_PrimFlickerAnimOffsets"
+              },
+              {
+                "offset": 204,
+                "value": "_PrimBaseScales"
+              },
+              {
+                "offset": 216,
+                "value": "_PrimAngles"
+              },
+              {
+                "offset": 228,
+                "value": "_MoveAngle"
+              },
+              {
+                "offset": 240,
+                "value": "_PrimTypes"
+              },
+              {
+                "offset": 252,
+                "value": "_CircularDefaultAngle"
+              },
+              {
+                "offset": 264,
+                "value": "_PrimBaseIntensities"
+              },
+              {
+                "offset": 276,
+                "value": "_PrimMaxIntensities"
+              },
+              {
+                "offset": 544,
+                "value": "_PrimFlickerAnimOffsets"
+              },
+              {
+                "offset": 580,
+                "value": "_PrimTypes"
+              },
+              {
+                "offset": 616,
+                "value": "_PrimMorphing"
+              },
+              {
+                "offset": 652,
+                "value": "_NoiseTime"
+              }
+            ],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "CardUtils": {
+      "namespace": "Lettuce.Infrastructure.Card.Core",
+      "fields": [],
+      "methods": {
+        "CollectRenderers": [
+          {
+            "shape": "f3d72cd8bfd01e7c532cd811a7cb061c818cb90df55a5bd0ad0f556fb8884431",
+            "literals": [],
+            "constants": []
+          }
+        ]
+      }
+    },
+    "RemapCurveSettings": {
+      "namespace": "",
+      "fields": [
+        "CurveLabel",
+        "Resolution",
+        "DefaultRemapCurve",
+        "TiltRemapCurve",
+        "RemapRemapCurve",
+        "_remapTexture"
+      ],
+      "methods": {
+        ".ctor": [
+          {
+            "shape": "9d8ac3b119ad0ed55eb9736030b924e76594b42e9cc3989867171d407a24bb37",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "get_RemapCurveId": [
+          {
+            "shape": "35c46bc13b3e340838025cd87e2812b8ee647de1730aac608a560aa6e79e44d3",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "get_TextureResolution": [
+          {
+            "shape": "a8bd04cad0261c8036cacd7d2a91dff5b1940ce8d4c5dd06fbca84cebb241e32",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "UpdateRemapTex": [
+          {
+            "shape": "67a780a03c9e5236fad6f81e4531ff1abd7674af29fa22851a83057943d45f9f",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "ApplyParams": [
+          {
+            "shape": "40bc7c26ebc5a2ce829c6f81a7d38ccf9114ed7ccb4fda4ac323cb8aa71cdc38",
+            "literals": [],
+            "constants": []
+          }
+        ],
+        "DisposeTexture": [
+          {
+            "shape": "726bb29b459690e99b82f8dee4a5cc3ab7a9c83abcff6fd2791ce77a763e7a92",
+            "literals": [],
+            "constants": []
+          }
+        ]
+      }
+    }
+  }
+}

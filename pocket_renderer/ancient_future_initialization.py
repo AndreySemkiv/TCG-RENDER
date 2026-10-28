@@ -6,7 +6,6 @@ Later motion, elapsed animation and nonempty particle systems stay unsupported.
 """
 from functools import lru_cache
 from pathlib import Path
-import hashlib
 import json
 import math
 
@@ -15,12 +14,9 @@ from .shiny_initialization import _frontal
 
 
 @lru_cache(maxsize=4)
-def validate_source(root):
+def validate_source(root, family):
     root = Path(root).resolve()
-    validate_native_source(str(root))
-    path = root/'original-render-pipeline/metadata/global-metadata.original-decoded.dat'
-    if hashlib.sha256(path.read_bytes()).hexdigest() != '905b9505a935828ac7174b7086d15e23640dcf61451e604e0085ae98e06c8618':
-        raise ValueError('Ancient/Future initialization metadata differs from inspected source')
+    return validate_native_source(str(root), family)
 
 
 def _playing(data):
@@ -107,7 +103,6 @@ def renderer_overrides(root, scene_dir, scene, materials):
     if not candidates:
         return {},[]
     root = Path(root).resolve()
-    validate_source(str(root))
     from .localization import _resources
     resources = _resources(str(root))
     shaders = {shader['id']:shader for shader in scene['shaders']}
@@ -124,6 +119,9 @@ def renderer_overrides(root, scene_dir, scene, materials):
         name = script_data['m_ClassName']
         if script_data['m_Namespace']!='Lettuce.Infrastructure.Card.Core':
             raise ValueError('Unknown original Ancient/Future controller namespace')
+        if name not in ('CardAncientObject','CardFutureObject'):
+            raise ValueError('Unknown original Ancient/Future initialization component '+name)
+        validate_source(str(root),name)
         extra = {}
         if name=='CardFutureObject':
             properties,tag = initial_future_properties(data),'Parallax-Led'

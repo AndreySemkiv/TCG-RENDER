@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "id": "unity-arm64-render-defaults-v1",
+  "scope": "Exact audited instruction shapes, readonly constants and imported math calls. Layout relocation is allowed; changed behavior is rejected. Not a full Unity runtime certification.",
+  "functions": [
+    {
+      "name": "black_registration",
+      "length": 36,
+      "anchor_offset": 16,
+      "anchor": "82008052e303132ae5031f2ae80b00f9",
+      "references": [],
+      "shape": {
+        "code_sha256": "8cfe145d7b1afeb396c5dbbe2f3abb24c0f8f8f8c5325a3b719f826c8897b7bb",
+        "constants": [],
+        "imports": []
+      },
+      "audited_reference_va": "0x5d8160"
+    },
+    {
+      "name": "create_builtin_texture",
+      "length": 220,
+      "anchor_offset": 0,
+      "anchor": "ff4301d1fe6701a9f85f02a9f65703a9f44f04a9f903012af60300aa80008052",
+      "references": [],
+      "shape": {
+        "code_sha256": "fa7c96cf361ec74335511dfb5b1fb46cdc9d25c840e143ab5eb28a78c5236daf",
+        "constants": [],
+        "imports": []
+      },
+      "audited_reference_va": "0x5d8a34"
+    },
+    {
+      "name": "pixel_fill_loop",
+      "length": 220,
+      "anchor_offset": 0,
+      "anchor": "fe0f1bf8fa6701a9f85f02a9f65703a9f44f04a9080040f9f30300aaf40301aa",
+      "references": [],
+      "shape": {
+        "code_sha256": "8dd784372f400e3e0d0ea42502ccb841c52d03537d83565293601641b6f087c8",
+        "constants": [],
+        "imports": []
+      },
+      "audited_reference_va": "0x5e0d20"
+    },
+    {
+      "name": "missing_channel_descriptor",
+      "length": 652,
+      "anchor_offset": 0,
+      "anchor": "ff0302d100e4006f08f04439ff3b00f9e08302ade013803d220400b4410840ad4308c03d491840f94a3841b9e31b803de10b02ade93b00f9ea0200344901c05a",
+      "references": [],
+      "shape": {
+        "code_sha256": "b2c6c9a3e6b8241c7b74321c8e8306869ff62b3de253186932a0ece62e459b81",
+        "constants": [],
+        "imports": []
+      },
+      "audited_reference_va": "0xc5f700"
+    },
+    {
+      "name": "append_default_stream",
+      "length": 128,
+      "anchor_offset": 0,
+      "anchor": "4800236a00020054fe4fbfa9e9018652f30301aa1f01096a80010054080040f9",
+      "references": [],
+      "shape": {
+        "code_sha256": "bf506e98d9c32ae1caeb99b6d338a0ba50b195f37d6f22f0eddcc7e9843834c2",
+        "constants": [],
+        "imports": []
+      },
+      "audited_reference_va": "0xc5fdf8"
+    },
+    {
+      "name": "default_buffer",
+      "length": 632,
+      "anchor_offset": 0,
+      "anchor": "fd7bbba9fa6701a9f85f02a9f65703a9f44f04a9fd030091ffc300d15f0400f188028052890380525a849f9a3f040071f30300aa3901881a58d03bd5547f199b",
+      "references": [
+        {
+          "load": 284,
+          "page": 220
+        },
+        {
+          "load": 288,
+          "page": 280
+        },
+        {
+          "load": 324,
+          "page": 220
+        },
+        {
+          "load": 384,
+          "page": 244
+        },
+        {
+          "load": 388,
+          "page": 368
+        },
+        {
+          "load": 392,
+          "page": 376
+        },
+        {
+          "load": 396,
+          "page": 380
+        },
+        {
+          "load": 440,
+          "page": 244
+        },
+        {
+          "load": 488,
+          "page": 480
+        }
+      ],
+      "shape": {
+        "code_sha256": "a409905a50abc7520a99de9ff2f83885023687a551d8e745e2fedfd96f0592a6",
+        "constants": [
+          {
+            "offset": 284,
+            "bytes": "00000000ffffffff0000ff00ff0000ff"
+          },
+          {
+            "offset": 288,
+            "bytes": "ff00000000000000ffffffff0000ff00"
+          },
+          {
+            "offset": 324,
+            "bytes": "00000000ffffffff0000ff00ff0000ff"
+          },
+          {
+            "offset": 384,
+            "bytes": "0000000000000000000080bf0000803f"
+          },
+          {
+            "offset": 388,
+            "bytes": "00000000000080bf0000803f00000000"
+          },
+          {
+            "offset": 392,
+            "bytes": "0000000000000000000080bf00000000"
+          },
+          {
+            "offset": 396,
+            "bytes": "00000000000080bf"
+          },
+          {
+            "offset": 440,
+            "bytes": "0000000000000000000080bf0000803f"
+          },
+          {
+            "offset": 488,
+            "bytes": "01000000000000000100000000000000"
+          }
+        ],
+        "imports": [
+          {
+            "offset": 628,
+            "name": "__stack_chk_fail"
+          }
+        ]
+      },
+      "audited_reference_va": "0xcbc7d8"
+    },
+    {
+      "name": "invert_bezier",
+      "length": 732,
+      "anchor_offset": 0,
+      "anchor": "ee0f1cfcedb3006debab016de9a3026dfe1f00f90410211e06102e1ee84d82526850a7720840201e0701271e2308241e4508241e6238251e4228261e0610331e",
+      "references": [],
+      "shape": {
+        "code_sha256": "d05ff6f97fc398c1721149c7ee5d2abb81a4d7431327ac9e8419fd81aafc7ea6",
+        "constants": [],
+        "imports": [
+          {
+            "offset": 188,
+            "name": "atan2f"
+          },
+          {
+            "offset": 200,
+            "name": "logf"
+          },
+          {
+            "offset": 216,
+            "name": "exp"
+          },
+          {
+            "offset": 240,
+            "name": "cosf"
+          },
+          {
+            "offset": 268,
+            "name": "cosf"
+          },
+          {
+            "offset": 312,
+            "name": "cosf"
+          },
+          {
+            "offset": 516,
+            "name": "logf"
+          },
+          {
+            "offset": 532,
+            "name": "exp"
+          },
+          {
+            "offset": 572,
+            "name": "logf"
+          },
+          {
+            "offset": 588,
+            "name": "exp"
+          },
+          {
+            "offset": 612,
+            "name": "logf"
+          },
+          {
+            "offset": 628,
+            "name": "exp"
+          },
+          {
+            "offset": 644,
+            "name": "logf"
+          },
+          {
+            "offset": 660,
+            "name": "exp"
+          }
+        ]
+      },
+      "audited_reference_va": "0xc9d42c"
+    }
+  ]
+}

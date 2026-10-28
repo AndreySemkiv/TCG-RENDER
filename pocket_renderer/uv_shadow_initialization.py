@@ -58,7 +58,7 @@ def renderer_overrides(root,scene_dir,scene,materials):
         and '_translateOffset' in c.get('data',{}) and '_lightDir' in c.get('data',{})
         and '_settings' not in c.get('data',{})]
     if not selected:return {},[]
-    root=Path(root).resolve();validate_native_source(str(root))
+    root=Path(root).resolve();validate_native_source(str(root),'CardUVShadow')
     from .localization import _resources
     resources=_resources(str(root));result={};audit=[]
     parents={o['transform_id']:o.get('parent_transform_id') for o in scene['objects']}

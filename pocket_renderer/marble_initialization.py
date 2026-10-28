@@ -84,7 +84,7 @@ def renderer_overrides(root,scene,out):
         for c in o.get('serialized_components',[]) if c.get('data',{}).get('m_Enabled',True)
         and '_defaultNoiseRemapSettings' in c.get('data',{}) and '_points' in c.get('data',{})]
     if not selected:return {},{},[]
-    root=Path(root).resolve();validate_native_source(str(root))
+    root=Path(root).resolve();validate_native_source(str(root),'CardMarbleLayer')
     from .localization import _resources
     resources=_resources(str(root));blocks={};textures={};audit=[];out=Path(out);out.mkdir(parents=True,exist_ok=True)
     for owner,component in selected:

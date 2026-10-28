@@ -38,16 +38,19 @@ def _active_function(resources,card,language,overrides):
     controllers=[t for t in resources.trees.values() if '_cardConditionViews' in t]
     if len(controllers)!=1:raise UnsupportedLayout('Original Pokémon UI condition controller is ambiguous')
     registered={p['m_PathID'] for p in controllers[0]['_cardConditionViews']};cache={}
+    from .card_conditions import native_condition_contract,pokemon_condition_extra
+    condition_contract=native_condition_contract(str(resources.root))
     def check(c):
         flag=c['_conditionType']
-        if flag&~489:raise UnsupportedLayout('Original rule UI condition is not recovered',condition=c)
+        if flag&~(489|condition_contract['dual']|condition_contract['rgb']):raise UnsupportedLayout('Original rule UI condition is not recovered',condition=c)
         categories=card['pokemon'].get('AdditionalCategories') or []
         return ((not flag&1 or c['_language']==enum) and
             (not flag&8 or c['_pokemonRuleType']==2) and
             (not flag&64 or bool(c['_isMegaEvolution'])==mega) and
             (not flag&32 or bool(c['_isUltraBeast'])==(1 in categories)) and
             (not flag&128 or bool(c['_isFuture'])==(3 in categories)) and
-            (not flag&256 or bool(c['_isAncient'])==(2 in categories)))
+            (not flag&256 or bool(c['_isAncient'])==(2 in categories)) and
+            (not condition_contract['dual'] or pokemon_condition_extra(condition_contract,c,card)))
     def active(go):
         if go not in cache:
             d=resources.gos[go];conditions=[resources.trees[c['component']['m_PathID']]['_conditions']

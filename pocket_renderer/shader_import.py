@@ -32,8 +32,11 @@ def spirv_entries(raw):
     return entries
 
 
-def extract_shader(root, relative, raw_dir, decoded_dir, prefix=None, unity_version='6000.0.78f1'):
+def extract_shader(root, relative, raw_dir, decoded_dir, prefix=None, unity_version=None):
     import UnityPy
+    if unity_version is None:
+        from .native_profile import unity_version as source_unity_version
+        unity_version = source_unity_version(root)
     UnityPy.config.FALLBACK_UNITY_VERSION = unity_version
     from UnityPy.helpers import CompressionHelper
     from UnityPy.streams import EndianBinaryReader

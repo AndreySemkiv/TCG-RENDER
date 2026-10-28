@@ -7,16 +7,16 @@ maps this descriptor to VK_FORMAT_R8G8B8A8_UNORM. Thus NORMAL.xyz=(0,0,1).
 Evidence: reports/vertex-default-normal-20261022/evidence.json.
 """
 from pathlib import Path
-from .mrr_initialization import validate_native_source
+from .unity_contracts import validate_engine_contract
 
 
 def normal_default(root):
     if root is None:raise ValueError('Original NORMAL default requires a verified native source profile')
-    root=Path(root).resolve();validate_native_source(str(root))
+    root=Path(root).resolve();engine=validate_engine_contract(root)
     return [0.0,0.0,1.0,0.0],{
         'semantic':'NORMAL','source':'Original Unity default vertex stream; absent source mesh channel',
-        'native_profile':{'libil2cpp.so':'eefba3938aa7bc1751135abb56b82f12d46c290c0a598b59e459d6f1a15c4d5c',
-            'libunity.so':'e6f33ccdad2fe323785c673ef8a5b6850f4a12100fa04c284c3f0264980b5bd9'},
+        'native_profile':{'libunity.so':engine['player_sha256']},
+        'native_contract':engine['contract'],
         'default_buffer':0,'offset':8,'original_format':'UNorm8','original_dimension':4,
         'original_bytes_hex':'0000ff00','values':[0.0,0.0,1.0,0.0],
         'mesh_normals_recalculated':False,
@@ -31,12 +31,12 @@ def uv_default(root,mesh,channel):
     predecessor, buffer0 offset0/UNorm8x4 supplies all four zeros.
     """
     if root is None:raise ValueError('Original UV default requires a verified native source profile')
-    root=Path(root).resolve();validate_native_source(str(root))
+    root=Path(root).resolve();engine=validate_engine_contract(root)
     if not 0<=channel<8:raise ValueError('Original UV semantic is outside the recovered eight channels')
     previous=next((n for n in range(channel-1,-1,-1) if mesh.get('uv'+str(n))),None)
     source={'semantic':'TEXCOORD'+str(channel),'source_mesh':mesh.get('source'),
-        'native_profile':{'libil2cpp.so':'eefba3938aa7bc1751135abb56b82f12d46c290c0a598b59e459d6f1a15c4d5c',
-            'libunity.so':'e6f33ccdad2fe323785c673ef8a5b6850f4a12100fa04c284c3f0264980b5bd9'},
+        'native_profile':{'libunity.so':engine['player_sha256']},
+        'native_contract':engine['contract'],
         'evidence':'reports/vertex-default-normal-20261022/missing_channel_descriptor_standard.asm',
         'source_mesh_channel_modified':False}
     if previous is not None:

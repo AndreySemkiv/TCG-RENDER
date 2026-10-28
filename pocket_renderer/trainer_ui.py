@@ -88,13 +88,11 @@ def localize_trainer(root,card,language,output_dir,allow_pending_masks=False):
     controllers=[t for t in resources.trees.values() if '_cardConditionViews' in t]
     if len(controllers)!=1:raise UnsupportedLayout('Original trainer UI controller is ambiguous')
     registered_conditions={p['m_PathID'] for p in controllers[0]['_cardConditionViews']}
+    from .card_conditions import native_condition_contract,trainer_condition_matches
+    condition_contract=native_condition_contract(str(root))
     def condition(c):
-        flag=c['_conditionType']
-        if flag & ~901:raise UnsupportedLayout('Unrecovered trainer UI condition',condition=c)
-        categories=trainer.get('AdditionalCategories') or []
-        return ((not flag&1 or c['_language']==enum) and (not flag&4 or c['_trainersType']==asset_type)
-            and (not flag&512 or not c['_hasSubType']) and (not flag&128 or bool(c['_isFuture'])==(3 in categories))
-            and (not flag&256 or bool(c['_isAncient'])==(2 in categories)))
+        return trainer_condition_matches(condition_contract,c,asset_type,
+            trainer.get('AdditionalCategories') or [],enum)
     active_cache={}
     def active(go):
         if go not in active_cache:

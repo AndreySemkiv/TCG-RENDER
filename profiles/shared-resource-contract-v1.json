@@ -1,0 +1,1635 @@
+{
+  "schema": 1,
+  "id": "shared-resource-contract-v1",
+  "reference": "Audited source objects from Pocket1.7.5; compatible object contracts may survive additive bundle changes.",
+  "bundles": {
+    "Common/CardNew/System/Prefabs/PokemonCardUI.prefab_bundles": {
+      "objects": {
+        "-3799754503620455235": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "eeb458cac2495ded68208abdaea3024ea0e44be7c1386abbf4302f4a8c22431b"
+        },
+        "9041653063728633021": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "80d49e9ede269bc594b468f877492e395bd2506a5a732c5d5a62d55e1d3403de"
+        },
+        "2540350467913356477": {
+          "type": "MonoBehaviour",
+          "mode": "controller",
+          "sha256": "8b60739f88890a227922a5b67da8aa39b869caf2080090d104e1a76a888a1977"
+        },
+        "-1282637176157825859": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "0accd033d95a3cbee9caf00bacef40e3db0436f77606a271cea0256598d59ee9"
+        },
+        "891809296433943741": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "3a7bba5d332786a5a61d6b6b67c9f514ca504a26abdcc9689478816ef673604e"
+        },
+        "1415002257506047165": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "9edc97fcbaf3439173ec1f5ec228ff31e8b348d13076438cf456d34474fb435a"
+        },
+        "-7015418383397808963": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "d0cb68fc335a96794a1afe683399d53f852a3f8e54afccc8701043f333f535ca"
+        },
+        "-2704223629074426691": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "ba55c65f875cb8f269912d069e124930414e0a03c358d53d034fcd20574a15d2"
+        },
+        "2689496735030777021": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "dcc6a20a080d3b77acafd9f4346a8e6a4b6cd405c51906971b5dc44bca3be042"
+        },
+        "3529626763627599037": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "4fb506fac6a17216975069f229b5cdde249ff0469a1799f7b04d21d9e047a63d"
+        },
+        "6042011694148949181": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "07d8124903977548375b26b1f7521245508d50a49255444e083a8579881c91eb"
+        },
+        "-2488084847741430595": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "445904b2d00adf80e93b903cd8c885efa5c499570823d02b036a189fea9867b2"
+        },
+        "2752569819571623101": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "2cf3057925abc67bafebf3a91c854eba14c78e643ec37ffdf45a5748c6cc2264"
+        },
+        "1646057371129156797": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "9ecf732d42ed4392cf7604d13d7a4f52517d65b046a429805dfb36c4bc4c417c"
+        },
+        "-7447821786276621123": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "004bb9faa4239ec0f241b6ab1f53482a7ebf2956729e74222a22683eb652545c"
+        },
+        "-3150362727207529283": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "b54b142e328741c9b8d2ab4bdc62dacc8ef0d3931a941c0f42b4253bc67f47a3"
+        },
+        "8657016480989189309": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "8899a538db9cf5ff4f01c04841b6ccf2a0273c19dca6114214911caa4f435c3e"
+        },
+        "1659785756225443005": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "794a1c0560926e548e9c91650bc8dbe7679707a2b5838fecfdfb7e999e1baab4"
+        },
+        "-7636651939041045315": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "bcaafbcc6aa389fa3d186fab2e19f304f65bed2060949cf25753ed2bc809601d"
+        },
+        "550727126263796925": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "c4ef268a4584c786453623094608d69cf7acc953521c18df3a9899f40fb998bf"
+        },
+        "7010900106689582269": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "d96c1a2272ddb06c79899b66ce2b94f3f3ac6db670d15646a9d90e2efcc949c2"
+        },
+        "5270519479972926653": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "620a8961cdcbe76de6f9447fc7c5794c81ad7215c87133664c878e1fed6d778f"
+        },
+        "-1676159554744871747": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "81409f6b5c5c6f1c5405027abf67daded6f899df5de3dcb179e3c466a1d0f355"
+        },
+        "-7473925130748029763": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "b332be8ed21e0e42a1318d3e2fb6dae9a1faabe0d66a2d42a71e64aa92302291"
+        },
+        "6850905015446213821": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "686b1153f3fb98cfd007926125fea599016d09c3b9174b23ad1d0f6a75ee2fad"
+        },
+        "6589237957896180925": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "b6a459529782d2cfa1a7bf38bacdb4f7a2c0b88804f49c66039cc191d812f3f8"
+        },
+        "-2797332491701185347": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "de9029653acbc4ca5ec2582e882afbfa7bbd3a38e3e0d847d320d8cde2fc789d"
+        },
+        "8661894478937068733": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "9e725008b92b15fc3326afb7724aab3c6b27a52482afdf7b3893305e408d6eab"
+        },
+        "-1210492773254818627": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "f39768b18867ad334b7bd5d20fae1c41ce2ed9d59602e81f9baab832e2735a6c"
+        },
+        "9150489301802161341": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "e2a4181fb46a8b4355ab8508435df05fa90c4214268bb4839661ac03cd35f4fd"
+        },
+        "-6929337792013724483": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "257e05651a186d49c408d39d724c4a0a8d1484b655ffec6f85c4c462f17ba518"
+        },
+        "2107533237668156605": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "6a8df5fc2636d559a01efd242f38ff94afb9b56b2ff78a6edff07a06e2c6b069"
+        },
+        "6057868378949293245": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "afc4e3929388842cb60d31ade0dd28077d2d305001a41a5b002ff2e421fc55ab"
+        },
+        "-4090210917664156483": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "e20a59bcae69dea62482b5213afe1bf075180adedeef3c3da3184249f2a1ac85"
+        },
+        "8902744113156658365": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "09a35cfc784497085d1036761d2ef1ebf376ee860db10d78eac28a721835540f"
+        },
+        "6632333684572886205": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "cbb139e695f7069a688da2891aa3c94461108e2235b5a1174755a4d29f9ccbc4"
+        },
+        "7226496110746080445": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "d4b13d8bc58959d50458475a55c9190cf83f9475595cb74e6d7c0b06c6d9e78e"
+        },
+        "-6130888725337008963": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "9dce5f6fdab2ce3e341ce2c3e1c3c3c53a3cd0367b3d6e761f82438fbd4fc869"
+        },
+        "-8374897469208128323": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "e7bdc3b2a6b75b339276bf78ec609293875acb618a6d62557e9619d772828680"
+        },
+        "-9168691792908708675": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "bdcd194e65b08f6f1f3b8b31a7a54e45c7bf48439382f97ea4281b0f8a5f4132"
+        },
+        "7913190512124171453": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "1a909fd0fdc6f6a1fe8e8074af4cfb73068698af88d0b01b753f51a94737e2c8"
+        },
+        "-7265321566131055427": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "896b5c811d32dde623f5c593b30e033cd08496c2d4eb03f39821b809d8781061"
+        },
+        "-2100705622969346883": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "87b6993be83e8be47bf38d653e3a1d4a88c313e56212dd8f05c2964bbb62c959"
+        },
+        "3913925856690836669": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "5fd705682790408fa256cdeda45af76408cff8680deb71ba4a2039674a529ccf"
+        },
+        "5109562493480735933": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "6d549da920602a45ef60ef5c785e8356d4c133d7f8d14d1cc76291cc0f279e78"
+        },
+        "4316605348643607741": {
+          "type": "MonoBehaviour",
+          "mode": "tree",
+          "sha256": "c31d246184761d4347bb12e021105e44910c8d5ac011c18f4f21f22dd70e8ccc"
+        },
+        "3162879018541126845": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "2d0a95bfe63863315a212264bb2084a18dcfa88cdab2720367401dbb51cf309b"
+        },
+        "6933429695772890301": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "6ace2df1f4d57a6e27a22bb4cf111af1c2c0d839ecc548350bfc53df2cf79cad"
+        },
+        "7854381534576514237": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "cc227a7fe8a4fb926a05734bea5c138a42861ab664829643b960db0e562dc639"
+        },
+        "-4830271069072911171": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "6fc6be432668037d791431062959d1503f514b69540771974dd9485de2f04e52"
+        },
+        "4706921335200617661": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "4fe94a4149b1686b6df3b7f9f7f508885aba09e43d9aba4d229404c67bd711ec"
+        },
+        "7434516060622623933": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "04e7626f06d0f8389ef0436422e46c4b59ac87955101af90ae854f28d7de4aab"
+        },
+        "3745998336534844605": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "5a129775c8f85fd43f8597c24031bad2470cd52eca5e0e10ac0e5adc22978232"
+        },
+        "-6927311790851156803": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "0f434554983f88e7bf1ca89030d0a2f20f30226783652ed934fb1427070d6a96"
+        },
+        "8789227572437783741": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "872d794b20da8f3b2193f6f342557da6ed734e70f463a305c22e506355b9c117"
+        },
+        "-3177955629178743619": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "38874fc934e2572af86e1d5ff0e9487539fc00dc8bf9080900930beb8565261d"
+        },
+        "-7634304943277599555": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "d14688b4bf2bffa356ef0dcd1e7ce2b210c66858453faed5c0f3d865969a83d4"
+        },
+        "6784667857365701821": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "de8583f1e98f27212dc56b6bc82390d225575f6948a6535f50ce21e2d3e3def2"
+        },
+        "5416615847046354109": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "89045eeb1a0e02509b885f33274f608fca09b95d1018c54e0c89b654fc5e2ae4"
+        },
+        "-573719664545098563": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "39477f3e249a209d476173d2c19242e1473d38f87104f212d6ddfa9154a6bd8a"
+        },
+        "-1783840429321284419": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "7c1f39b065a8c513734de2d163fa63af634ff8dc9a4f0f9c1ae2eebe3a248cd0"
+        },
+        "8393656741952754877": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "7b750b30828cff527c3dc9cdaf06f8e4cb6fbd8eb5b8f3f6357ce825dbb6c219"
+        },
+        "6565503331122681021": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "9edd16ace504ec8099be8b0a34e0a1dcf3901779c8d1b6066baab4fa49ff88cb"
+        },
+        "7159085540730999997": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "2b78c259308a8258add8fe53a361b37bd8c3c6e8f8980cfcef749cf26c0c2d80"
+        },
+        "8854747873535792317": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "dca4afa83aae03193ead716b26651cb1d3791f0fbc19f80da06bdfc8e9289e9e"
+        },
+        "-5068963409051904835": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "a87987b56401f9898e8c1d7d89ef078292b402c818593681354eebc7f003e3d8"
+        },
+        "6968807628390339773": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "39205c3f35158bdd2adebd8111433f108f015420347c00309e02b1b7f8b5c733"
+        },
+        "-6799599540566682435": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "076a8583db46cf8864414dbbfebd48db2e1da320d9294d0bcf042da60663b5e0"
+        },
+        "7989187307954640061": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "105977facfdd4f55644efb4cbba871c292fb2c724fd755219df9a9c495c21b32"
+        },
+        "7940126379265430717": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "f51a183f5f54026b5b84f48a585d9dbd3af9f33e57782a6701015f741a460556"
+        },
+        "-5569701033675516739": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "a4f514eacb75e3db1c2902a8d47c43001abb409c9dbc49b11c89312a8504c270"
+        },
+        "6604012541982282941": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "dd92d693054e88dcd5828e33f13e5eeef16f1a7359853d0d35c8f3b11c555fa1"
+        },
+        "-2022986068777757507": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "ba27946c529ca56ef66a3bf18645b925fda4b91a4b23ba7e43f675d6b981aeb7"
+        },
+        "8571964282549376189": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "0115643924470b4fb8add9d185e0ca2482f4aa76bdd905947c58e0d838dec985"
+        },
+        "7705608160865948861": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "f1ed56f6a2127f7c294b517f17259041915f1303e7d7a43f593bc2fb08f44512"
+        },
+        "6450960654069273789": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "86a2b105f73723be0a008ab01afd09c19f3ec4ba7372cbc61e931484aef605cd"
+        },
+        "3843201665046877373": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "1a2c1c4005aa068db5aa4c2834f993aab72d7445a56bd169c34abfa48ba33b70"
+        },
+        "-2897131802787703619": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "af969515f619dae9ece091d5c35d5256f90345205876000fe6ccd17165e1f61c"
+        },
+        "2037350412056925373": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "a7a499933973dd25587e1546096c86b72b239d0f9fa84eb26a27a35b9ffb21ab"
+        },
+        "3567419630889800893": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "b70f6faf5175361de947c47a7409d9dac20e30bae10294490b517288ce5f87de"
+        },
+        "-5975202027764378435": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "c3a774aaf0f7585d7651825ed3726faf855589f8f4a337884a218f5958bcc890"
+        },
+        "-2337417457786284867": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "929eb2b62ff6d610061bf655401373d0d96dd062672f6bb4c32235a2199e5361"
+        },
+        "5178392093170537661": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "1c8b2cce0e230fab95439ae7d5488391ba375c435d890b4b8986c178d779b12e"
+        },
+        "6465346011224151229": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "1f0b402d531483e9c5367cb8298eb1f31862615d657ae0d8566c35285dfb5555"
+        },
+        "5755819269215950013": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "254526b296be916af48091ba97d6d277b9c93fb315dd72b9d88c002cdc3caee0"
+        },
+        "4717972114328261821": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "ae597bac22c7a1517006f465642baf5cf6487db1ad10922cb32047cc6833a756"
+        },
+        "5485094747363022013": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "19899e071c6b9b1770734e43e9dd1221b8a68534629ab6119f352a538e59d193"
+        },
+        "-282024922086173507": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "652624af27616aa8f8b5c069b687d95cfffa492324efa446bb2ba83cc9309ba8"
+        },
+        "-532380874149194563": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "b4a3bd926343a58afb900949552ef0000a6934b36fca57de88aed9d7f780f27a"
+        },
+        "8326300499596285117": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "68985a67a8227609adb310b2612950d730a1b1fc41285353d7795b2f60b2a28a"
+        },
+        "4322783663268893885": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "7d57965e2275d75b732090312acad5093e47a91be18c7c733ad450668998d3e2"
+        },
+        "-1173358762464832323": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "7c02ca1f5bdce96c7e3a409872429366940a2f69ec9f60c6654004f6a39b79b2"
+        },
+        "-1556667468562230083": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "54437d9db936677896d07b66b9c1c5c8cd63598630c1c32fa7abd0f2e808bace"
+        },
+        "-5717719079965485891": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "6c33e495895f1039c493bfecd2fe3c9437cabf4bef3e078f01269b238b9a20fe"
+        },
+        "1577707045293528253": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "cb99eb5db0fa616c58b0a6d2c0fc02838c7abb7e9ee444bf86de0edd3501b78e"
+        },
+        "5865044205234099389": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "ac0baf203a39f8897ee07b0fcb36eacbd1ec02516218c5c4484c62bc6021db21"
+        },
+        "8447137833260881085": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "2c334cf130493cd839e767226b29a77f9723e8ceebdd8ff0a8959ac98bd4c02c"
+        },
+        "5344702013183235261": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "4e04b23101af75233659a8b723088873db85cc74eb1ee3f4e0f596d62f3e8175"
+        },
+        "-4152630451272084291": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "62643d1d2fcbdccb88f3dd2375fa475558158e1b92a0209ed609e11e546c654c"
+        },
+        "774023868878427325": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "07b3db1dcd417ed6923e8d3ff3a7b6c617437ffd293f04d7af650d3986363227"
+        },
+        "1212778188161750205": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "89904ee76ce5103fbf856c60b18034b2f7c905e3ad61f6683df10a60416e2e76"
+        },
+        "2541113776887698621": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "aba23e5a52dd1a7a99901a4ee0daca8887f4b28bcd9399bb8e98a3b8a0d463ed"
+        },
+        "4203786953443906749": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "9630690378472861265eb0aecfc11993fbcfbe6b19f34f81c1296ded3daf1bb6"
+        },
+        "-1338655245570206531": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "c6f5ca066ed651bb5c95b4592dc7feeaf513976402735d8a79f5004b7fafb6ff"
+        },
+        "489572153393878205": {
+          "type": "GameObject",
+          "mode": "gameobject",
+          "sha256": "c45e3ba44d6df8cc9ca4da2918c04b38401a504c5c2f32b1d7afd3cd9bb5c3c4"
+        },
+        "7016720286420571325": {
+          "type": "RectTransform",
+          "mode": "transform",
+          "sha256": "660c9f21784164b221201f27dcd49c6c703b3ffa735391ad26e0f1ec3f793758"
+        }
+      }
+    },
+    "Common/Font_bundles": {
+      "external_files": ["cab-1e36700dd93ee778e75c5e8df73b6de5", "unity default resources", "cab-2861765bc020423c052753f3d68257d4", "cab-67f01944dd42f77d3b8883c36c4fac35", "cab-d9e009e83909ffe0b1a466d3ebe720d4", "cab-5defc05c0250f5fe935b9cd9b28fdca5"],
+      "objects": {
+        "-9077103329924155044": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a7c70a66952a5bce54db2f6f4a58bb9728051d61472a04ecf75699c26e6d4e86"
+        },
+        "-9058677790128289632": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "aaba142a3511945d1b16e0c8a90ac96adf9eaa02ac1454241818e128d08d19ed"
+        },
+        "-9025032285879999613": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "413d5c00827d8fda9cde5da52ed81f41dc460c082ef3970e74939ff4bc7786bb"
+        },
+        "-8931304705812715982": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9a1c904e78a00aa559e24c806b42b11f8bed439ee15df17f03ef8837adba0504"
+        },
+        "-8903999276269755321": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "e5dd4428217c54cd4cde66d1e550a20db4f456ae741fdae24cbf935c63b42fe8"
+        },
+        "-8897188453783582491": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "7afb3f63a6cbe54af6274784aefca16ec977612015ea7285a5ac1f784b0f04e3"
+        },
+        "-8881356153878509886": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f9679322a5f9f9a1181ded454157563ae48cda379b149b056f00e87a657341d6"
+        },
+        "-8649989426673538992": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "e8cda8e6727019d2ef8e33c82ce02491eb152b511486c7d64f1b63b708a60a0e"
+        },
+        "-8581051127559483422": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "6319d380716a4064e8fd8be6d2966f1774306936dd9230fabf40080aec369921"
+        },
+        "-8530258174419154715": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "5df7ee969ddb224b44ffcf9cbd4cc1c9544212900b10a8bdad5296d5cf134cb9"
+        },
+        "-8266628098239966572": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "fb9b288335c2cf5565bd946a79d3cef193595d2134e84a497b30774f71bb4c5e"
+        },
+        "-8219409746397535362": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "8de0605642ca32533b8d23a30ce9c80159029bb69df06d3989e43325f84429f6"
+        },
+        "-8043147592868604225": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-7783248419330370782": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "e558cc486032cb93abb18061698c45c9e5de13f13c7be8afe89f954c5adde626"
+        },
+        "-7652827882693125516": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "972d015f423c291897618cb4eee2343ccb115e957c9f0ac2c26a85ee183f18cd"
+        },
+        "-7637238699032663536": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "469cf8c154ebdf27427d491a26f07757ee400275a6b15f2f1324def7c1722c12"
+        },
+        "-7490950863985017264": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ab312fd897f460f9803aba298fd380cab8553c6cb770bd300ca83078f468f70b"
+        },
+        "-7476818593982884034": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "02de127c48a9b963e9332df314a97b9f1c7cce23a86ce3f069b7fc0b01e4671d"
+        },
+        "-7340497057463985865": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "0820c7053da924e64366c44a4949426746785aaa7f3ed7856738e0b6efeef854"
+        },
+        "-7190641599664479712": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "7462dc16a19d223b0a2e1eae58844d3a90dd21e3c50b6744ae63c969d2a3ac8d"
+        },
+        "-7012869489686580820": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "b5b96abf320db14ec2e12ba86f41c471edd2d8380358ec4bd5968a45a93248fd"
+        },
+        "-6990912067073817693": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "c69d24b0022bfe7680fa0f6470a8b3c831d98a899b5b16676b0043f88c450239"
+        },
+        "-6805988056271771396": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "8644a5d5018bc495263d0749c9c39dd858e8877e198edd00411d833cc4ceef91"
+        },
+        "-6789176201234150437": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-6741314407065587059": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "52bc58baa64da6da7a06922aead04874d0f6dabf2f992e9a8dce02eb237e3bb5"
+        },
+        "-6692016768870736312": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "6595f89cfe904ed0959cf8a3a8ffb4db21f407f6939ff2f03e08752ad529b208"
+        },
+        "-6686326012741466436": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "6d4f72041ab5242f070c2d68e20775bff6f0081707d5b682de3b091827c028e9"
+        },
+        "-6662324353449554933": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-6614084552199804299": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-6468951624618883653": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9d5e9a5aefab67308603f889bbd5bb741a92b34bbd92da4dfb35ce3060ed18bd"
+        },
+        "-6460730260487173109": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "119125cdd7ad4e557d0bbdcae54c29680f476b4c9448f662d8545df049a9b775"
+        },
+        "-6432202996080702089": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "736ecd2e40bb9d83d97ed325cb523e99954a7d7147cb9804deaa95230cd97402"
+        },
+        "-6333558123561130649": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f457bb0892e5b0e85a27ee889c22808c0ef313255171b4b5dcff55395813aece"
+        },
+        "-6251145387723093571": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "e1710e922f602891592f7ed653d9b902e9d8d06cc2bc6132d7dd50cad4456f12"
+        },
+        "-6188241384574981967": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-6167166145700619731": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "8fc67ec906cb810b96f4b05286a7528d81a9490c4de395edeebff36be616f06d"
+        },
+        "-6057619296318035339": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "2ffdad04560970d262244457c9095cbb38fc679bb35704e16a5126c8e628ff17"
+        },
+        "-5742928583980460353": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ab2ed5485a6a99d8f251f6fad23b7cb5d90305fe1598ce83e492277f7695d863"
+        },
+        "-5571602220041330553": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a3c14b3c4e9d3964213b010d867b32e33a6f031276bbe5b3abe77d179f8fec68"
+        },
+        "-5379414220533248839": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9eeb75d3db594203b0b608f25684f51e40234256dc45d5dbffadc9fe4288fe32"
+        },
+        "-5192298408270348345": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "63c48f28e1e5a0c573b012553227395a05547c2da1716acf1203ed4a8b34b5b5"
+        },
+        "-5166281332108710592": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f30dde14fae78a3976eb9f2ff7d6351f8e60c31c2d175ba51053881b56d546d5"
+        },
+        "-5102697118585943731": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4051efe34bc7b0bff505608de1d51e5f8c63cff8865bb2c17ac6803643b36334"
+        },
+        "-5030290114768873187": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ac47a06352ef0cbc6bc0bd26cdd000ee4ec6e42f6d34a43e8190d404d2f61a70"
+        },
+        "-4901455399455278718": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "151cd51d9544232c6beec71127470072b7a2b8728b9add488e363bc3de6dbada"
+        },
+        "-4877037056050673435": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-4848402987123262260": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ba4d6d8a57eacdb6c1ff94ebc445d48e791fbf73f7e480479ae1c8c31d3af77d"
+        },
+        "-4666779584427913889": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "152ef36cf816abb5487870ff0cab4e6d2d5ef6cdb6f4f8993a8cc237bf42f1ac"
+        },
+        "-4602379687554624409": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "30587f696f665e28d51999d28861621ab44e14a5ae2b9971831931b439524d28"
+        },
+        "-4353644328918980037": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4877da4e8f126cceb9eef6d0275b60173deff2295c334d984a8b1afb0a6d9412"
+        },
+        "-4107943921645750434": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "21cca3c6f7f5cb5de79a18a267a4349be83e856a4aba25f56b7f349c58809e96"
+        },
+        "-4080393176190516637": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "d4db369c9833cc79959b1dccfce88a23d18fdeba74286da37a408443ab1e3654"
+        },
+        "-4000200143744628403": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "06bbe745149423b46ad643dd6fabbdbc977f455982306b7e3b96830940e5eaf1"
+        },
+        "-3962955837346944120": {
+          "type": "TextAsset",
+          "mode": "raw",
+          "sha256": "3d585de8957fedaeb3d56814ea7929f13062fa6202620ea33918a37459300a8b"
+        },
+        "-3945054721683969796": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4967a85aa4577e6626fa9b82c1efddea3fb9a931748fc9c575b7dd1bf492628a"
+        },
+        "-3776850198537865092": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "33737158840dd555d6be67afd3e21c77b4c9e8212adf4d22e5f748af87a330f8"
+        },
+        "-3728308693272659837": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "b1b7d341bf7cf439014824376e71323cb91210168875eca4fa2e05ab7e408cf3"
+        },
+        "-3718458055164599747": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a8b3ec5659bd75b34a8204c4b141b2e50c6d470304e062533e3e11c23d7a8015"
+        },
+        "-3518056681779151063": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ee11903bd81c4578b9ac1677e8bb0584b734060e9973b06c51dfd7b54304220c"
+        },
+        "-3357988717150523223": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a8a7edfd00e8224960bd4521fb9cb648bd5fa7d3359cbcf5c386be9bd1d300a7"
+        },
+        "-3210479769178092562": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "1fee27b9cb6d84c601fd6453653098c7953c256d5084897f2acf4a0044139d29"
+        },
+        "-3003650033793178330": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "dc3a9fbf27c57e5b999dc8b7449a4a41e75b7ea7dcb1f41b5590b26b4f265de1"
+        },
+        "-2881732922338545654": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "7a5036f698784071108125e0da5ace86eeafe794b524d85eccde92065313d2e8"
+        },
+        "-2822967664231537001": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "994773d027c0d132a767f39ac025af0e07883931bc00244caca1dde95096f689"
+        },
+        "-2769886035318915437": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4cd40d4a0971192ec7b7f9f644321ae8b92ce61ad7c1dde89f82c42588df2237"
+        },
+        "-2739202363678272378": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "19ac8159b0a33eabc416f3d6fe91b8048f714d2fb553a4b0ea8d384130dd4d72"
+        },
+        "-2737353082296680797": {
+          "type": "Sprite",
+          "mode": "raw",
+          "sha256": "c221afc11acca782d6950098cec1e1d7298162f0233910b6f69481690b0e4d57"
+        },
+        "-2726544977098719581": {
+          "type": "Sprite",
+          "mode": "raw",
+          "sha256": "a141b81bdd7bd412e3631c866e0144dc57b5c486cf813f789e64ae91d3b5fadc"
+        },
+        "-2677701467107552156": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "cd79a2b57d935ab8c3136ffa0d4ee4e3b37722499eacc4f223d8b7719ce7b65f"
+        },
+        "-2636977022750913760": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "8363ec7a003b98cc9daf5902eb9e15389fc0f1593bb22a374b53fb08cae9646a"
+        },
+        "-2594834333922463316": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "1ef0fa5d529adb140593ce552288887b4e016ca5dc942c474dbb7ebb9eb5159f"
+        },
+        "-2585341984207382849": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "3a37dc383c1866485fa3ab4f9b860221c448165dbb903c83d55b1f103a204541"
+        },
+        "-2482927500938524313": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "e44b7d7e040888decd1f5e3d87728c3934ab02be3381aa0b58e71d026446b5bc"
+        },
+        "-2456974459131654793": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4c3e572ce775834404ee366a64f2368b56785ef5a0e0afd33d673a818c84fb9c"
+        },
+        "-2427773098340341508": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "5240018b3eb4091eaccb211b35aa6687ec015b141e97dea0ea25f3331bf05571"
+        },
+        "-2341484749670911087": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "91b6aa02fd7f26f484cafc51a1cf0958886f90454c66545223adc2d0a0b1fa05"
+        },
+        "-2239669775989256489": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "c99e104e5ac1df266271be29a762e2c04195f6b74dbeee7343e574020042c555"
+        },
+        "-2144999671638427524": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "ec41d91bd3991ae2e7cbfa3893df930bc1af7657a5db8f6c72b55d1df62d433c"
+        },
+        "-2109953502839829046": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "3f45715d55c590bb213fdc63d6d00a2f18d863aeba68c07df43f79e74ce562eb"
+        },
+        "-1981966392023882863": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "ad56bb756f9f97ce09015e40d74af76ca922168abfebc59e208cb940999a43b5"
+        },
+        "-1788825920881739392": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9bccec96df21362933921eaf5b192b632d76cd71f83759faa2555468854a374f"
+        },
+        "-1689973875006637397": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "e5e8a4f3ecb05c7abf8b09e7f4e37a1bd65e469b2bb8dce3a0aa44cd32213f3e"
+        },
+        "-1661451472408514550": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "-1622146089113048836": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "6e36d96651d9e9400af36c6112d8073f28fcd86f76bb0b42f91586c569ec453c"
+        },
+        "-1344514854270874102": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "fb1189aaad0473beab21c3f96477c83697e89ef88d264e2fee09c53c850cbe10"
+        },
+        "-1297865124389623179": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "5314865e0af8045ce32bb8617c8f2771686242c3504909a9a264bb6bd70d3562"
+        },
+        "-1247429339039607674": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "cb892bd2f7847ba373aff0d9b1f18fb6d427f6938ee1db5d2f90763b220928fc"
+        },
+        "-1094520165225180259": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "077968be24fa311c80398e63076e0e26e148d6a65c340202bb9f58a5d29b3d35"
+        },
+        "-1078079334646013421": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "e0c4892bdfb6e9906228399b59659d046e5be7df6abcf8f4367c761b1ad09dbe"
+        },
+        "-1050951510632854060": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "d5161b0bbbe99257643d3b9fd127b0433029beee5b87386eb796e20a5911b984"
+        },
+        "-1018730195410547254": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "6ac39f81e2f92d5b9304b15f9870a402a8a742cb7437011f83c1d74ae9346e48"
+        },
+        "-854032043685140228": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "7ccd0f50724abaf6032ce87fb2aae285d0ea4e134e576005f10e62fd5dbc2a4e"
+        },
+        "-757749988448016049": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "dfd8f904ee648a5ca08809d5c2f98195ea929ac47f76a673198b2f058c0e1726"
+        },
+        "-736094418183318990": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "253ae7b86f2f89e33ce1f2aac2cd1148dd98158cc42f475784f04c11c023a83a"
+        },
+        "-526405809559564322": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "031689c2720c845f39387fa2dff9d3c0a8010c39e9b88a95976c2a7e60f0ddee"
+        },
+        "-518503460033298657": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "c0b61f901285285c816212683372db68e7ddd1c851f61d074a871b4ca3def691"
+        },
+        "-504220220300900716": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "05dfbbf47d94399f4b466ddf50b933498146dd60c26cad71978ca7305d157b0f"
+        },
+        "-494501303937253797": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f12ee20f2811a3e4639a313818972553a87fb8ff49498214507529c381e4febd"
+        },
+        "-396364928729778045": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "ffceaefb5a6f04cca0abbe8725e24a6419ae5a9ffff6fe308d17d1a7f64b190b"
+        },
+        "-340481626681099060": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "e7293a640e52a7f6a663796c0cc48817801de715b955c96b584c4469015a21c8"
+        },
+        "-284393212418135729": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ed2b5e776e47cb81696f4e31f10c30441d2fbdd8a141a1035ccdf93ddd26cadb"
+        },
+        "-158333336950086104": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a328ba59ce923ec9e56967adecc240e83f098708badaa624c85f65fcfd4200af"
+        },
+        "-136116701966010237": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "9387bd535f761c6b97c26d8a6c9edff53353b0e21329d4c5b71bf28604f8c670"
+        },
+        "-67802524686419620": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "c26280b20ff2361a97ce3a121e0488e9ed6c46f7de2b6b0fe0cc55f2af896e2b"
+        },
+        "39010727359333490": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "d61fb042ad9d548cea7b0db6c02b94246af637bfcd3ec896047fef7c53883d22"
+        },
+        "215281571894860404": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "745a5c0f2985d6d35bc6979ee09cfe7c610774fc7d7f22cf0b6371ee4f5cb3d5"
+        },
+        "228114276289140771": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "b6e71b06b3ad3728b5d1206146e772145685fa52a6cdbb7f12d2bd61e18564ac"
+        },
+        "454012691824221465": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a373f66e40c6f29478ce795bda4a01efd881b534c43b839259d94763f738ae45"
+        },
+        "476129404694895220": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "505981080948566968": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "3e210d2a9088eb34a0b02e9e2345a2534e19d9cbdf0244564bfa42fe766c4cbc"
+        },
+        "511814773224304508": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "fc88022f8cbf462ecb65021f57ac14f9275215a0dc2dfbf0a1d2e871dad9918c"
+        },
+        "513522895607094282": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4d721d572738952d1b54bf23fbee442b0ab4b227bf3791b865d78f9554785bed"
+        },
+        "527721970697765214": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "baaffd5dd27ae80bfeaa306eff1160dcc9debfd96bb53333ee9ef625c55a0c03"
+        },
+        "591443852604680652": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f28a11627e5ee5ff5f753b3ccc44a82999bcedc4906a94850e24c499647766e6"
+        },
+        "606841134786854563": {
+          "type": "Sprite",
+          "mode": "raw",
+          "sha256": "169a3112c97b5857c728128466c29a7c0ccb41635832bcd8bacb78acd5a60737"
+        },
+        "613735202355363625": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "655952751495679656": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a3edefa4df825aa651987b6ab6c20a716bc227bb02327afc17230eaf1997d2b6"
+        },
+        "675747191376828451": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "840073264968542736": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "71515c2223760e74e3b36bf4ccdf322aeac049e2ff1a9df395b02ea5a014e5d4"
+        },
+        "894406179742414824": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4e9cb407b726fe6f9c47922fabd0a3f635c170ec919e0f0dbaa96f33c2e45d84"
+        },
+        "964561049169661507": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "39fd7fad0faedf295caeffa4e8e90f9724d79aa78ca9bd51af7c5a3d037ed89a"
+        },
+        "1029903354320107755": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "18bd76a841c622445ea1309b6007c7e45ea4b99b71af093e771693582b21cab1"
+        },
+        "1071188550088116610": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "4ca00b78b718f531e9899b8d89eef579d959f3ec784b148aa87ea332c8298b1d"
+        },
+        "1101475106157266840": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "191a4b22d9282fc4643c347f87be885d22b6e8a9de68eec6624debb5bc99bbd5"
+        },
+        "1291991854179502789": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "56932dac6c0ad326b6409689462a7c9371ca7cfac67f9663a0b8faab39f6fdc3"
+        },
+        "1388851050165242843": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "447f9491d80d455e71f11e8ad1e75cdc8f6a99f2010581121c1aa13f5fb7ea23"
+        },
+        "1470737543190596764": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "eca3d207e3720486a1dd4bcc534f5277b78b8e2832532e6dcff85d4ffd66baae"
+        },
+        "1482346930774817996": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "2fc1d8c5e78a97553603578e38a3ab2e3c7020ce765c94462ac40878c3d3af6e"
+        },
+        "1529096516356181003": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "d9f0d5af4e050d8a8ad2260443174a229feb8509118825cc2fd1ad9e3fd86b13"
+        },
+        "1727227129298798752": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "f346cf784bf13114948ab4e7d1459a781386aa0f93babf34093de98f523cbd3d"
+        },
+        "1800965822738019446": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "d8151b7fe7310e464aa34a4aa2f85b2e5eb57953bfdc745931116820d215ceb6"
+        },
+        "1862148377416843639": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9c84f8a555a10d8fcbb60c0789554ada11f14a0b57f409bfa4ccbbc7f1b99fe9"
+        },
+        "1866416259400829261": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "dc8ef2c4fdbb08188741c80087d4552381aed5fed01c263f886218b6a5b4d139"
+        },
+        "2202806132585060090": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "eebe9bb1daeeffe908cb026f9d13b496a39ab2477434b9c81991122f7ea8fb12"
+        },
+        "2288475248508964238": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "16ea9032a84fb9d5949bd44b1e88fcb6525ab1ef96b4547751f181978a3b2dcc"
+        },
+        "2336340763902414175": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "3aecac275f539f9e8070c9bbb4769d075a71e660f5d7fd3a8d9436532519d58a"
+        },
+        "2417365139982267753": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a99756541bee90e948e2564afe6136ad0d662f042dbf770ff866134530dd50a9"
+        },
+        "2420816717895247081": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "b822e0b9782baaa71cab51a899a12abbf70bd8d17382f877f32a10c720c34616"
+        },
+        "2453702881396880219": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "26b29f60b51b3300abc5de4c79578c4357807d1b2ccc369a634bbca32e1ba3ef"
+        },
+        "2489022873567018659": {
+          "type": "Sprite",
+          "mode": "raw",
+          "sha256": "24ae75b51700f3337b923962bb9810b64130e38a72122bf5fe2d2a5066d391b9"
+        },
+        "2506655689348058510": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "29bbb1d9a3370a78e4246accb64d367af7b89189c46913bba4b1f06569c74a17"
+        },
+        "2514498900070013759": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "ed6ffe508739793173488de87ca50fbfad6ed76ad04110294b5661d7bdba8c15"
+        },
+        "2585727726197762225": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "528f3f47d3b628e4ab6763a2dbce8c402e4b85d3ebe81c85b8c75b7803482834"
+        },
+        "2630640100712033994": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "6c764327fe189efced0e84e539739916a0d59ec26158f4dd2e68595597bf9f51"
+        },
+        "3025408188106648896": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "c10d58991d138d7fd6c2bc7196b7f54a3be80238d313bce2facfadd3f4fcae73"
+        },
+        "3075911927517116540": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "1f2110b8a528fadcddfcadf2dba6d483b8fbdd602536af79545acb81caaa17ce"
+        },
+        "3090806996891761934": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "1b382b8d953ffd46330561abcf48f069faf4c2e081618c73de3251e100a600d4"
+        },
+        "3141919785211530698": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "3159024574713555279": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "86b5b25d4253ac3e9ee9c91c2e573a863d9e5bd8c2b2933e480b15f532daf738"
+        },
+        "3209478181533236899": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "ce075915dbba8c23a6eea8e5b860e9dea786d3e68ea0667a418f8c712e633291"
+        },
+        "3219280019115604651": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "3242940556523500418": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "eb3ec46f649a1ec460dce6acaf7a4c8003a58ae7d93943d0202104b407380b96"
+        },
+        "3341312650030621203": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "5642aa09ea06be4954d7c6593cd7055ff313cbb6d236e302e42a083486eaa170"
+        },
+        "3416126243364311598": {
+          "type": "Shader",
+          "mode": "raw",
+          "sha256": "d526de05994a898e61b68b8d82a5f7f966bdd11780658d62f28170099b55c4ac"
+        },
+        "3454343822568136589": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f1f91c59b6b64c727825465fbddd228e304210d1e71c24cfdccb107104ad518e"
+        },
+        "3529434280266724759": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9769513f29ef1cd0ac6c8676c36a1bfb960cdeae1726624163aa9bb9eff97a82"
+        },
+        "3554737679264524368": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "6991666c6203346572e4a1a6649f30c8b39746d0501b40f18a9be5ddefd7aac7"
+        },
+        "3796896436709751337": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "d5ef4ec4c004832c59ad95da65b15f7d6fc6c743c63d61cf8af8c3e992e32ac4"
+        },
+        "3856137593976352778": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f3db4bc79760d5cbd4058e9575570bb01bf43a9e483eaa5fb0d475a9e430c6f9"
+        },
+        "3909140731805619334": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "41c54d9d780a58c643087bb58cd05a316eb4e88c977e0429a564c9803ca16022"
+        },
+        "4153242979261961319": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "feeb0c0976306341231869e72d88857ff417775b3f15c770e0437b36dff3ba42"
+        },
+        "4221754493284925225": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "cabe17ae8eada362feb0b4263d3d9955a04927d8815994c72d756c332e279ae4"
+        },
+        "4267309662958127386": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "0409860b523c104bcb72e318c6a14d60bc953295adcbd32093f40e4f2f33443e"
+        },
+        "4481481307848332189": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "4530880918231092622": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "b1006bb71c386b749ecce9c9f97bdb8ab92270c244c1905009ac3044e021b66f"
+        },
+        "4541047551861386800": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "d12a5321cbc41ad0abc22e9aa1d52591609be2315359f774bbba8d1e9f78a736"
+        },
+        "4563955496668944419": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "e684c1d923f53572a233d09bf072669f80281ab0d34f57f1a3f5195435fa1fb7"
+        },
+        "4623184334520582964": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "923538cb1cdc41fc642afa642e244d3c4081054eef2d55076159c7ef0edac364"
+        },
+        "4757642117711961369": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "4844346167338499664": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "114746ece89ed9365a842fa18d8f8f753824026a6ad964d8ef3aebfd066f94dc"
+        },
+        "4861283354042511053": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "47206cb349df515673f95a1317bc4b887e510f180c5ea6782ea8b1e187b82f31"
+        },
+        "4897694105146334489": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "1a41baea5929a980814a0c8d9163bf54aae659cc3d4e5829561b386313f3d124"
+        },
+        "4918060070403543188": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "226b41c9c9979e9bfe0ffaceb769cf37da47b6f3dc94c3c770ec5722d805dc4e"
+        },
+        "5018203230936993685": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "5980a8624c72a351d1f1cf1767f45834cea3a79844d1410fc57e4b6d97f6909e"
+        },
+        "5138894921845942099": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "002b7a557b19de964260e5669f6533c02333123187c7d5f160690269c28803a3"
+        },
+        "5192235980605589400": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "2858d068166437ca6eec8e3bd7ec73dcd875e57b880f93ad70f6fea4938898e2"
+        },
+        "5277366442296353299": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "708296dd4a8f8fa5cb4708b8d4bab0555ffe8b1448cba76f604fad15ef7c99a8"
+        },
+        "5357336657525401712": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "0b2405da7c4f5f76cc5d674a48adb8f2cfca63266cceb886e63a7873b7b53e4c"
+        },
+        "5433426752858002393": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "a15f6963466a406b5734da7e3b08974d4cf804171ed61c898e75e2a7a37f5458"
+        },
+        "5545789179577526449": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "9f2ebcadcd752a2263b050fdb19f4b6c1b6cf87c066721bec42968410bfcb9da"
+        },
+        "5564791474015107755": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f619e6a655731a3a39aeeeeeef21df9e1df7ef939a49cad1b5904b7d0d14485f"
+        },
+        "5573507160228690125": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "c325bbd6cbb43113a66df03d4dca72ac2af1a463c34cdafde48ccb9a638ae32a"
+        },
+        "5909685757390997664": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "e50f585f8f7c90bb23c0100ff0e5a17e801c103fb3100830f4467d15e35e1554"
+        },
+        "6050920612300482427": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "bc7f966c24ba8b7e08617abf218fdcf8fb3859eca76c34a44affc3b8b0c01e54"
+        },
+        "6068388132393809398": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "44598c41a0a385c6e131554fc6f7016252c723de5d41246bb1463305652cdf56"
+        },
+        "6105471708108388190": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "6158666564737182050": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "d0f968ca54ccc063a1e526eaf4745434c5700923307742901ceb970136ad5bea"
+        },
+        "6206515793347378645": {
+          "type": "TextAsset",
+          "mode": "raw",
+          "sha256": "f6344de63a76ceb626c538270d638494219e530ebf5b3ebdf809cc7e8cbbd72b"
+        },
+        "6458880836934660321": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "b90755489abd8ea496dde018920bac8c6e6ae56112f8a9a54cca2978a5b53f41"
+        },
+        "6489296763794803849": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "9c744db44441d414975611acbec4bfb7867eecc7288b8962dadf9cc6d6838496"
+        },
+        "6521745544450897570": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "21811074fab6c7605c9135ba54119f325bbe34dd1e9a6725b788cd340dc1f4b1"
+        },
+        "6603932437988314075": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "2ec01dd5444a279c1fef381a4d7aafcb51232f5ad996f125016d4ea2dea6bf36"
+        },
+        "6611014148321512823": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "6915779399637063369": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "b149cbd2d49a12f70e002c2518f2c808eb1312a16f2490e8bb2ecf6c65a3f2d3"
+        },
+        "6975828564934792292": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "f36bdc0d15a9a818a97881456512929b741e6cacd2421d510e4a63536c08dc41"
+        },
+        "7154034827063686154": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "f3210fc7e5d8df10ef261c181673d19998d06372dcdf162bf776649382009544"
+        },
+        "7442897762026031561": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "1fc311e7c65c88730e41bbb30e1261e752725708f9076083e3ef18e0351feec8"
+        },
+        "7527955383585624989": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "cca213682eb9e1c52962128bf7d37c0e15ce85921d10f4292b9e065da09435f4"
+        },
+        "7618289846053370204": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "7633830098329592499": {
+          "type": "TextAsset",
+          "mode": "raw",
+          "sha256": "d6a57977d063a5a4fa9c6d1587cfeacfafb657cf36d9f3718090b948836a720e"
+        },
+        "7997069833075654224": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "d7726fe26d221e709716acd640d0a465305687ae16a0a1394bb77e96dd33cfd5"
+        },
+        "8022233087390664787": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "320a5a727b4fa4d949b473e5a672ad18e4e508725e2586f91e7fecd80048e2ef"
+        },
+        "8042856992228511071": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "bc355d8d9cc50b26bfa96ca02ee5386ac26c067f4fadc72783c32ae31933bc4c"
+        },
+        "8163795205098350844": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "6c9f8a349e153970f724fcc5b8439324b6ad6818b2f0b8a918744f31114f235d"
+        },
+        "8214263739281601562": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "8e87e21559f80a1adae62a3eef2e1d8f95ea54b2e8e40d3503a34c2d448009cd"
+        },
+        "8286394459813532775": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "9f8bc88af5a3ed25f861ea78cb4f7a228a901970e5b09a2ff64d0e873baa53be"
+        },
+        "8539762101666481764": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "eaa04cb75ba2a0250caf7a152254265a4dafd063dc8e6d38bf139b199cabb439"
+        },
+        "8554438936047941470": {
+          "type": "Font",
+          "mode": "raw",
+          "sha256": "d81e362d8a660005a43d2b6f81198b6633da2dc8c97630e576368f0d57a04678"
+        },
+        "8588858337919807788": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "98f70b4f615caf19228c99797ce73670d4b982307e1307c9ed908e73e2fd44b5"
+        },
+        "8608529731987509218": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "21c25343afc717e30cabddc94b217b0d7d5d37faee4e75ca93f6963c3673c8ce"
+        },
+        "8634796869515325130": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "0bb5871f01e89914dc055fc5f60b479d5c7c4d24d01ba8bad65bddec0a76bda0"
+        },
+        "8793007782781944419": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "275b60c2e712d71e4f611567bc35f13914e0840b39c6fea6f882e7c70ce37cc1"
+        },
+        "8884153184787638352": {
+          "type": "MonoBehaviour",
+          "mode": "raw",
+          "sha256": "75b8816d73e16c55827af9aaac7f99f33cef667820706844957f44f0bfb5f812"
+        },
+        "9169685037495135946": {
+          "type": "Texture2D",
+          "mode": "raw",
+          "sha256": "5c2077635265e8bbb01365754369a646f8f30cfa0639596c7d5f673677f23072"
+        },
+        "9201361646025998947": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "6170128f8bdcef870df76463d78a5743d03d3180ff8573af68194798ee9fc392"
+        },
+        "9215654393425129900": {
+          "type": "Material",
+          "mode": "raw",
+          "sha256": "3aee54be9dbeae02fde0c08dc2f9e183e48217e66c70c9b398c1753f8eeaeb71"
+        }
+      }
+    },
+    "Common/CardNew/Template/L/Settings/FontGroupConditions/Pokemon_Normal.asset_bundles": {
+      "objects": {
+        "-642452921627321170": {
+          "type": "MonoBehaviour",
+          "mode": "condition",
+          "sha256": "6c984c11ba39ec258842ef1049a179a2117bf35d2577a725eb14cf2c62bbed19"
+        }
+      }
+    }
+  }
+}

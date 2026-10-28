@@ -1,8 +1,8 @@
 """Prepare newly copied Pocket resources without borrowing an older database.
 
-Aladin assets use the key asset extracted from the selected APK. Protected
-metadata currently has one audited native-loader profile. A different native
-binary is rejected rather than applying unverified offsets to another build.
+Aladin assets use the key asset extracted from the selected APK. The native
+metadata loader and master key are discovered from that installation and
+verified structurally; unknown layouts never receive another build's offsets.
 """
 import ctypes
 from contextlib import contextmanager
@@ -153,26 +153,24 @@ def _recover_metadata(root, profile, notify):
     elf = inspector.ELF(root/'input/native-code/libil2cpp.so')
     source = root/'input/unity-data/Managed/Metadata/global-metadata.dat'
     protected = source.read_bytes()
-    if os.name == 'nt':
+    if profile.get('metadata_plaintext'):
+        recovered = protected
+    elif os.name == 'nt':
         if _aes_ecb_windows(bytes(range(16)), bytes.fromhex('00112233445566778899aabbccddeeff')).hex() != '69c4e0d86a7b0430d8cdb78070b4c55a':
             raise SourceError('Teste de referência AES não passou.')
         n = struct.unpack_from('<I', elf.data, elf.off(profile['prefix_size_va']))[0]
         pos = elf.off(profile['prefix_va'])
         encrypted = elf.data[pos+16:pos+16+n]+protected[4:]
         pos = elf.off(profile['key_va'])
-        seed = struct.pack('<Q', 0x2d79bbfe57c87ce8)
+        seed = struct.pack('<Q', profile['key_seed'])
         key = bytes(value ^ seed[index%8] for index,value in enumerate(elf.data[pos:pos+16]))
         counters = b''.join(b'\0'*8 + index.to_bytes(8, 'big') for index in range(1, (len(encrypted)+15)//16+1))
         stream = _aes_ecb_windows(key, counters)[:len(encrypted)]
         recovered = (int.from_bytes(encrypted, 'little') ^ int.from_bytes(stream, 'little')).to_bytes(len(encrypted), 'little')
     else:
-        notify('Decoding metadata with the verified native profile...')
-        recovered, _ = inspector.recover_prefix(elf, protected, len(protected)-4+8192)
-    if struct.unpack_from('<II', recovered) != (0xfab11baf,31):
-        raise SourceError('Os metadados não correspondem ao perfil IL2CPP auditado.')
-    values = struct.unpack_from('<64I', recovered)
-    if not all(offset+size <= len(recovered) for offset,size in zip(values[2::2], values[3::2])):
-        raise SourceError('Limites inválidos nas tabelas dos metadados.')
+        raise SourceError('Protected metadata decoding currently requires Windows BCrypt.')
+    from .native_profile import metadata_sections
+    metadata_sections(recovered)
     out = root/'original-render-pipeline/metadata/global-metadata.original-decoded.dat'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_bytes(recovered)
@@ -182,7 +180,17 @@ def _recover_metadata(root, profile, notify):
 def _decode_master(root, profile):
     decoder = _load_script('decode_original_master')
     metadata = (root/'original-render-pipeline/metadata/global-metadata.original-decoded.dat').read_bytes()
-    offset = profile['metadata_master_key_offset']
+    from .native_profile import discover_master_key
+    entries = [entry for index in sorted((root/'input/master-cache-original/index').rglob('*.aladin'))
+               for entry in decoder.index_entries(index.read_bytes())]
+    source = next((entry for entry in entries if entry['address'] == 'MasterMemory.bytes'), None)
+    if source is None:
+        raise SourceError('MasterMemory.bytes is missing from this installation.')
+    encrypted = (root/'input/master-cache-original/blob'/source['blob_hash'][:2]/(source['blob_hash']+'.aladin')).read_bytes()
+    if len(encrypted) != source['blob_size'] or decoder.xxh64(encrypted) != int(source['blob_hash'], 16):
+        raise SourceError('The source master database failed its integrity check.')
+    offset = discover_master_key(metadata, source, encrypted, decoder)
+    profile['metadata_master_key_offset'] = offset
     key = metadata[offset:offset+32]
     if len(key) != 32:
         raise SourceError('Chave do banco fora dos metadados do perfil.')
@@ -230,9 +238,17 @@ def _decode_aladin(root, assets, executable, notify):
                                  creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
     contents = log_path.read_text(encoding='utf8',errors='replace')
     errors = re.findall(r'(?im)(?:file_write:\s*cannot\s+create|file_open:\s*cannot\s+open|error:|failed to (?:write|create|read|decrypt))',contents)
-    if process.returncode or errors:
+    # The installed catalog can retain entries for optional or superseded blobs
+    # which the game did not download. Only explicit ENOENT + matching decoder
+    # skip records are optional; corruption, decryption and write errors fail.
+    missing = re.findall(r"(?m)^file_open: cannot open '\./blob/([0-9a-f]{2}/[0-9a-f]{16}\.aladin)': No such file or directory\s*$", contents)
+    skipped = re.findall(r"(?m)^process_index_buf: skipping \(not found\) '\./blob/([0-9a-f]{2}/[0-9a-f]{16}\.aladin)'\s*$", contents)
+    from collections import Counter
+    optional_missing = len(missing) if Counter(missing) == Counter(skipped) else 0
+    fatal_errors = len(errors)-optional_missing
+    if process.returncode or fatal_errors:
         hint = ' No Windows, tente uma pasta de projeto mais curta se o log mostrar file_write: cannot create.' if 'file_write:' in contents else ''
-        raise SourceError('A extração Aladin falhou (%d erros no log); consulte %s. Os arquivos originais foram preservados.%s' % (len(errors),log_path,hint))
+        raise SourceError('A extração Aladin falhou (%d erros no log); consulte %s. Os arquivos originais foram preservados.%s' % (fatal_errors,log_path,hint))
     progress = [(int(done),int(total)) for done,total in re.findall(r'\[(\d+)/(\d+)\]',contents)]
     if not progress or progress[-1][0] != progress[-1][1]:
         raise SourceError('O log não confirma a extração Aladin completa. Consulte '+str(log_path))
@@ -241,8 +257,12 @@ def _decode_aladin(root, assets, executable, notify):
     count = sum(len(files) for _,_,files in os.walk(output))
     if count == 0 or not (output/'Common/Font_bundles').is_file():
         raise SourceError('A extração não produziu os recursos necessários para renderizar.')
+    if optional_missing:
+        notify('%d packages are not present in this installation; required render resources will be checked separately.' % optional_missing)
     return {'index_entries_processed':progress[-1][1], 'files_written':count,
-            'logged_failures':len(errors), 'log_sha256':_hash(log_path), 'relative_decoder_workdir':True}
+            'logged_failures':fatal_errors, 'unavailable_package_count':optional_missing,
+            'unavailable_blobs':sorted(set(missing)),
+            'log_sha256':_hash(log_path), 'relative_decoder_workdir':True}
 
 
 def _prepare_snapshot_unlocked(root, tools_root, progress=None, input_digest=None):
@@ -265,9 +285,13 @@ def _prepare_snapshot_unlocked(root, tools_root, progress=None, input_digest=Non
         raise SourceError('Esta importação precisa do split ARM64 do Pocket (libil2cpp.so).')
     if not (native.parent/'libunity.so').is_file():
         raise SourceError('O split ARM64 está incomplete: libunity.so não foi encontrado nos APKs selecionados.')
-    profile = NATIVE_PROFILES.get(_hash(native))
-    if not profile:
-        raise SourceError('Versão nativa ainda não reconhecida. Os arquivos foram preservados, mas a preparação precisa de um perfil compatível; os dados antigos não serão usados como substituição.')
+    notify('Discovering the native metadata layout from this installation...')
+    from .native_profile import discover_loader, unity_version
+    inspector = _load_script('inspect_original_metadata')
+    profile = discover_loader(inspector.ELF(native),
+                             (root/'input/unity-data/Managed/Metadata/global-metadata.dat').read_bytes(),
+                             _aes_ecb_windows)
+    profile['unity_version'] = unity_version(root)
     import UnityPy
     UnityPy.config.FALLBACK_UNITY_VERSION = profile['unity_version']
     notify('Reading the selected APK resource key...')
@@ -287,17 +311,18 @@ def _prepare_snapshot_unlocked(root, tools_root, progress=None, input_digest=Non
     executable = Path(tools_root)/'aladump/aladump.exe'
     if not executable.is_file():
         raise SourceError('Dependência aladump.exe não encontrada em '+str(executable))
-    asset_report = _decode_aladin(root,assets,executable,notify)
     notify('Decoding metadata and the selected installation card database...')
     metadata = _recover_metadata(root,profile,notify)
     master = _decode_master(root,profile)
+    asset_report = _decode_aladin(root,assets,executable,notify)
     result = {'schema':2, 'complete':True, 'source_input_sha256':input_digest,
               'raw_preparation_code_sha256':raw_preparation_code_digest(),
               'root':str(root),'profile':profile['id'],'unity_version':profile['unity_version'],
+              'native_loader':profile,
               'raw_prepared':True,'prepared':False,'metadata':metadata,'master':master,
               'assets':asset_report,
               'native_files':{path.name:_hash(path) for path in (root/'input/native-code').glob('*.so')},
-              'limits':['Audited native loader profile only; changed native binaries need an updated profile.',
+              'limits':['Automatically recognized loader structure; unknown loader algorithms require app support.',
                         'Render-resource materialization and per-layout compatibility checks are still required.']}
     marker = root/'raw-preparation.json'
     temporary = marker.with_suffix('.json.partial')

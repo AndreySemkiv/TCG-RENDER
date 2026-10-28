@@ -136,7 +136,8 @@ def _program_metadata(root,relative,program,parameter):
     from UnityPy.helpers import CompressionHelper
     from UnityPy.streams import EndianBinaryReader
     from UnityPy.export.ShaderConverter import ShaderSubProgram
-    UnityPy.config.FALLBACK_UNITY_VERSION='6000.0.78f1'
+    from .native_profile import unity_version
+    UnityPy.config.FALLBACK_UNITY_VERSION=unity_version(root)
     with warnings.catch_warnings():
         warnings.simplefilter('ignore');env=UnityPy.load(str(Path(root)/'input/aladin-complete/output'/relative))
     shader=next(o for o in env.objects if o.type.name=='Shader').read()

@@ -9,19 +9,19 @@ is provided: this is not a complete animation/tilt/camera runtime.
 from bisect import bisect_right
 from pathlib import Path
 from functools import lru_cache
-import hashlib
 import math
 import struct
 
 
 @lru_cache(maxsize=4)
-def validate_native_source(root):
-    expected = {'libil2cpp.so': 'eefba3938aa7bc1751135abb56b82f12d46c290c0a598b59e459d6f1a15c4d5c',
-                'libunity.so': 'e6f33ccdad2fe323785c673ef8a5b6850f4a12100fa04c284c3f0264980b5bd9'}
-    for name, digest in expected.items():
-        path = Path(root) / 'input/native-code' / name
-        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
-            raise ValueError('MRR initialization native source differs from inspected original: ' + name)
+def validate_native_source(root, family='CardMRRObject'):
+    from .native_scene_contract import validate_scene_contract
+    from .unity_contracts import validate_engine_contract
+    scene = validate_scene_contract(root, family)
+    engine = validate_engine_contract(root)
+    return {'libil2cpp.so': scene['native_sha256'], 'libunity.so': engine['player_sha256'],
+            'scene_contract': scene['contract'], 'scene_family': family,
+            'engine_contract': engine['contract']}
 
 
 def f32(value):
@@ -166,7 +166,6 @@ def initial_properties(settings, component):
 def load_component(root, scene, component):
     """Resolve MonoScript identity before interpreting similarly named fields."""
     from pocket_renderer.localization import _resources
-    validate_native_source(str(Path(root).resolve()))
     resources = _resources(str(Path(root).resolve()))
     cab, pid = component['id'].rsplit('__', 1)
     owner = next(obj for obj in resources.load(scene['prefab']).objects
@@ -174,6 +173,7 @@ def load_component(root, scene, component):
     data = owner.read_typetree()
     script, _ = resources.resolve(owner, data['m_Script'])
     identity = script.read_typetree()
+    validate_native_source(str(Path(root).resolve()), identity['m_ClassName'])
     return resources, owner, data, identity
 
 

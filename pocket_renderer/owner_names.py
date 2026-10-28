@@ -7,9 +7,7 @@ localized names and category flags come from the selected original master.
 from copy import deepcopy
 from functools import lru_cache
 from pathlib import Path
-import hashlib
 import re
-import struct
 
 from .localization import LANGUAGES, UnsupportedLayout
 from .skills import _field, _path
@@ -17,50 +15,56 @@ from .skills import _field, _path
 
 @lru_cache(maxsize=4)
 def native_name_contract(root):
-    """Read cctor literals from ARM64 1.7.5; never infer future native rules."""
-    root=Path(root)
-    paths=[root/'input/native-code/libil2cpp.so',
-        root/'original-render-pipeline/metadata/global-metadata.original-decoded.dat']
-    expected=['eefba3938aa7bc1751135abb56b82f12d46c290c0a598b59e459d6f1a15c4d5c',
-        '905b9505a935828ac7174b7086d15e23640dcf61451e604e0085ae98e06c8618']
-    data=[]
-    for path,digest in zip(paths,expected):
-        raw=path.read_bytes()
-        if hashlib.sha256(raw).hexdigest()!=digest:
-            raise UnsupportedLayout('Owner-name native source differs from inspected original',file=str(path))
-        data.append(raw)
-    binary,metadata=data
-    start=struct.unpack_from('<Q',binary,32)[0];size,count=struct.unpack_from('<HH',binary,54)
-    segments=[struct.unpack_from('<IIQQQQQQ',binary,start+i*size) for i in range(count)]
-    def offset(address):
-        segment=next(s for s in segments if s[0]==1 and s[3]<=address<s[3]+s[5])
-        return segment[2]+address-segment[3]
-    start=struct.unpack_from('<Q',binary,40)[0];size,count=struct.unpack_from('<HH',binary,58)
-    relocations={}
-    for i in range(count):
-        section=struct.unpack_from('<IIQQQQIIQQ',binary,start+i*size)
-        if section[1]!=4:continue
-        for pos in range(section[4],section[4]+section[5],section[9]):
-            address,kind,value=struct.unpack_from('<QQq',binary,pos)
-            if kind&0xffffffff==1027:relocations[address]=value
-    def qword(address):
-        return relocations.get(address,struct.unpack_from('<Q',binary,offset(address))[0])
-    literal_offset,literal_size,text_offset,text_size=struct.unpack_from('<4I',metadata,8)
-    def literal(address):
-        value=qword(address)
-        encoded=value if value>>29==5 else qword(value)
-        if encoded>>29!=5:raise UnsupportedLayout('Original name literal is unavailable',slot=hex(address))
-        index=(encoded&0x1fffffff)>>1
-        if index>=literal_size//8:raise UnsupportedLayout('Original name literal index is invalid')
-        length,pos=struct.unpack_from('<II',metadata,literal_offset+index*8)
-        if pos+length>text_size:raise UnsupportedLayout('Original name literal bounds are invalid')
-        return metadata[text_offset+pos:text_offset+pos+length].decode('utf8')
-    return {'flex_card_id_fragments':[literal(address) for address in range(0x72e0a18,0x72e0a48,8)],
-        'suffix_regex':literal(0x72e0a48),'split_regex':literal(0x72e0a50),
-        'language_bitmask':0x12c,
-        'provenance':{'native_sha256':expected[0],'metadata_sha256':expected[1],
-            'methods':{'ShouldFlexLayout':'0x4812BAC','.ctor':'0x48138D8','.cctor':'0x4813A9C'},
-            'fragment_literal_slots':[hex(v) for v in range(0x72e0a18,0x72e0a48,8)]}}
+    """Resolve current literals and one of the inspected native flex branches."""
+    from .native_text_contract import source
+    native=source(str(Path(root).resolve()))
+    namespace='Lettuce.Infrastructure.Card.Core';name='PokemonCardNameView'
+    def require(method, digest):
+        if native.normalized_method(namespace,name,method)!=digest:
+            raise UnsupportedLayout('Owner-name native method structure is not recovered',method=method)
+    require('.cctor','17b7e6963c9df4b23ab45abedcded0b96d38fe6e050b479b2c8b88678339b9db')
+    def literals(method):
+        result=[]
+        for ref in native.method_references(namespace,name,method):
+            try:result.append((ref['target'],native.literal(ref['target'])))
+            except ValueError:pass
+        return result
+    strings={value for _,value in literals('.cctor')}
+    suffix=r'\s?-?ex$';split=r'(?<=(?:\s|-)ex)(?=[^\w\s])'
+    if not {suffix,split}<=strings:
+        raise UnsupportedLayout('Original owner-name regex literals are not recovered')
+    flex_digest=native.normalized_method(namespace,name,'ShouldFlexLayout')
+    result={'flex_card_id_fragments':[],'suffix_regex':suffix,'split_regex':split,
+            'language_bitmask':0x12c,'provenance':dict(native.provenance,
+                methods={m:hex(native.method(namespace,name,m)) for m in ('ShouldFlexLayout','.ctor','.cctor')})}
+    if flex_digest=='747adebe43edbf9f2ceaf37b8f71d6f9fe143a4823c5d038c944efe6d0931bf5':
+        require('.ctor','0b9b7e8cc033f51089b366a35e60d4f7982179238928277f997e1dfaf5eda75e')
+        fragments={value:address for address,value in literals('.ctor') if re.fullmatch(r'[0-9]{6}',value)}
+        if len(fragments)!=6:
+            raise UnsupportedLayout('Original owner-name flex fragment array is not recovered')
+        result['flex_card_id_fragments']=list(fragments)
+        result['provenance']['fragment_literal_slots']=[hex(v) for v in fragments.values()]
+        result['flex_selector']='card-id-fragments'
+    elif flex_digest=='1bf86bf3f69c21dae7383c8fed8bfc1c24b177a54ea3909571df499ea042f215':
+        data_namespace=namespace+'.Data'
+        checks=[('PokemonRegionFormTypeExtensions','FromRegionFormId',
+                 'b1ee9d03b800f1cf051933eec7a0bdc981f1019faf49bb2990593e50f4b7637f'),
+                ('PokemonCardData','get_PokemonRegionFormType',
+                 '2567803b2657720ccf21bc84b638b4e96b979bb1e6b3102a8d03cdf0f468aae0')]
+        for owner,method,digest in checks:
+            if native.normalized_method(data_namespace,owner,method)!=digest:
+                raise UnsupportedLayout('Original region-form flex selector is not recovered',method=method)
+        regions=set()
+        for ref in native.method_references(data_namespace,'PokemonRegionFormTypeExtensions','FromRegionFormId'):
+            try:regions.add(native.literal(ref['target']))
+            except ValueError:pass
+        if len(regions)!=1:
+            raise UnsupportedLayout('Original flex region-form literal is ambiguous')
+        result.update(flex_selector='region-form',flex_region_form_id=regions.pop())
+        result['provenance']['region_form_source']='original PokemonCard.RegionFormID -> PokemonCardEntity.RegionFormId -> FromRegionFormId'
+    else:
+        raise UnsupportedLayout('Owner-name native flex selector is not recovered')
+    return result
 
 
 def split_ex_name(root,card,locale,value):
@@ -74,8 +78,10 @@ def split_ex_name(root,card,locale,value):
     language=LANGUAGES[locale.language]['asset_enum']
     # CardData.Id is the original card identifier; native String.Contains tests
     # fragments, not names or a catalogue of supported cards.
-    flex=bool((1<<language)&contract['language_bitmask']) and any(
-        fragment in card['card_id'] for fragment in contract['flex_card_id_fragments'])
+    selected=(card['card'].get('RegionFormID')==contract['flex_region_form_id']
+              if contract['flex_selector']=='region-form' else any(
+                  fragment in card['card_id'] for fragment in contract['flex_card_id_fragments']))
+    flex=bool((1<<language)&contract['language_bitmask']) and selected
     right=''
     if flex:
         match=re.search(r'(?:\s|-)ex(?=[^\w\s])',value)

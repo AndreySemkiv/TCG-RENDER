@@ -28,7 +28,7 @@ def preparation_code_digest():
 
 def raw_preparation_code_digest():
     """Keep decoder changes from reusing data produced by an earlier decoder."""
-    names = ('pocket_renderer/importer.py', 'pocket_renderer/catalog.py', 'pocket_renderer/source_state.py',
+    names = ('pocket_renderer/importer.py', 'pocket_renderer/native_profile.py', 'pocket_renderer/catalog.py', 'pocket_renderer/source_state.py',
              'scripts/inspect_original_metadata.py', 'scripts/decode_original_master.py')
     return digest_json({name:_hash(CODE_ROOT/name) for name in names})
 

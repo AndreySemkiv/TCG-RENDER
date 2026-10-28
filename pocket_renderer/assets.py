@@ -107,7 +107,8 @@ def _trs(value):
 class _Store:
     def __init__(self, root, prefab):
         import UnityPy
-        UnityPy.config.FALLBACK_UNITY_VERSION = "6000.0.78f1"
+        from .native_profile import unity_version
+        UnityPy.config.FALLBACK_UNITY_VERSION = unity_version(root)
         self.root, self.source = root, root / "input/aladin-complete/output"
         self.cab_files = dict(_shared_index(str(root)))
         self.objects, self.serialized, self.environments, self.provenance, self.trees = {}, {}, {}, {}, {}

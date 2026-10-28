@@ -125,7 +125,7 @@ def scene_initialization(root,scene,meshes,materials):
               for c in o.get('serialized_components',[]) if c.get('data',{}).get('m_Enabled',True)
               and ('_rampRepeat' in c.get('data',{}) or '_prims' in c.get('data',{}))]
     if not selected:return {},{},[]
-    validate_native_source(str(Path(root).resolve()));resources=_resources(str(Path(root).resolve()))
+    resources=_resources(str(Path(root).resolve()))
     blocks,modified,audit={},{},[]
     renderer_objects={o['renderer']['id']:o for o in scene['objects'] if o.get('renderer')}
     def oid(obj):return obj.assets_file.name.lower()+'__'+str(obj.path_id)
@@ -148,6 +148,7 @@ def scene_initialization(root,scene,meshes,materials):
         source={'component':component['id'],'component_class':name,'source':owner['source'],
                 'frame':'Original Awake initial frontal state; time0/delta0; no later animation or tilt',
                 'native_evidence':'reports/shiny-initialization-20261022/native/evidence.json'}
+        validate_native_source(str(Path(root).resolve()),name)
         if name=='KiraPuyoObject':
             settings,relative=resources.resolve(original,data['_settings'])
             settings_script,_=resources.resolve(settings,settings.read_typetree()['m_Script'])
